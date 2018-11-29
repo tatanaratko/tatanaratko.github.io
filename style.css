@@ -1,0 +1,722 @@
+
+@media screen and (max-width: 2200px) {  
+    .home__title {
+        padding-right: 100px;
+    }
+}
+
+@media all and (max-width:2000px) {
+    .menu__item-link {
+        font-size: calc(100vw / 90);
+    }
+
+    .logo a{
+        font-size: calc(100vw / 55);
+    }
+
+    .btn a{
+        font-size: calc(100vw / 75);
+    }
+    
+    .menu {
+        padding-left: 630px;
+    }
+
+    .home__title {
+        padding-right: 0;
+        font-size: calc(100vw / 90);
+    }
+}
+
+@media all and (max-width: 1800px){
+    .menu {
+        padding-left: 440px;
+    }
+
+    .title__description,
+    .undermenu {
+        font-size: calc(100vw / 80);
+    }
+}
+
+@media screen and (max-width: 1571px){
+
+    .center{
+        display: inline-block;    
+    }
+
+    .menu {
+       padding-left: 400px; 
+    } 
+}
+
+@media screen and (max-width: 1400px){
+    .menu {
+        padding-left: 580px;    
+    }
+
+    .menu__item-link {
+        font-size: calc(100vw / 73);
+    }
+
+    .logo a{
+        font-size: calc(100vw / 50);
+    }
+
+    .title__description,
+    .undermenu {
+        font-size: calc(100vw / 60);
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .logo {
+        padding-left:100px; 
+    }
+    .menu {
+        padding-left: 480px;    
+    }
+
+    .menu__item-link {
+        font-size: calc(100vw / 65);
+    }
+
+    .logo a {
+        font-size: calc(100vw / 45);
+    }
+
+    .btn a
+     {
+        font-size: calc(100vw / 65);
+    }  
+
+    .services__text,
+    .text__about,
+    .blog__body,
+    {
+        font-size: 17px;
+        padding-right:25px; 
+    }
+  
+  
+}
+
+@media screen and (max-width: 1020px) {
+    .menu__item-link {
+        font-size: calc(100vw / 50);
+    }
+
+    .logo a {
+        font-size: calc(100vw / 35);
+    }  
+    .title__description,
+    .undermenu {
+        font-size: calc(100vw / 50);
+    } 
+}
+
+@media screen and (max-width: 980px) {
+    .services__text,
+    .text__about,
+    .blog__body,
+    .info__details {
+        font-size: 19px;
+        padding-right:10px; 
+    }
+}
+
+@media screen and (max-width:768px) {
+
+}
+
+body { 
+    font-family: "Roboto Slab" , Arial, sans-serif;
+    font-weight: 400;
+    line-height: 24px;  
+}
+
+.center {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+/* центр по горизонтали,картинка прижата к верхнему краю*/
+.home { 
+    
+    background: url("./img/background.png") no-repeat top;
+    /*картинка по всей ширине экрана*/
+    background-size: 100%;
+    height: 800px;
+    margin: 0 auto;
+}
+
+/*home__title=h1+home__title-discription*/
+.home__title {
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    top: 50%;
+    height: 800px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif, bold;
+    font-size: 50px;
+    font-weight:400;
+    margin: 0;  
+}
+
+.home__title-discription {
+    font-weight: 100;
+    font-size:18px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+.btn a{
+    padding: 13px 38px;
+    width: 180px;
+    height: 33px;
+    border-radius: 2px;
+    border: 2px solid #ffffff;
+    
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.btn a:hover{
+    color:  rgba(216, 113, 45, 0.8);
+    border: 2px solid rgba(216, 113, 45, 0.8);
+}
+figcaption {
+    text-align: center;
+    color: #555555;
+    font-size: 15px;
+    cursor:default;
+}
+.developer__name {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.men:hover .men__effects {
+    transition: 0.3s;
+    opacity: 0.8;  
+}
+
+.social__icons {
+    display: flex;
+    cursor: pointer;
+}
+
+.social__icons>div {
+    margin-top:-10%;
+    padding: 2px 5px; 
+    height: 18px;
+    justify-content: center;
+    /*hidden скрывает элемент, буду использовать как эффект при наведении на изображенние*/
+    visibility: hidden;
+}
+/*когда наводим на фото, одноременно появяеся прозрачность и иконки соцсетей*/
+.men:hover .social__icons>div {
+    visibility: visible; 
+    transition: 0.3s;
+}
+
+.social__icons>div:hover{
+    background-color: #c0301c;  
+}   
+
+/*врап нужен для центровки header, header занимает 1160пикс от экрана,
+ включая расстояние между лого и меню*/
+.home__wrapper {
+    height: 770px;
+    
+}
+.wrapper {
+    max-width:1160px ;
+    margin:0 auto;
+    height: 700px;
+}
+.wrapper2 { 
+    max-width:1160px ;
+    margin:0 auto;
+}
+.header-wrap {
+    display: flex;
+    /*так элементы будут выравниваться по центральной оси*/
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1300px;
+}
+
+header {
+    /*здесь left/top начинает выравнивание с logo*/
+    position: absolute;
+    top:40px;
+    right: 0;
+    left: 10%;
+    z-index: 100;
+}
+
+.logo a{
+    display: flex;
+    width: 91px;
+    height: 25px;
+    color: #ffffff;
+    
+    font-weight: 700;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;   
+}
+
+.menu {
+    /*убрать маркировку и выстроить элементы в горизонтальный ряд*/
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.undermenu {
+    list-style: none; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    
+    margin-top: 28px;
+    color: #555555;
+    font-family: "Roboto Slab" ;
+}
+
+.undermenu__option-link {
+    text-decoration: none;
+    color: #555555;   
+}
+
+.undermenu__option-link:hover {
+    color: rgba(216, 113, 45, 0.8);  
+}
+.undermenu>li{
+    margin-right: 20px;
+}
+
+.menu__item-link {
+    text-decoration: none;
+    color:white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+}
+
+.menu__item-link:hover {
+    color: rgba(216, 113, 45, 0.8);
+}
+
+/*расстояние будет указываться для элементов ли, а не ссылкам на элементы 
+меню, потому что ли являются соседними по отношению друг к другу*/
+
+/*margin-left - потому что справа уже есть граница, она обозначена во .wrapper*/
+.menu__item {
+    margin-left: 35px;
+}
+
+.box {
+    padding: 99px 0px 0px;
+}
+
+.services{
+    text-align: center;
+    color: #555555; 
+}
+
+/*название заголовка - title, без привязки к конкретному разделу, потому что 
+заголовки h2 везде однотипные*/
+.title {
+    font-family: "Montserrat", sans-serif;
+    margin: 0px 0px 28px;  
+}
+
+.title__description {
+    
+    margin: 0px;
+    padding: 28px 0px;
+    font-family: "Roboto Slab";  
+}
+
+.services__text {
+    list-style: none;
+    display: flex;
+    text-align: center;
+    color: #555555;
+}
+
+.services__text__left-title {
+    font-family: "Montserrat", sans-serif;
+}
+
+.services__text__-,.about__text__- {
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 17px; 
+    height: 63px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.background {
+    background-color: #f8f8f8;
+    height: 845px;
+}
+
+.text__about {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.picture__wrap {
+    padding-top: 170px;
+}    
+
+.mens {
+    display: flex;
+    width: 1160px;   
+}
+
+.men {
+    padding-right: 27px;
+}
+
+.social__icons {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top:-70px;
+}
+
+.menu__wrap {
+    text-align: center;
+}
+
+.picture__wrap2 {
+    padding-top: 30px;
+    padding-bottom: 100px;
+    
+}
+
+.work__picturs {
+    display:flex; 
+}
+
+td {
+    padding-right: 30px;
+    padding-top: 30px;
+}
+
+.doyou {
+    color: #ffffff;
+    margin:0 auto; 
+    background: url("./img/doyoulike.png") no-repeat top;
+    height:370px;
+    background-size: 100%; /* Современные браузеры */
+}
+
+.question {
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 44px;
+    text-align:center;
+    padding-top: 6%;
+    padding-bottom: 11%;
+}
+
+.btn__getintouch a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    font-family: "Roboto Slab", sans-serif;
+    font-size: 18px;
+    font-weight:lighter;
+    border: 2px solid #ffffff;
+    border-radius: 2px;
+    left:44%;
+    top: -125px;
+    text-align: center;
+    padding: 12px 27px;
+}
+
+.btn__getintouch a:hover {
+    color:  rgb(221, 202, 92, 0.6);
+    border: 2px solid rgb(221, 202, 92, 0.6);
+}
+
+.shape__padding {
+    padding: 0;
+}
+
+.blog__picture_text {
+    display: flex;
+}
+
+.blog__picture {
+    padding-bottom: 21px;
+}
+
+h4 a{
+    color: #777777;   
+    font-family: "Montserrat" sans-serif;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.blog__author {
+    font-size: 13px;
+    font-style: italic;
+    line-height: 24px;
+    color: #777777;
+}
+
+.blog__body {
+    color: #555555;
+    font-weight: 400;
+    line-height: 30px;
+    margin: 30px 20px 30px;    
+}
+
+.khalil {
+    color: #777777;
+}
+
+.btn__read a{
+  
+    color: #777777;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.1px;
+}
+.btn__read {
+   margin-left: 20px;
+}
+
+h4 a:hover,
+.btn__read a:hover,
+.khalil:hover,
+.logo a:hover {
+    color: #b34a20da;
+}
+
+.for__date{
+    display: flex;
+}
+
+.date {
+    width: 70px;
+    height: 70px;
+    border: 2px solid #555555;
+    margin: 15px 22px;
+    color: #777777;
+    font-family: "Montserrat";
+    font-weight: 700;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.day {
+    font-size: 24px;
+    letter-spacing: 2.6px;
+    padding-top: 14px;
+    text-align: center;
+}
+
+.mounth{
+    padding-top: 2px;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.partners {
+    margin-top: 1%;
+    height: 477px;
+    background-color: #f8f8f8;  
+}
+
+.partners__logo {
+    display: flex;
+    margin: auto;
+    position: relative;
+    padding:4% 24em;
+}
+
+.quote {
+    position: relative;
+    width: 780px;
+    margin: 0 auto;
+
+    text-align: center;
+    color: #555555;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    line-height: 30px;
+}
+
+.quote:after, .quote:before{
+    content:" ” ";
+}
+
+.quote__author {
+    font-size: 20px;
+    color: #555555;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.round_grey {
+    position: relative;
+    left: 49%;
+    top: 49px;
+    padding-right: 5px;
+} 
+
+.round_grey:hover{
+    visibility: hidden;
+}    
+
+.info {
+    float:left;
+    text-align: left;
+    width: 200px;
+}
+
+.info__details{   
+    padding-top:33px; 
+    display:flex;  
+}
+
+.info__head {
+    padding-bottom:7px;
+    color: #555555;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+}
+
+.info__body {
+    color: #555555;
+    width: 220px;
+    line-height: 26px;
+}
+
+.info__img{
+    padding: 7px 10px;
+    height:30px;
+}
+
+.height {
+    height: 750px;
+}
+
+footer {
+    height: 307px;
+    background-color: #c0301c;
+}
+
+.networks{
+    position: relative;
+    padding-top:6%;
+}
+
+.license {
+color: #ffffff;
+font-size: 14px;
+padding-top: 3%;
+font-weight: 400;
+text-align: center;
+}
+
+.foot__shape {
+    display: flex;
+    margin: auto;
+    padding-top:3%; 
+}
+
+input[type=text] {
+    display: block;
+    padding: 0 15px;
+    width: 350px;
+    height: 44px;
+    border: 1px solid #7c7878;
+    font-family: "Roboto Slab", sans-serif;
+  
+}
+input[type=submit] {
+    display: block;
+    padding: 0 15px;
+    width: 350px;
+    height: 44px;
+    border: 1px solid #7c7878;
+    color: #615d5d;
+}
+
+.form__element input[type=text]:hover {
+    border-color:  rgb(175, 83, 40);
+   
+}
+
+
+#send__btn:hover {
+    border:1px solid rgb(175, 83, 40);
+    color: rgb(175, 83, 40);
+    cursor: pointer;
+}
+
+#message {
+    width: 760px;
+    height: 104px;
+    border: 1px solid #555555;  
+}
+#message:hover{
+    border: 1px solid #b97433;  
+}
+    
+ #send__btn {
+    font-size: 16px;
+    background-color: #ffffff;
+    width: 170px;
+}
+    
+.grid {
+    display: grid;
+    /*определz. количество колонок; фракции вместо фиксированной ширины нужны,
+     чтобы сделать вёрстку адаптивной; фракция=место, пространство*/
+    grid-template-columns: 1fr 1fr; 
+    width: 795px;
+    padding-left: 160px;
+    grid-row-gap: 21px;
+    grid-column-gap: 30px;
+    padding-top: 38px;
+}
+
+.grid div:nth-child(5) {
+    grid-column-start: 1;
+    /*растягиваю пятого child (message) на всю строку*/
+    grid-column-end: -1;
+    /*можно записать это кратко*/
+    grid-column: 1 / -1;
+}
+
+   
