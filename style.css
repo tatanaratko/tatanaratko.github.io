@@ -5,7 +5,7 @@
     }
 }
 
-@media all and (max-width:2000px) {
+@media screen and (max-width:2000px) {
     .menu__item-link {
         font-size: calc(100vw / 90);
     }
