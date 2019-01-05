@@ -474,11 +474,11 @@ footer {
     }
 
     .menu__item {
-        padding: 5px 0px 0px 0px;
+        padding: 5px 0px 0px 30px;
     }
     
     .menu__item:nth-child(1) {
-        padding-left: 0px;
+        padding-left: 30px;
     }
 
     .learn {
