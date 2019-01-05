@@ -1,12 +1,11 @@
 
-/*soecification*/
+/*specification*/
 
 body {
     font-family:'Lato', sans-serif;
     font-size: 15px;
     font-weight:400;
-    font-stretch: expanded;
-    background: url("file:///G:/_projects/%D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B0%D1%8F_%D1%88%D0%BA%D0%BE%D0%BB%D0%B0_%D1%82%D0%B0%D1%80%D0%BE/home.jpg") no-repeat top;
+    background: url("../img/home.jpg") no-repeat top;
     width: auto;
     overflow-x:  hidden !important;
 }
@@ -22,27 +21,33 @@ h2 {
 /*first screen*/
 
 .header {
-    padding-top: 43px;
+    padding-top: 33px;
     color: #ffffff;
 }
 
 .logo {
-    padding-left: 85px;
+    padding-left: 46px;
 }
 
 .menu {
     display: flex;
-    padding-top:3px;
+    padding-top:5px;
 }
 
 .menu__item {
     list-style: none;
-    padding-right: 31px;
+    padding-right: 32px;
+    letter-spacing: .2px;
 }
 
 .menu__item a {
     color: #ffffff;
     text-decoration: none;
+    transition: .2s;
+}
+
+.menu__item a:hover {
+    text-shadow: .5px .5px 15px #fafafa
 }
 
 .menu__item:nth-child(1) {
@@ -50,24 +55,21 @@ h2 {
 }
 
 .home__question {
-  
     font-size: 28px;
     font-weight: 300;
     text-align: center;
-    padding-top: 132px;
+    padding-top: 131px;
     transform: scale(1.1,1.0);
-    padding-left: 12px;
-    letter-spacing: -1px;
+    letter-spacing: -1.1px;
 }
 
 h1 {
-    font-size: 66px;
+    font-size: 65px;
     font-weight: 600;
     text-align: center;
-    line-height: 91px;
-    letter-spacing:-2px;
+    line-height: 96px;
+    letter-spacing:-1.4px;
     padding-right: 35px;
-
 }
 
 .learn {
@@ -77,31 +79,36 @@ h1 {
     font-weight: 500;
     border: 2px solid #ffffff;
     border-radius: 2px;
-    padding: 15px 45px;
-    margin: 55px auto 125px;
+    padding: 13px 45px 16px;
+    margin: 52px auto 125px;
     max-width: 239px;
 }
+
 .learn a {
     color: #ffffff;
     text-decoration: none;
+    transition: .2s;
+}
+
+.learn a:hover {
+    text-shadow: .5px .5px 15px white;
 }
 
 /*second screen*/
 
-
 .wrap {
-    padding: 0 100px 75px 0px;
+    padding: 0 100px 55px 0px;
 }
 
 .web {
-    padding-left: 120px;
+    padding-left: 45px;
 }
 
 .web__title {
-    padding-top: 95px;
-    padding-left: 95px;
-
+    display: flex;
+    padding: 94px 0px 0px 95px;
 }
+
 .web__title, .branding__title, .form__title {
     font-size: 51px;
     color: #222222;
@@ -111,8 +118,7 @@ h1 {
 }
 
 .branding__title {
-    padding-top: 20px;
-    padding-left: 40px;
+   padding: 17px 0px 30px 63px;
 }
 
 .strong {
@@ -120,14 +126,12 @@ h1 {
 }
 
 .web__text, .branding__text {
-   
     line-height: 24px;
     color: #777777;
-    
 }
+
 .web__text {
     padding-left:80px;
-    max-width: ;
 }
 
 .web__text:nth-child(1) {
@@ -136,53 +140,57 @@ h1 {
 
 .tree {
     margin-top: -80px;
+    margin-left: 47px;
 }
 
 /*third screen*/
 
-
+.ww{
+    padding-left: 20px;
+}
 
 .branding__text {
-    width: 600px;  
-    padding-left: 30px;
+    width: 610px;  
+    padding-left: 50px;
+    margin-bottom: 32px
 }
 
 .users {
-    padding-top: 46px;
-    padding-left: 140px;
+    padding: 46px 0px 0px 70px;
 }
 
 .background{
-    padding-top: 75px;
+    margin: 0 auto;
+    padding: 75px 0px 0px 55px;
     background-color: #fafafa;
     width: 1400px;
-    margin: 0 auto;
+    height: 440px;
 }
 
 .advantage {
     display: flex;
-    padding-top:30px;
+    padding: 30px 0px 12px 0px;
     line-height: 26px;
-    padding-bottom: 14px;
 }
 
-
 .advantage__block {
-    width: 310px;
+    width: 280px; 
 }
 
 .advantage__block-title {
     font-weight: 700;
     font-size: 18px;
+    padding-bottom: 8px;
 }
 
 .advantage__block-text {
     color: #777777;
+    line-height: 24px;
 }
 
 .services {
-    padding-top: 90px;
-    padding-left: 140px;
+    padding-top: 70px;
+    padding-left: 100px;
 }
 
 .advantage__icon {
@@ -190,56 +198,63 @@ h1 {
 }
 
 #advantage {
-    padding-left: 20px;
+    padding-left: 40px;
 }
 
 /*fourth screen*/
 
+.wrap1 {
+    padding: 0 60px 55px 0px
+}
+
 .blue {
     background-color: #7690c5;
     width: 1400px;
-    margin: 0 auto;
+    margin: 16px auto 0px;
 }
 
 .form__title {
+    font-size: 53px;
     color: #ffffff;
-    padding-top:90px;
     width: 300px;
-    padding-bottom: 0px;
+    padding: 94px 0px 14px 0px;
 }
 
 .form__text {
+    display: inline;
     width: 470px;
     color: #ffffff;
+    letter-spacing: .1px;
+    margin-bottom: 14px;
 }
 
 .form__title, .form__text {
-    padding-left: 114px;
-}
-
- 
-input [tipe=text] {
-    color: #bbbbbb;
+    padding-left: 74px;
 }
 
 input {
     padding-left: 20px;
 }
 
-.name, .mail {
+input [tipe=text] {
+    color: #bbbbbb;
+}
 
+.name, .mail {
     width: 457px;
     height: 53px;
     float: right;
     color: #bbbbbb;
+    letter-spacing: .4px;
 }
 
 .name {
 margin-top: 100px;
+padding-bottom: 6px;
 }
 
 .mail {
-    margin-top: 20px;
+    margin-top: 2px;
 }
 
 .contacts__padding {
@@ -250,7 +265,8 @@ margin-top: 100px;
     width: 457px;
     height:210px;
     float: right;
-    margin-top: 20px;
+    margin-top: 17px;
+    padding-bottom: 160px;
 }
 
 table {
@@ -259,16 +275,21 @@ table {
 }
 
 .contacts__part {
-    padding-top: 49px;
-    padding-left: 106px;
+    padding-top: 36px;
+    padding-left: 67px;
+}
+
+.contacts__part:hover {
+    cursor: pointer;
 }
 
 #contacts__second {
     padding-left: 76px;
 }
 
-
-
+.icon {
+    padding-right: 8px;
+}
 
 /*footer*/
 
@@ -279,11 +300,303 @@ footer {
 }
 
 .credits {
-    width: 980px;
-    margin: 0 auto;
+    width: 940px;
+    margin: 42px auto;
     color: #ffffff;
     text-align: center;
     border-top: 1px solid #87a0d2;
-    padding: 48px 0px;
+    padding: 30px 0px;
     font-size: 14px;
+    letter-spacing: -.3px;
+}
+
+@media screen and (max-width:1199px) {
+    .background {
+        height: 680px;
+    }
+
+    .users {
+        padding-left: 40px;
+    }
+}
+@media screen and (max-width:1024px) {
+    
+    ul {
+        margin-left:-70px;
+    }
+
+    .tree {
+        margin-top: 20px;
+        
+        }
+
+    .users {
+        padding: 0px 0px 30px 0px; 
+    }    
+
+    .background {
+        height: 660px;
+    }
+
+    .blue {
+        width: 100%;
+    }
+
+    .name, .mail, .message {
+        width: 80%;
+    }
+    
+    .contacts__part {
+        padding-left: 33px;
+    }
+    
+    .form__title, .form__text {
+        padding-left: 53px;
+    }  
+    
+    footer {
+        width: 100%;
+    }
+
+    .background {
+        width: 110%;
+    }
+
+    #advantage {
+        padding-left:0px;
+    }
+}    
+
+@media screen and (min-width: 992px) {
+    .container {
+        max-width: 1060px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .logo {
+        display: flex;
+        padding-left: 0px;
+        margin: 25px auto 40px;
+    }
+
+    .menu {
+        display: block;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    li {
+        display: inline-block;    
+    }
+
+    .home__question {
+        padding-top: 30px;
+    }
+
+    .web {
+        padding-left: 40px;
+    }
+
+    .web__title {
+        padding-top: 40px;
+    }
+
+    .tree {
+        margin-left: 130px;
+    }
+
+    .background {
+        height: 760px;
+    }
+
+    .branding__text {
+        max-width: 70%;
+    }
+
+    .container {
+        max-width: 1270px;
+    }
+
+    .services {
+        padding-left: 190px;
+    }
+
+    .form__title {
+        padding-left: 75px;
+        display: inherit;
+        margin: 0 auto;
+    }
+    .form__text {
+        width: 100%;
+        text-align: center;
+        padding: 20px 0px 10px 70px;
+    }
+
+    .name, .mail, .message {
+        width: 85%;
+    }
+
+    .message {
+        margin-top: 50px;
+    }
+
+    table {
+        margin: 0 auto;
+    }
+
+    .credits {
+        width: 100%;
+    }
+} 
+
+@media screen and (max-width:540px) {
+    .header {
+        padding-top: 0px;
+    }
+    .logo {
+        margin-bottom: 25px;
+    }
+
+    h1 {
+        line-height: 70px;
+    }
+
+    .branding__title {
+        max-width: 50%;
+    }
+    
+    .menu {
+        display: flex;
+        flex-direction: column;
+        padding-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .menu__item {
+        padding: 5px 0px 0px 0px;
+    }
+    
+    .menu__item:nth-child(1) {
+        padding-left: 0px;
+    }
+
+    .learn {
+        margin-top: 20px;
+    }
+
+    .web__title {
+        display: block;
+    }
+
+    .branding__text {
+        max-width: 50%
+    }
+
+    .services {
+        padding-left: 40px;
+    }
+
+    .users {
+        padding-left: 100px;
+    }
+
+    .tree {
+        margin-left: 80px;
+    }
+
+    .name {
+        margin-top: 60px;
+    }
+    
+    .ww {
+        padding-left: 80px;
+    } 
+
+    .background {
+        height: 850px;
+    }
+}
+
+@media screen and (max-width:425px) {
+    .logo {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .home__question {
+        padding-top: 10px;
+    }
+
+    .learn {
+        margin-top: 10px;
+    }
+
+    .header {
+        padding-top:0px;
+    }
+
+    .web {
+        padding-left: 0px;
+    }
+
+    .web__title {
+        padding: 0px 0px 0px 25px;
+    }
+
+    .web__text, .ww {
+        padding-left: 30px;
+    }
+    
+    .tree {
+        margin-left: 20px;
+    }
+
+    .container {
+        margin-left: 0px;
+    } 
+
+    .users {
+        padding-left: 20px;
+    }
+
+    .branding__text, .background {
+        padding-left: 0px;
+    }
+
+    .branding__title {
+        padding-left: 10px;
+    }
+
+    .form__title {
+        padding-left: 95px;
+    }
+
+    .name, .mail, .message {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:375px) {
+    #contacts__second {
+        padding-left: 20px;
+    }
+
+    .form__title {
+        padding-left: 75px;
+    }  
+}
+
+@media screen and (max-width:320px) {
+    .branding__text {
+        width: 400px;
+    }
+
+    .background {
+        height: 950px;;
+    }
+
+    .advantage__block-text {
+        width: 140px;
+    }
 }
