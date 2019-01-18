@@ -6,8 +6,8 @@
     position:absolute;
     right: 0;
     left: 0;
-    background-color: #c4cdd6;
-    height:593px;
+    background-color: #ffffff;
+    height:600px;
     z-index: 1;
     opacity: 1;
 }
@@ -18,12 +18,14 @@
     opacity: 0;
 }
 
-#navbar-002  {
-    width: 100%;
+li {
     z-index: -1;
 }
-
-
+#navbar-002  {
+    
+    z-index: -1;
+   
+}
 
 .navbar-001 .navbar-button a {
     display:flex;
