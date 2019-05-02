@@ -147,8 +147,8 @@ font-family: 'Hind', sans-serif;*/
 	font-size: 72px;
 	font-weight: 700;
 	color: #ffffff;
-	line-height: 1.2em;
-	text-transform: uppercase;
+  line-height: 1.2em;
+  
 }
 
 .slider-content {
@@ -231,7 +231,7 @@ font-family: 'Hind', sans-serif;*/
 	margin-top: 35px;
 	color: #fff;
 	line-height: 1.5em;
-	text-transform: capitalize;
+	
 }
 
 .page-title .text {
@@ -273,7 +273,7 @@ font-family: 'Hind', sans-serif;*/
 	color: #19c365;
 	font-weight: 400;
 	line-height: 24px;
-	text-transform: capitalize;
+	 
 	font-family: 'Poppins', sans-serif;
 }
 
@@ -1026,7 +1026,7 @@ font-family: 'Hind', sans-serif;*/
 	font-weight: 500;
 	color: #000000;
 	line-height: 1.4em;
-	text-transform: capitalize;
+	 
 }
 
 .sidebar .news-widget .post .text a {
@@ -1056,7 +1056,7 @@ font-family: 'Hind', sans-serif;*/
 	color: #929292;
 	text-align: center;
 	font-size: 15px;
-	text-transform: capitalize;
+	 
 	border: 1px solid #ececec;
 	background: #e7eaee;
 	transition: all 300ms ease;
@@ -2063,7 +2063,7 @@ font-family: 'Hind', sans-serif;*/
 }
 
 .news-block-one .lower-content .default_link {
-  text-transform: capitalize;
+   
   color: #222;
   font-weight: 700;
   text-transform: uppercase;
@@ -2380,7 +2380,7 @@ font-family: 'Hind', sans-serif;*/
   line-height: 40px;
   font-weight: 500;
   color: #1c1c1c;
-  text-transform: capitalize;
+   
   font-family: 'Poppins', sans-serif;
 }
 
@@ -2410,7 +2410,7 @@ font-family: 'Hind', sans-serif;*/
   color: #1c1c1c;
   font-weight: 700;
   padding-bottom: 0px;
-  text-transform: capitalize;
+   
 }
 
 .comments-area .comment-box {
@@ -2484,7 +2484,7 @@ font-family: 'Hind', sans-serif;*/
   font-weight: 500;
   color: #000000;
   line-height: 16px;
-  text-transform: capitalize;
+   
 }
 
 .comments-area .comment-box .text {
@@ -2648,7 +2648,7 @@ font-family: 'Hind', sans-serif;*/
   padding: 2px 0px 7px 20px;
   color: #aaaaaa;
   font-size: 14px;
-  text-transform: capitalize;
+   
 }
 
 .main-footer .links-widget .list li a:before {
@@ -2889,7 +2889,7 @@ font-family: 'Hind', sans-serif;*/
 .main-footer .posts-widget .post .desc-text a{
   color:#aaa;
   font-size: 16px;
-  text-transform: capitalize;
+   
 }
 
 .main-footer .posts-widget .post .time{
@@ -4944,7 +4944,7 @@ font-family: 'Hind', sans-serif;*/
 }
 
 .services-block-thirteen .default_link {
-  text-transform: capitalize;
+   
   color: #222;
   font-weight: 700;
   text-transform: uppercase;
@@ -5387,7 +5387,7 @@ font-family: 'Hind', sans-serif;*/
 	font-size: 24px;
 	font-weight: 400;
 	margin: 0px 0 5px;
-	text-transform: capitalize;
+	 
 }
 
 .product-content-box .content-box del {
@@ -5569,7 +5569,7 @@ font-family: 'Hind', sans-serif;*/
 	color: #1f1f1f;
 	font-size: 16px;
 	font-weight: 600;
-	text-transform: capitalize;
+	 
 	background: #f7f7f7;
 	-webkit-transition: all 500ms ease;
 	transition: all 500ms ease;
@@ -5860,7 +5860,7 @@ font-family: 'Hind', sans-serif;*/
 .cart-table .cart-header {
 	position: relative;
 	width: 100%;
-	text-transform: capitalize;
+	 
 	font-size: 16px;
 	border-radius: 7px;
 	font-family: "Poppins", sans-serif;
@@ -5924,7 +5924,7 @@ font-family: 'Hind', sans-serif;*/
 	margin-top: 20px;
 	margin-bottom: 5px;
 	color: #222;
-	text-transform: capitalize;
+	 
 }
 
 .cart-table tbody tr .sub-total {
@@ -6120,7 +6120,7 @@ font-family: 'Hind', sans-serif;*/
 
 .cart-section .estimate-form .select-box .btn-group.bootstrap-select .btn {
 	font-size: 14px;
-	text-transform: capitalize;
+	 
 	border: none;
 	outline: none;
 	border: 1px solid #f4f4f4;
@@ -6342,7 +6342,7 @@ font-family: 'Hind', sans-serif;*/
 .checkout-area .form form .field-label {
 	color: #222;
 	font-family: "Poppins", Sans-serif;
-	text-transform: capitalize;
+	 
 	font-weight: 400;
 	margin-bottom: 8px;
 }
@@ -6736,7 +6736,7 @@ a:hover,a:focus{
 .form-horizontal .form-group label{
     padding: 0 20px;
     color: #7f8291;
-    text-transform: capitalize;
+     
     margin-bottom: 10px;
 }
 .form-horizontal .main-checkbox{
@@ -6782,7 +6782,7 @@ a:hover,a:focus{
     margin-left: 7px;
     line-height: 20px;
     padding-top: 5px;
-    text-transform: capitalize;
+     
 }
 .form-horizontal .btn{
     width: 100%;
@@ -6813,7 +6813,7 @@ a:hover,a:focus{
     background: transparent;
     margin: 30px 0 0 0;
     color: #615f6c;
-    text-transform: capitalize;
+     
     transition: all 0.3s ease 0s;
     cursor:  pointer;
 }
@@ -7716,11 +7716,15 @@ a:hover,a:focus{
   max-width: 500px;
 }
 
+.sp-two {
+  padding: 20px 0 50px;
+}
 
 
 /*progressbar*/
 #progressbar {
-	margin-bottom: 30px;
+  margin-bottom: 30px;
+  margin-top: 50px;
 	overflow: hidden;
 	/*CSS counters to number the steps*/
 	counter-reset: step;
