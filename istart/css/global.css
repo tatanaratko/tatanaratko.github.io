@@ -356,6 +356,7 @@ img {
 	text-transform: uppercase;
 	border: 2px solid #19c365;
 	font-family: 'Poppins', sans-serif;
+	-webkit-appearance: none;
 }
 
 .btn-style-one:hover {
@@ -1080,7 +1081,7 @@ img {
 	color: #000000;
 	font-weight: 500;
 	line-height: 1.2em;
-	text-transform: capitalize;
+	 
 }
 
 .inner-page-title {
@@ -1093,7 +1094,7 @@ img {
 	color: #000000;
 	font-weight: 500;
 	line-height: 1.2em;
-	text-transform: capitalize;
+	 
 }
 
 /*** Fancy Box ***/
