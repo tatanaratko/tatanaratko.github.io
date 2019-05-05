@@ -720,9 +720,6 @@ font-family: 'Hind', sans-serif;*/
 	position: relative;
 }
 
-.contact-form .form-group:last-child {
-	margin-bottom: 30px;
-}
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
@@ -868,9 +865,9 @@ font-family: 'Hind', sans-serif;*/
 }
 
 .sidebar .sidebar-widget {
-	margin-bottom: 40px;
+	margin-bottom: 15px;
 	background: #f7f8f9;
-	padding: 30px 40px;
+  padding: 20px 40px 0px;
 }
 
 /* search widget */
@@ -1098,7 +1095,7 @@ font-family: 'Hind', sans-serif;*/
 	font-size: 14px;
 	background: #d9dfe6;
 	padding: 9px 10px;
-	width: 70px;
+	max-width: 96px;
 	color: #222;
 	text-align: center;
 }
@@ -7773,13 +7770,33 @@ a:hover,a:focus{
 
 
 
+.continue {
+  color: #ffffff;
+}
+
+
+.contact-form input[type="text"].about-project {
+  height: 160px;
+}
 
 
 
 
 
+#map {
+  width: 100%;
+  height: 95%;
+}
 
+.project-sum {
+  max-height: 150px;
+}
 
+.file {
+  padding-top: 15px;
+}
 
-
-
+.status-btns {
+  display:flex;
+  justify-content: center;
+}
