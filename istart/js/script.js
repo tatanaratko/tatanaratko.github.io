@@ -564,8 +564,8 @@
 		var priceRange = document.getElementById('range-slider-price');
 
 		noUiSlider.create(priceRange, {
-			start: [ 180, 560 ],
-			limit: 1000,
+			start: [ 10000, 500000 ],
+			limit: 1000000,
 			behaviour: 'drag',
 			connect: true,
 			range: {
