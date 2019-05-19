@@ -81,6 +81,7 @@ function onSubmitDetailsForm(e) {
     var citixenship=formDetails.get('citixenship');
     var status=formDetails.get('status');
     var industry=formDetails.get('industry');
+    //agree
 
     // Сколько полей заполено неправильно
     var mistakes = 0;
