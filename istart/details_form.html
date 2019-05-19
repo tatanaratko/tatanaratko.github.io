@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--<link href="plugins/revolution/css/settings.css" rel="stylesheet">-->
+    <!--<link href="plugins/revolution/css/layers.css" rel="stylesheet">-->
+    <!--<link href="plugins/revolution/css/navigation.css" rel="stylesheet">-->
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--Page Title-->
+        <section class="head">
+            <div class="container">
+                <div class="box">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="#">Отрасли</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#second">Инвестиционные фонды</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="logo-head" src="images/logo.PNG">
+                            </li>
+                            <li class="menu__item">
+                                <a href="#fourth">Эксперты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="into_form.html">Вход</a><a href="reg_form.html"> / Регистрация</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </section>
+        <!--End Page Title-->
+
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="container">
+                <div class="flex-box-five">
+                    <ul class="bread-crumb">
+                        <li><a href="index.html">Главная</a></li>
+                        <li>Регистрация</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Info -->
+        <div class="steps">
+            <div class="container register-width">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group style-two">
+                            <!-- progressbar -->
+                            <ul id="progressbar" class="progressbar">
+                                <li class="active"><a href="reg_form.html">Регистрация</a></li>
+                                <li><a href="details_form.html">Данные о вас</a></li>
+                                <li><a href="project_form.html">Данные о проекте</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact form -->
+
+        <section class="contact-form-section sp-two">
+            <div class="container register-width">
+                <div class="default-form-area">
+                    <form id="details-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
+                        <div class="row clearfix">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="citixenship">
+                                <select name="citixenship" class="citixenship" >
+                                    <option value="default-form-area">Гражданство</option>
+                                    <option value="RF">РФ</option>
+                                    <option value="SNG">СНГ</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="status">
+                                <select name="status" class="citixenship" >
+                                    <option value="default-form-area">Статус</option>
+                                    <option value="developer">Проектировщик</option>
+                                    <option value="funder">Инвестор</option>
+                                    <option value="expert">Эксперт</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <div class="form-group style-two" id="industry">
+                                        <input type="text" name="industry" class="form-control required email" value=""
+                                            placeholder="Сфера деятельности" required="">
+                                    </div>
+                                </div>
+                            <div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    Прикрепите фото
+                                </div>
+                                <input class="foto" type="file" name="document">
+                            </div>
+                        </div>
+                        <div class="policy-form form-group">
+                            <input type="checkbox" name="agree" id="politics" autocomplete="off">
+                            Я даю согласие на обработку персональных данных и ознакомлен с <a href="site-policy.html">политикой
+                                сайта.</a>
+                        </div>
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><!--<a
+                                        class="continue" href="project_form.html"> далее</a>--></button>
+                                <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </button>
+
+
+    <!-- jequery plugin -->
+    <!-- <script src="js/jquery.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+
+
+<script src="js/sticky-header.js"></script> -->
+    <script src="js/script_.js"></script>
+
+</body>
+
+</html>

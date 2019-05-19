@@ -791,7 +791,7 @@ font-family: 'Hind', sans-serif;*/
 }
 
 .contact-form.style-two textarea {
-	height: 250px;
+	height: 220px;
 }
 
 /* form style three */
@@ -7693,7 +7693,8 @@ a:hover,a:focus{
   display: none;
 }
 
-.form-group.err input{
+.form-group.err input,
+.form-group.err select{
   border: 1px solid red !important;
 }
 .form-group.err span{
@@ -7701,7 +7702,8 @@ a:hover,a:focus{
   color:red;
 }
 
-.form-group.suc input  {
+.form-group.suc input,
+.form-group.suc select  {
   border: 1px solid green !important;
 }
 
@@ -7841,4 +7843,26 @@ a {
   text-align: center;
   padding-top: 150px;
   font-size: 50px;
+}
+
+.foto {
+  margin: 10px 10px 30px;
+}
+
+.policy-form {
+  padding-bottom: 25px;
+}
+
+.analitics {
+  margin-top: 30px;
+  background-color: #f7f8f9;
+  margin-bottom: 30px;
+}
+
+.analitics-text {
+  padding: 10px 30px;
+}
+
+select.citixenship {
+  margin-bottom: 20px;
 }

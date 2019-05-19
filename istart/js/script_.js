@@ -1,11 +1,25 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-	document.getElementById('contact-form').addEventListener('submit', onSubmit);
-	ymaps.ready(initYMaps);
+    //'submit' - стандартное событие. Оно говорит о том, что формв отправлена.
+    // onSubmit - слушатель, который навешивается на событие.
+    // getElementById('contact-form') и getElementById('details-form') -
+    // источники событий, у разных источников могут быть разные слушатели
+    // одного и того же события
+    if(document.getElementById('contact-form'))
+    {
+        console.log("contact form listener")
+        document.getElementById('contact-form').addEventListener('submit', onSubmitContactForm);
+    }
+
+    if(document.getElementById('details-form'))
+    {
+        console.log("details form listener")
+        document.getElementById('details-form').addEventListener('submit', onSubmitDetailsForm);
+    }
 }
 
-function onSubmit(e) {
+function onSubmitContactForm(e) {
 	e.preventDefault();
 	var formData = new FormData(document.querySelector('#contact-form'));
 
@@ -54,68 +68,76 @@ function onSubmit(e) {
 	}
 }
 
+function onSubmitDetailsForm(e) {
+    e.preventDefault();
 
-	
-	
+    var formDetails = new FormData(document.querySelector('#details-form'));
 
-function initYMaps() {
-    var myPlacemark,
-        myMap = new ymaps.Map('map', {
-            center: [54.98655697, 73.37736619],
-            zoom: 9
-        }, {
-            searchControlProvider: 'yandex#search'
-        });
-
-    // Слушаем клик на карте.
-    myMap.events.add('click', function (e) {
-        var coords = e.get('coords');
-
-        // Если метка уже создана – просто передвигаем ее.
-        if (myPlacemark) {
-            myPlacemark.geometry.setCoordinates(coords);
-        }
-        // Если нет – создаем.
-        else {
-            myPlacemark = createPlacemark(coords);
-            myMap.geoObjects.add(myPlacemark);
-            // Слушаем событие окончания перетаскивания на метке.
-            myPlacemark.events.add('dragend', function () {
-                getAddress(myPlacemark.geometry.getCoordinates());
-            });
-		}
-		console.log(coords)
-        getAddress(coords);
-    });
-
-    // Создание метки.
-    function createPlacemark(coords) {
-        return new ymaps.Placemark(coords, {
-            iconCaption: 'поиск...'
-        }, {
-            preset: 'islands#violetDotIconWithCaption',
-            draggable: true
-        });
+    var serverDetails= {};
+    for (var[key, value] of formDetails.entries()) {
+        serverDetails[key]=value;
     }
 
-    // Определяем адрес по координатам (обратное геокодирование).
-    function getAddress(coords) {
-        myPlacemark.properties.set('iconCaption', 'поиск...');
-        ymaps.geocode(coords).then(function (res) {
-            var firstGeoObject = res.geoObjects.get(0);
+    var citixenship=formDetails.get('citixenship');
+    var status=formDetails.get('status');
+    var industry=formDetails.get('industry');
 
-            myPlacemark.properties
-                .set({
-                    // Формируем строку с данными об объекте.
-                    iconCaption: [
-                        // Название населенного пункта или вышестоящее административно-территориальное образование.
-                        firstGeoObject.getLocalities().length ? firstGeoObject.getLocalities() : firstGeoObject.getAdministrativeAreas(),
-                        // Получаем путь до топонима, если метод вернул null, запрашиваем наименование здания.
-                        firstGeoObject.getThoroughfare() || firstGeoObject.getPremise()
-                    ].filter(Boolean).join(', '),
-                    // В качестве контента балуна задаем строку с адресом объекта.
-                    balloonContent: firstGeoObject.getAddressLine()
-                });
-        });
+    // Сколько полей заполено неправильно
+    var mistakes = 0;
+
+    if (citixenship=='default-form-area') {
+        mistakes++;
+        var selectColor=document.getElementById('citixenship');
+        selectColor.classList.remove('suc');
+        selectColor.classList.add('err');
+    }
+
+    else {
+        var selectColor=document.getElementById('citixenship');
+        selectColor.classList.remove('err');
+        selectColor.classList.add('suc');
+    }
+
+    if (status=='default-form-area') {
+        mistakes++;
+        var selectColor=document.getElementById('status');
+        selectColor.classList.remove('suc');
+        selectColor.classList.add('err');
+
+    }
+
+    else {
+        var selectColor=document.getElementById('status');
+        selectColor.classList.remove('err');
+        selectColor.classList.add('suc');
+    }
+
+    if (industry='') {
+        mistakes++;
+        var selectColor=document.getElementById('industry');
+        selectColor.classList.remove('suc');
+        selectColor.classList.add('err');
+
+    }
+
+    else {
+        var selectColor=document.getElementById('industry');
+        selectColor.classList.remove('err');
+        selectColor.classList.add('suc');
+    }
+    // Если нигде не ошиблись - подсвечиваем всё зелёным
+    if(mistakes == 0)
+    {
+        allGreen();
+    }
+
+}
+
+function allGreen(){
+    var allDetails=document.querySelectorAll('#details-form .form-group');
+    for(var details of allDetails) {
+        details.classList.remove('err');
+        details.classList.add('suc');
     }
 }
+
