@@ -1,11 +1,13 @@
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
-    //'submit' - стандартное событие. Оно говорит о том, что формв отправлена.
+    //'submit' - стандартное событие. Оно говорит о том, что форма отправлена.
     // onSubmit - слушатель, который навешивается на событие.
     // getElementById('contact-form') и getElementById('details-form') -
     // источники событий, у разных источников могут быть разные слушатели
     // одного и того же события
+    //Здесь мы проверяем, нашли ли айди и подключаем слушателя событий
+
     if(document.getElementById('contact-form'))
     {
         console.log("contact form listener")
@@ -16,6 +18,12 @@ function init() {
     {
         console.log("details form listener")
         document.getElementById('details-form').addEventListener('submit', onSubmitDetailsForm);
+    }
+
+    if (document.getElementById('fund-analitic-btn'))
+    {
+        console.log('fund analitic listener')
+        document.getElementById('fund-analitic-btn').addEventListener('click', onClickFunds);
     }
 }
 
@@ -81,10 +89,27 @@ function onSubmitDetailsForm(e) {
     var citixenship=formDetails.get('citixenship');
     var status=formDetails.get('status');
     var industry=formDetails.get('industry');
-    //agree
+    var agree=formDetails.get('agree');
 
     // Сколько полей заполено неправильно
     var mistakes = 0;
+
+    //classList - взять весь список классов из стилей с указанным значением
+
+    if (agree=='off') {
+
+        var yesAgree=document.getElementById('policy-form');
+        yesAgree.classList.remove('no-agreement');
+        yesAgree.classList.add('yes-agreement');
+
+    }
+
+    else {
+        mistakes++;
+        var notAgree=document.getElementById('policy-form');
+        notAgree.classList.remove('yes-agreement');
+        notAgree.classList.add('no-agreement');
+    }
 
     if (citixenship=='default-form-area') {
         mistakes++;
@@ -139,6 +164,22 @@ function allGreen(){
     for(var details of allDetails) {
         details.classList.remove('err');
         details.classList.add('suc');
+    }
+}
+
+function onClickFunds() {
+    var maxElement=document.getElementById('max-value-rangeslider');
+    var maxValue = parseInt(maxElement.value);
+
+    var formIndustry=new FormData(document.querySelector('#industry-form'));
+    var industry=formIndustry.get('sphere');
+
+    var mistakes=0;
+    console.log(typeof maxValue)
+    if (maxValue<=500000 && industry=='social') {
+        var industryContent=document.getElementById('social-industry');
+        industryContent.classList.remove('no-social-content');
+        industryContent.classList.add('social-content');
     }
 }
 

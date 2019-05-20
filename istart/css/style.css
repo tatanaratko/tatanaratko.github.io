@@ -7863,6 +7863,27 @@ a {
   padding: 10px 30px;
 }
 
-select.citixenship {
+select.citixenship   {
   margin-bottom: 20px;
 }
+.sphere {
+  margin-bottom: 20px;
+}
+
+.policy-form.yes-agreement p {
+  display: none;
+}
+
+.policy-form.no-agreement p {
+  display: block;
+  color: red;
+}
+
+.social-content span {
+  display: block;
+}
+.no-social-content span{
+  display: none;
+}
+
+

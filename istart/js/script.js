@@ -577,6 +577,7 @@
 		var limitFieldMin = document.getElementById('min-value-rangeslider');
 		var limitFieldMax = document.getElementById('max-value-rangeslider');
 
+		// priceRange=priceRange.replace(/(\d)(?=(\d\d\d)+([^\d]|$))/g, '$1 ');
 		priceRange.noUiSlider.on('update', function( values, handle ){
 			(handle ? limitFieldMax : limitFieldMin).value = values[handle];
 		});

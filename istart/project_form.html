@@ -67,8 +67,7 @@
             <div class="container">
 
                 <div class="default-form-area sidebar">
-                    <form id="contact-form" name="contact_form" class="contact-form style-two"
-                        enctype="multipart/form-data">
+                    <form id="industry-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
                         <div class="row clearfix">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group style-two">
@@ -79,17 +78,25 @@
                                     <input type="email" name="form_email" class="form-control required email" value=""
                                         placeholder="Цель проекта" required="">
                                 </div>
+                                <select name="sphere" class="sphere " required="">
+                                    <option value="default-form-area">Сфера</option>
+                                    <option value="social">Социальное предпринимательство</option>
+                                    <option value="programming">Программирование</option>
+                                    <option value="bussiness">Составление бизнес-плана</option>
+                                    <option value="other1">Другое 1</option>
+                                    <option value="other2">Другое 2</option>
+                                </select>
                                 <div class="form-group style-two">
                                     <textarea name="form_message" class="form-control textarea required" placeholder="Суть проекта"></textarea>
                                 </div>
                                 <select name="citixenship" class="citixenship" required="">
-                                        <option value="default-form-area">Каких навыков вам не хватает?</option>
-                                        <option value="RF">Презентация проекта</option>
-                                        <option value="SNG">Программирование</option>
-                                        <option value="other">Составление бизнес-плана</option>
-                                        <option value="other">Другое 1</option>
-                                        <option value="other">Другое 2</option>
-                                    </select>
+                                    <option value="default-form-area">Каких навыков вам не хватает?</option>
+                                    <option value="RF">Презентация проекта</option>
+                                    <option value="SNG">Программирование</option>
+                                    <option value="other">Составление бизнес-плана</option>
+                                    <option value="other">Другое 1</option>
+                                    <option value="other">Другое 2</option>
+                                </select>
                             </div>
 
                             <div class="col-md-6 col-sm-6 col-xs-12">
@@ -99,10 +106,9 @@
                                     </div>
 
                                     <div class="range-slider-price" id="range-slider-price"></div><br>
-                                    <div class="form-group">
-                                        <input type="text" class="val-box" id="min-value-rangeslider">
-                                        <input type="text" class="val-box" id="max-value-rangeslider">
-
+                                    <div class="form-group" id="fund-analitic">
+                                        <input type="text" name="min-sum" class="val-box" id="min-value-rangeslider">
+                                        <input type="text" name="max-sum" class="val-box" id="max-value-rangeslider">
                                     </div>
                                 </div>
                                 <div class="form-group style-two">
@@ -115,21 +121,40 @@
                         </div>
                         <section class="contact-form-section sp-two analitics">
                             <div class="container">
-                               <div class="analitics-text">
-                                <p>
-                                    Вы можете узнать потенциальные фонды, которые могут проинвестировать в ваш проект или подобрать курсы для получения недостающих навыков:
-                                </p>
+                                <div class="analitics-text">
+                                    <p>
+                                        Вы можете узнать потенциальные фонды, которые могут проинвестировать в ваш
+                                        проект или подобрать курсы для получения недостающих навыков:
+                                    </p>
                                 </div>
                                 <div class="row">
                                     <div class="col status-btns">
-                                        <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a class="continue"
-                                                href="fonds.html"> анализ фондов</a></button>
+                                        <div class="theme-btn btn-style-one " id="fund-analitic-btn" type="submit"
+                                            data-loading-text="Please wait..."> анализ фондов</button>
                                         </div>
                                     </div>
                                     <div class="col status-btns">
-                                        <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a class="continue"
-                                                href="cources.html"> подбор курсов</a></button>
+                                        <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a
+                                                class="continue" href="cources.html"> подбор курсов</a></button>
                                         </div>
+                                    </div>
+                                    <div class="social-industry no-social-content" id="social-industry">
+
+                                        <span>
+                                            Всероссийский конкурс «Импульс добра»,
+                                            Фонд «Наше будущее»
+                                        </span>
+                                        <span>
+                                            Конкурс социальных стартапов SAP UP
+                                            Организатор: SAP СНГ
+                                        </span>
+                                        <span>
+                                            Конкурс социальных предпринимателей «Навстречу
+                                            переменам» Организаторы: Фонд поддержки
+                                            социальных инициатив в сфере детства
+                                            «Навстречу переменам» при поддержке Tele2,
+                                            газеты Metro
+                                        </span>
                                     </div>
                                     <!-- <div class="col status-btns">
                                         <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a class="continue"
@@ -174,9 +199,9 @@
 
         <script src="js/jquery.js"></script>
         <script src="js/plugins.js"></script>
-        <!-- <script src="js/script.js"></script> -->
+        <script src="js/script.js"></script>
         <script src="js/script_.js"></script>
-        
+
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67" type="text/javascript"></script>
         <script src="js/ymaps.js"></script>
 
