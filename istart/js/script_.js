@@ -95,8 +95,7 @@ function onSubmitDetailsForm(e) {
     var mistakes = 0;
 
     //classList - взять весь список классов из стилей с указанным значением
-
-    if (agree=='off') {
+    if (agree=='agree') {
 
         var yesAgree=document.getElementById('policy-form');
         yesAgree.classList.remove('no-agreement');
@@ -155,6 +154,7 @@ function onSubmitDetailsForm(e) {
     if(mistakes == 0)
     {
         allGreen();
+        setTimeout(()=> window.location.href="project_form.html", 1000)
     }
 
 }

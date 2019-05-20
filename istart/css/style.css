@@ -7870,7 +7870,8 @@ select.citixenship   {
   margin-bottom: 20px;
 }
 
-.policy-form.yes-agreement p {
+.policy-form.yes-agreement p,
+.policy-form p {
   display: none;
 }
 
