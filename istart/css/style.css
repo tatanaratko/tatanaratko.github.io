@@ -7904,3 +7904,11 @@ select.citixenship   {
 .social-industry span, .programming-courses span {
   padding-bottom: 15px;
 }
+
+
+@media only screen and (max-width:700px) {
+	.menu {
+  display: flex;
+  flex-direction: column;
+	}
+}
