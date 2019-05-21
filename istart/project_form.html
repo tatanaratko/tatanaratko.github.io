@@ -78,7 +78,7 @@
                                     <input type="email" name="form_email" class="form-control required email" value=""
                                         placeholder="Цель проекта" required="">
                                 </div>
-                                <select name="sphere" class="sphere " required="">
+                                <select name="sphere" class="sphere" required="">
                                     <option value="default-form-area">Сфера</option>
                                     <option value="social">Социальное предпринимательство</option>
                                     <option value="programming">Программирование</option>
@@ -89,10 +89,10 @@
                                 <div class="form-group style-two">
                                     <textarea name="form_message" class="form-control textarea required" placeholder="Суть проекта"></textarea>
                                 </div>
-                                <select name="citixenship" class="citixenship" required="">
+                                <select name="course" class="course" required="">
                                     <option value="default-form-area">Каких навыков вам не хватает?</option>
                                     <option value="RF">Презентация проекта</option>
-                                    <option value="SNG">Программирование</option>
+                                    <option value="programming">Программирование</option>
                                     <option value="other">Составление бизнес-плана</option>
                                     <option value="other">Другое 1</option>
                                     <option value="other">Другое 2</option>
@@ -134,28 +134,11 @@
                                         </div>
                                     </div>
                                     <div class="col status-btns">
-                                        <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a
-                                                class="continue" href="cources.html"> подбор курсов</a></button>
+                                        <div class="theme-btn btn-style-one " type="submit" id="course-analitic-btn"
+                                            data-loading-text="Please wait..."><a class="continue"> подбор курсов</a></button>
                                         </div>
                                     </div>
-                                    <div class="social-industry no-social-content" id="social-industry">
 
-                                        <span>
-                                            Всероссийский конкурс «Импульс добра»,
-                                            Фонд «Наше будущее»
-                                        </span>
-                                        <span>
-                                            Конкурс социальных стартапов SAP UP
-                                            Организатор: SAP СНГ
-                                        </span>
-                                        <span>
-                                            Конкурс социальных предпринимателей «Навстречу
-                                            переменам» Организаторы: Фонд поддержки
-                                            социальных инициатив в сфере детства
-                                            «Навстречу переменам» при поддержке Tele2,
-                                            газеты Metro
-                                        </span>
-                                    </div>
                                     <!-- <div class="col status-btns">
                                         <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a class="continue"
                                                 href="project_form.html"> другой анализ</a></button>
@@ -164,6 +147,43 @@
                                 </div>
                             </div>
                         </section>
+
+                        <section class='funds-data'>
+                            <div class="social-industry no-social-content" id="social-industry">
+
+                                <span>
+                                    Всероссийский конкурс «Импульс добра»,
+                                    Фонд «Наше будущее» - <b>max 460 000 руб</b><br>
+                                </span>
+                                <span>
+                                    Конкурс социальных стартапов SAP UP
+                                    Организатор: SAP СНГ -<b> max 450 000 руб</b><br>
+                                </span>
+                                <span>
+                                    Конкурс социальных предпринимателей «Навстречу
+                                    переменам» Организаторы: Фонд поддержки
+                                    социальных инициатив в сфере детства
+                                    «Навстречу переменам» при поддержке Tele2,
+                                    газеты Metro -<b> max 1 200 000 руб</b><br>
+                                </span>
+                            </div>
+                        </section>
+
+                        <section class="programming-data">
+                            <div class="programming-courses  no-programming-courses" id="programming-courses">
+                                <span><img class=" " src="images/Python.png">
+                                    pyton: 
+                                    <a href="https://www.coursera.org/specializations/python">https://www.coursera.org/specializations/python</a> <br>
+                                </span>
+                                <span><img class=" " src="images/js_logo.jpg">
+                                    js: <a href="https://coursehunters.net/course/JavaScript">https://coursehunters.net/course/JavaScript</a><br>
+                                </span>
+                                <span><img class=" " src="images/ISO_C++_Logo.svg">
+                                    c++: <a href="https://stepik.org/course/7/promo">https://stepik.org/course/7/promo</a><br>
+                                </span>
+                            </div>
+                        </section>
+
                         <div class="col-md-12 col-sm-12 col-xs-12">
                             <p>Укажите локацию проекта, кликнув на карте:</p>
                             <div id="map" style="width:100%; height:300px"></div>

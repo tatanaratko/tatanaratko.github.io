@@ -26,6 +26,12 @@ function init()
         console.log('fund analitic listener')
         document.getElementById('fund-analitic-btn').addEventListener('click', onClickFunds);
     }
+
+    if (document.getElementById('course-analitic-btn'))
+    {
+        console.log('course analitic listener')
+        document.getElementById('course-analitic-btn').addEventListener('click', onClickCourses);
+    }
 }
 
 function onSubmitContactForm(e)
@@ -204,3 +210,17 @@ function onClickFunds()
     }
 }
 
+
+function onClickCourses()
+{
+    var formCourse = new FormData(document.querySelector('#industry-form'));
+    var course = formCourse.get('course');
+    var mistakes = 0;
+    
+    if (course=='programming')
+    {
+        var industryContent = document.getElementById('programming-courses');
+        industryContent.classList.remove('no-programming-courses');
+        industryContent.classList.add('programming-courses');
+    }
+}

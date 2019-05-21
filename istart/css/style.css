@@ -7880,7 +7880,7 @@ select.citixenship   {
   color: red;
 }
 
-.social-content span {
+.social-content span{
   display: block;
 }
 .no-social-content span{
@@ -7888,3 +7888,19 @@ select.citixenship   {
 }
 
 
+.programming-courses span{
+  display: block;
+}
+.no-programming-courses span{
+  display: none;
+}
+
+
+.funds-data , .programming-data{
+  padding-bottom: 30px;
+  font-size: 23px;
+}
+
+.social-industry span, .programming-courses span {
+  padding-bottom: 15px;
+}
