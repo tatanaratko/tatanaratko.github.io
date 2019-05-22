@@ -174,10 +174,22 @@ function onSubmitDetailsForm(e)
         selectColor.classList.add('suc');
     }
     // Если нигде не ошиблись - подсвечиваем всё зелёным
-    if (mistakes == 0)
+    if (mistakes == 0 && status=='developer')
     {
         allGreen();
         setTimeout(() => window.location.href = "project_form.html", 1000)
+    }
+
+    if (mistakes == 0 && status=='funder')
+    {
+        allGreen();
+        setTimeout(() => window.location.href = "funder_form.html", 1000)
+    }
+
+    if (mistakes == 0 && status=='expert')
+    {
+        allGreen();
+        setTimeout(() => window.location.href = "expert_form.html", 1000)
     }
 
 }
