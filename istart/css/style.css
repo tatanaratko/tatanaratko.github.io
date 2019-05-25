@@ -7912,3 +7912,17 @@ select.citixenship   {
   flex-direction: column;
 	}
 }
+
+
+/* .fund-default select,
+.organization-name-default div,
+.primary-working-default div
+ {
+  display: none;
+}
+
+.true-fund select,
+.true-organizaion-name div,
+.true-primary-working div {
+display: block;
+} */

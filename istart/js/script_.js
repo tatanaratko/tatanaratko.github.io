@@ -32,7 +32,14 @@ function init()
         console.log('course analitic listener')
         document.getElementById('course-analitic-btn').addEventListener('click', onClickCourses);
     }
+
+    if (document.getElementById('entity'))
+    {
+        console.log('funder entity listener')
+        document.getElementById('entity').addEventListener('click', onClickFunderEntity);
+    }
 }
+
 
 function onSubmitContactForm(e)
 {
@@ -204,6 +211,7 @@ function allGreen()
     }
 }
 
+
 function onClickFunds()
 {
     var maxElement = document.getElementById('max-value-rangeslider');
@@ -220,6 +228,29 @@ function onClickFunds()
         industryContent.classList.remove('no-social-content');
         industryContent.classList.add('social-content');
     }
+}
+
+function onClickFunderEntity() 
+{
+    var funderEntity = new FormData(document.querySelector('#funder-form'));
+
+    var entity = funderEntity.get('entity');
+    var fund = funderEntity.get('fund');
+    var organizationName = funderEntity.get('organization-name');
+    var primaryWorking = funderEntity.get('primary-working');
+    // Сколько полей заполено неправильно
+    var mistakes = 0;
+
+    var fund=document.getElementById('fund');
+    var yurOrganization=document.getElementById('organization-name');
+    var fizPrimaryWork=document.getElementById('primary-working');
+
+    fund.hidden = entity!='ur' // прятать всегда когда entity не равно ur
+    yurOrganization.hidden = entity!='ur'
+    fizPrimaryWork.hidden = entity != "fiz"
+    
+
+
 }
 
 
