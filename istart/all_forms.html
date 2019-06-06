@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Project</title>
+
+    <!-- Stylesheets -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+    <!--<link href="plugins/revolution/css/settings.css" rel="stylesheet">-->
+    <!--<link href="plugins/revolution/css/layers.css" rel="stylesheet">-->
+    <!--<link href="plugins/revolution/css/navigation.css" rel="stylesheet">-->
+
+    <!--Favicon-->
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="icon" href="#" type="image/x-icon">
+    <!-- Responsive -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!--[if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script><![endif]-->
+    <!--[if lt IE 9]><script src="js/respond.js"></script><![endif]-->
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <!--Page Title-->
+        <section class="head">
+                <div class="container">
+                    <div class="box">
+                        <nav>
+                            <ul class="menu">
+                                <li class="menu__item">
+                                    <a href="#">Отрасли</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#second">Инвестиционные фонды</a>
+                                </li>
+                                <li class="menu__item">
+                                    <img class="logo-head" src="images/logo.PNG">
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#fourth">Эксперты</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="into_form.html">Вход</a><a href="reg_form.html"> / Регистрация</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </section>
+        <!--End Page Title-->
+
+        <!--Page Info-->
+        <section class="page-info">
+            <div class="container">
+                <div class="flex-box-five">
+                    <ul class="bread-crumb">
+                        <li><a href="index.html">Главная</a></li>
+                        <li>Регистрация</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <!-- End Page Info -->
+        <div class="steps">
+            <div class="container register-width">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div class="form-group style-two">
+                            <!-- progressbar -->
+                            <ul id="progressbar" class="progressbar">
+                                <li data-form="reg_form" class="active">Регистрация</li>
+                                <li data-form="details_form">Данные о вас</li>
+                                <li data-form="project_form">Подробности</li>
+                                <li data-form="funder_form" hidden>Подробности</li>
+                                <li data-form="expert_form" hidden>Подробности</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- contact form -->
+
+        <section class="contact-form-section sp-two" id="reg_form">
+            <div class="container register-width">
+                <div class="default-form-area">
+                    <form id="contact-form" name="contact_form" class="contact-form style-two">
+                        <div class="row clearfix">
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Имя"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_email" class="form-control required email" value=""
+                                        placeholder="Фамилия" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_email" class="form-control required email" value=""
+                                        placeholder="Отчество" required="">
+                                </div>
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two" id="email">
+                                    <input type="email" name="form_phone" class="form-control" value="" placeholder="Email"
+                                        required="">
+                                </div>
+                            </div>
+                           
+                        
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two" id="password">
+                                    <span>Пароли не совпадают</span>
+                                    <input name="form_passwd" type="password" class="form-control" value="" placeholder="Пароль"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two" id="password_repeat">
+                                    <input name="form_passwd_repeat" type="password" class="form-control" value=""
+                                        placeholder="Повторите пароль" required="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="details_form.html"> далее</a></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-form-section sp-two" id="details_form" hidden>
+            <div class="container register-width">
+                <div class="default-form-area">
+                    <form id="details-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
+                        <div class="row clearfix">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="citixenship">
+                                <select name="citixenship" class="citixenship" >
+                                    <option value="default-form-area">Гражданство</option>
+                                    <option value="RF">РФ</option>
+                                    <option value="SNG">СНГ</option>
+                                    <option value="other">Другое</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="status">
+                                <select name="status" class="citixenship" >
+                                    <option value="default-form-area">Статус</option>
+                                    <option value="developer">Проектировщик</option>
+                                    <option value="funder">Инвестор</option>
+                                    <option value="expert">Эксперт</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <div class="form-group style-two" id="industry">
+                                        <input type="text" name="industry" class="form-control required email" value=""
+                                            placeholder="Сфера деятельности" required="">
+                                    </div>
+                                </div>
+                            <div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    Прикрепите фото
+                                </div>
+                                <input class="foto" type="file" name="document">
+                            </div>
+                        </div>
+                        <div class="policy-form form-group" id="policy-form">
+                            <p>Вы не ознакомились с политикой сайта</p>
+                            <input type="checkbox" name="agree" id="politics-form " value="agree" autocomplete="on">
+                            Я даю согласие на обработку персональных данных и ознакомлен с <a href="site-policy.html">политикой
+                                сайта.</a>
+                        </div>
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait...">далее</button>
+                                <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-form-section sp-two" id="project_form" hidden>
+            <div class="container">
+
+                <div class="default-form-area sidebar">
+                    <form id="industry-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
+                        <div class="row clearfix">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Название проекта"
+                                        required="">
+                                </div>
+                                <div class="form-group style-two">
+                                    <input type="email" name="form_email" class="form-control required email" value=""
+                                        placeholder="Цель проекта" required="">
+                                </div>
+                                <select name="sphere" class="sphere" required="">
+                                    <option value="default-form-area">Сфера</option>
+                                    <option value="social">Социальное предпринимательство</option>
+                                    <option value="programming">Программирование</option>
+                                    <option value="bussiness">Составление бизнес-плана</option>
+                                    <option value="other1">Другое 1</option>
+                                    <option value="other2">Другое 2</option>
+                                </select>
+                                <div class="form-group style-two">
+                                    <textarea name="form_message" class="form-control textarea required" placeholder="Суть проекта"></textarea>
+                                </div>
+                                <select name="course" class="course" required="">
+                                    <option value="default-form-area">Каких навыков вам не хватает?</option>
+                                    <option value="RF">Презентация проекта</option>
+                                    <option value="programming">Программирование</option>
+                                    <option value="other">Составление бизнес-плана</option>
+                                    <option value="other">Другое 1</option>
+                                    <option value="other">Другое 2</option>
+                                </select>
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <div class="sidebar-widget pricefilter-widget">
+                                    <div class="sidebar-title">
+                                        <h6>Сколько нужно средств на реализацию проекта?</h6> <object>&#8381</object>
+                                    </div>
+
+                                    <div class="range-slider-price" id="range-slider-price"></div><br>
+                                    <div class="form-group" id="fund-analitic">
+                                        <input type="text" name="min-sum" class="val-box" id="min-value-rangeslider">
+                                        <input type="text" name="max-sum" class="val-box" id="max-value-rangeslider">
+                                    </div>
+                                </div>
+                                <div class="form-group style-two">
+                                    <textarea name="form_message" class="form-control textarea required project-sum"
+                                        placeholder="Обоснование суммы"></textarea>
+                                    <input class="file" type="file" name="document">
+                                </div>
+
+                            </div>
+                        </div>
+                        <section class="contact-form-section sp-two analitics">
+                            <div class="container">
+                                <div class="analitics-text">
+                                    <p>
+                                        Вы можете узнать потенциальные фонды, которые могут проинвестировать в ваш
+                                        проект или подобрать курсы для получения недостающих навыков:
+                                    </p>
+                                </div>
+                                <div class="row">
+                                    <div class="col status-btns">
+                                        <div class="theme-btn btn-style-one " id="fund-analitic-btn" type="submit"
+                                            data-loading-text="Please wait..."> анализ фондов</button>
+                                        </div>
+                                    </div>
+                                    <div class="col status-btns">
+                                        <div class="theme-btn btn-style-one " type="submit" id="course-analitic-btn"
+                                            data-loading-text="Please wait..."><a class="continue"> подбор курсов</a></button>
+                                        </div>
+                                    </div>
+
+                                    <!-- <div class="col status-btns">
+                                        <div class="theme-btn btn-style-one " type="submit" data-loading-text="Please wait..."><a class="continue"
+                                                href="project_form.html"> другой анализ</a></button>
+                                        </div>
+                                    </div> -->
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class='funds-data'>
+                            <div class="social-industry no-social-content" id="social-industry">
+
+                                <span>
+                                    Всероссийский конкурс «Импульс добра»,
+                                    Фонд «Наше будущее» - <b>max 460 000 руб</b><br>
+                                </span>
+                                <span>
+                                    Конкурс социальных стартапов SAP UP
+                                    Организатор: SAP СНГ -<b> max 450 000 руб</b><br>
+                                </span>
+                                <span>
+                                    Конкурс социальных предпринимателей «Навстречу
+                                    переменам» Организаторы: Фонд поддержки
+                                    социальных инициатив в сфере детства
+                                    «Навстречу переменам» при поддержке Tele2,
+                                    газеты Metro -<b> max 1 200 000 руб</b><br>
+                                </span>
+                            </div>
+                        </section>
+
+                        <section class="programming-data">
+                            <div class="programming-courses  no-programming-courses" id="programming-courses">
+                                <span><img class=" " src="images/Python.png">
+                                    pyton: 
+                                    <a href="https://www.coursera.org/specializations/python">https://www.coursera.org/specializations/python</a> <br>
+                                </span>
+                                <span><img class=" " src="images/js_logo.jpg">
+                                    js: <a href="https://coursehunters.net/course/JavaScript">https://coursehunters.net/course/JavaScript</a><br>
+                                </span>
+                                <span><img class=" " src="images/ISO_C++_Logo.svg">
+                                    c++: <a href="https://stepik.org/course/7/promo">https://stepik.org/course/7/promo</a><br>
+                                </span>
+                            </div>
+                        </section>
+
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <p>Укажите локацию проекта, кликнув на карте:</p>
+                            <div id="map" style="width:100%; height:300px"></div>
+                            <div class="form-group style-two">
+
+                            </div>
+                        </div>
+
+
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a
+                                        class="continue" href="project_details.html">далее</a></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-form-section sp-two" id="expert_form" hidden>
+            <div class="container register-width">
+                <div class="default-form-area">
+                    <form id="contact-form" name="contact_form" class="contact-form style-two">
+                        <div class="row clearfix">
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text"  class="form-control" value="" placeholder="Основной вид деятельности"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
+                                    <input type="text" class="form-control required email" value=""
+                                        placeholder="Опыт работы (лет)" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group style-two">
+                                        <input type="text" class="form-control required email" value=""
+                                            placeholder="Опыт проектной деятельности" required="">
+                                    </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                    <div class="form-group style-two">
+                                        <input type="file" name="project-exp">
+                                    </div>
+                            </div>
+                            
+                        </div>
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="project_status.html"> далее</a></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="contact-form-section sp-two" id="funder_form" hidden >
+            <div class="container register-width">
+                <div class="default-form-area">
+                    <form id="funder-form" name="funder_form" class="contact-form style-two" enctype="multipart/form-data">
+                        <div class="row clearfix">
+
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="entity">
+                                <select name="entity" class="entity">
+                                    <option value="default-form-area">Лицо</option>
+                                    <option value="fiz">Физическое</option>
+                                    <option value="ur">Юридическое</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="fund" hidden>
+                                <select name="fund" class="fund">
+                                    <option value="default-form-area">Является ли фондом?</option>
+                                    <option value="yes-fund">Да</option>
+                                    <option value="no-fund">Нет</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="organization-name" hidden>
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Название организации"
+                                        required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="primary-working" hidden>
+                                <div class="form-group style-two">
+                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Основной вид деятельности"
+                                        required="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-section-btn text-center">
+                            <div class="form-group style-two">
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait...">готово</button>
+                                <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--End pagewrapper-->
+
+
+    <!-- Scroll Top Button -->
+    <button class="scroll-top scroll-to-target" data-target="html">
+        <span class="fa fa-angle-up"></span>
+    </button>
+
+
+    <!-- jequery plugin -->
+    <!-- <script src="js/jquery.js"></script>
+<script src="js/tether.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script src="js/plugins.js"></script>
+<script src="js/validate.js"></script>
+<script src="js/jquery.fancybox.pack.js"></script>
+<script src="js/jquery.fancybox-media.js"></script>
+
+
+<script src="js/sticky-header.js"></script> -->
+<script src="js/jquery.js"></script>
+<script src="js/plugins.js"></script>
+<script src="js/script.js"></script>
+<script src="js/script_.js"></script>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67" type="text/javascript"></script>
+<script src="js/ymaps.js"></script>
+
+</body>
+
+</html>

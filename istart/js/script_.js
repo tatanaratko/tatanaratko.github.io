@@ -1,5 +1,10 @@
 document.addEventListener('DOMContentLoaded', init);
 
+var FORMS = document.getElementsByClassName("contact-form-section")
+var LABELS = document.querySelectorAll("#progressbar > li")
+
+var serverBody = {}
+
 function init()
 {
     //'submit' - стандартное событие. Оно говорит о том, что форма отправлена.
@@ -40,13 +45,27 @@ function init()
     }
 }
 
+function toggleForm(formId)
+{
+    for(var f of FORMS)
+    {
+        f.hidden = f.getAttribute("id") != formId
+    }
+
+    for(var l of LABELS)
+    {
+        l.classList.remove("active")
+    }
+    document.querySelector(`[data-form=${formId}]`).hidden = false
+    document.querySelector(`[data-form=${formId}]`).classList.add("active")
+}
+
 
 function onSubmitContactForm(e)
 {
     e.preventDefault();
     var formData = new FormData(document.querySelector('#contact-form'));
 
-    var serverBody = {};
     for (var [key, value] of formData.entries())
     {
         serverBody[key] = value;
@@ -62,7 +81,7 @@ function onSubmitContactForm(e)
             input.classList.remove('err');
             input.classList.add('suc');
             
-            setTimeout(() => window.location.href = "details_form.html", 1000);
+            setTimeout(() => toggleForm("details_form"), 1000);
 
         }
         // console.log(serverBody)
@@ -102,10 +121,9 @@ function onSubmitDetailsForm(e)
 
     var formDetails = new FormData(document.querySelector('#details-form'));
 
-    var serverDetails = {};
     for (var [key, value] of formDetails.entries())
     {
-        serverDetails[key] = value;
+        serverBody[key] = value;
     }
 
     var citixenship = formDetails.get('citixenship');
@@ -184,19 +202,19 @@ function onSubmitDetailsForm(e)
     if (mistakes == 0 && status=='developer')
     {
         allGreen();
-        setTimeout(() => window.location.href = "project_form.html", 1000)
+        setTimeout(() => toggleForm("project_form"), 1000)
     }
 
     if (mistakes == 0 && status=='funder')
     {
         allGreen();
-        setTimeout(() => window.location.href = "funder_form.html", 1000)
+        setTimeout(() => toggleForm("funder_form"), 1000)
     }
 
     if (mistakes == 0 && status=='expert')
     {
         allGreen();
-        setTimeout(() => window.location.href = "expert_form.html", 1000)
+        setTimeout(() => toggleForm("expert_form"), 1000)
     }
 
 }
@@ -221,7 +239,9 @@ function onClickFunds()
     var industry = formIndustry.get('sphere');
 
     var mistakes = 0;
-    console.log(typeof maxValue)
+    
+    
+
     if (maxValue <= 500000 && industry == 'social')
     {
         var industryContent = document.getElementById('social-industry');

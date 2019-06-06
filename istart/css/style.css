@@ -6982,7 +6982,7 @@ a:hover,a:focus{
 .team-member-two .inner-box .lower-content {
   position: relative;
   text-align: center;
-  padding: 17px 0px 16px;
+  padding: 5px 0px 0px;
   background-color: #f7f8f9;
 }
 
@@ -7825,8 +7825,8 @@ a {
 
 .quote {
   text-align: center;
-  padding-top: 100px;
-  font-size: 40px;
+  line-height: 60px;
+  font-size: 45px;
 }
 
 .footer {
@@ -7926,3 +7926,214 @@ select.citixenship   {
 .true-primary-working div {
 display: block;
 } */
+
+.flex-main-page {
+  display: flex;
+  align-items: center;
+}
+  
+  .main-page-height {
+    max-height: 660px;
+  }
+  .personal-funder {
+    display: flex;
+  }
+  .personal-funder-data {
+    height: 800px;
+    
+    background-color: #8b8b8b1c;
+    border-radius: 40px;
+    margin: 60px 20px 60px 40px  ;
+    flex-grow: 1;
+    width: 30%;
+    padding: 40px;
+  }
+
+  .personal-funder-collection {
+    height: 800px;
+    background-color: #8b8b8b1c;
+    border-radius: 40px;
+    margin: 60px 40px 60px 20px;
+    flex-grow: 2;
+    width: 70%;
+    padding: 40px;
+  }
+
+  .funder-foto {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 40px;
+}
+
+  .funder-foto_img  {
+      object-fit: cover;
+      width: 260px;
+      height: 260px;
+      border-radius: 50%;
+     
+  }
+  .funder-foto_fullname {
+    color: #0074D9;
+  }
+  .funder-foto_fullname, .funder-foto_mail, .profile-status {
+    text-align: center;
+  }
+
+  .funder-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 30px;
+  }
+
+  .funder-section li {
+    padding-bottom: 20px;
+    font-size: 25px;
+    text-transform: lowercase;
+  }
+
+  .post {
+    display: flex;
+  }
+  .post-icon {
+    height: 36px;
+  }
+
+  .post-quantity {
+    background-color: red;
+    border-radius: 50%;
+    width: 28px;
+    height: 16px;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    padding-bottom: 28px;
+    margin-left: 3px;
+  }
+
+  .funder-profile-data>div,
+  .funder-projects{
+    font-size: 25px;
+  }
+  .funder-profile-data>div>span {
+    color: #0074D9;
+  }
+
+  .tags {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .tag {
+   
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 15px 0px 15px 15px;
+
+    background-image: linear-gradient(to right, #50ceb8 0%, #4830F0 51%,  #50ceb8 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+  }
+
+  .tag:hover {
+    background-position: right center;
+  }
+
+  .funder-profile-keywords {
+    padding-top: 50px;
+  }
+
+  .funder-profile-keywords_default{
+    padding-bottom: 20px;
+  }
+
+  .funder-profile-changing {
+    display: flex;
+    padding-top: 150px;
+  }
+
+  .funder-profile-changing_data {
+    margin-left: 50px;
+    padding: 5px 10px;
+    background-color: #e8c89f;
+    color:#455b8e;
+    
+  }
+
+  .image-box {
+    height: 150px;
+  }
+
+  .item-area {
+    display: flex;
+  }
+  
+  .item-description>img {
+    height: 104px;
+    width: 300px;
+    object-fit: cover;
+    opacity: 1;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    
+  }
+
+  .item-description>img:hover {
+  
+    opacity: .5;
+  }
+
+  .item-description {
+    width: 300px;
+    text-align: center;
+    font-size: 22px;
+    background-color: #5f9ea059;
+    margin-right: 40px;
+}
+
+.item-description_title {
+  color: #0074D9;
+  text-transform: initial;
+  margin-bottom: 2px;
+}
+
+p.item-description_text {
+  line-height: 8px;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+
+.all-projects-btn{
+    padding: 5px 10px;
+    border-radius: 15px;
+    max-width: 301px;
+    margin-top: 40px;
+
+    background-image: linear-gradient(to right, #50ceb8 0%, #4830F0 51%,  #50ceb8 100%);
+    background-size: 200% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,.1);
+    transition: .5s;
+}
+.all-projects-btn a {
+  color: #fff;
+}
+.all-projects-btn:hover {
+background-position: right center;
+}
+
+.item-icon {
+  width: 36px;
+}
+
+.item-sign {
+  display:flex;
+  align-items: center;
+}
+.item-sign:nth-child(1){
+  padding-top: 0;
+}
+.item-text {
+  padding-right: 15px;
+}
