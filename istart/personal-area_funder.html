@@ -45,7 +45,7 @@
                                 <a href="#fourth">Эксперты</a>
                             </li>
                             <li class="menu__item">
-                                <a href="into_form.html">Вход</a><a href="reg_form.html"> / Регистрация</a>
+                                <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
                             </li>
                         </ul>
                     </nav>
@@ -61,7 +61,7 @@
             <div class=" personal-funder-data ">
                 <div class="post">
                     <img class="post-icon" src="images/letter.svg">
-                    <div class="post-quantity">36</div>
+                    <!-- <div class="post-quantity">36</div> -->
                 </div>
                 <figure>
                     <div class="funder-foto">
@@ -70,11 +70,11 @@
                     <div class="profile-status">
                         инвестор
                     </div>
-                    <figcaption class="funder-foto_fullname">
-                        Ратько Татьяна Алексеевна
+                    <figcaption class="funder-foto_fullname" id="fullname">
+
                     </figcaption>
-                    <figcaption class="funder-foto_mail">
-                        tatanatar@yandex.ru
+                    <figcaption class="funder-foto_mail" id="email">
+            
                     </figcaption>
                 </figure>
 
@@ -156,6 +156,27 @@
         <script src="js/script_.js"></script>
 
         <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67" type="text/javascript"></script>
+
+        <script>
+
+            document.addEventListener("DOMContentLoaded", setLogin)
+
+            function setLogin()
+            {
+                var login = localStorage.getItem("login-info");
+    
+                if(login)
+                {
+                    var loginInfo = localStorage.getItem(login);
+                    if(loginInfo)
+                    {
+                        loginInfo = JSON.parse(loginInfo);
+                        document.getElementById("fullname").textContent = loginInfo.lastname + " " + loginInfo.name + " " + loginInfo.fathername;
+                        document.getElementById("email").textContent = loginInfo.email;
+                    }
+                }
+            }
+        </script>
 
 </body>
 

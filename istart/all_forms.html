@@ -44,7 +44,7 @@
                                     <a href="#fourth">Эксперты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="into_form.html">Вход</a><a href="reg_form.html"> / Регистрация</a>
+                                    <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
                                 </li>
                             </ul>
                         </nav>
@@ -74,9 +74,7 @@
                             <ul id="progressbar" class="progressbar">
                                 <li data-form="reg_form" class="active">Регистрация</li>
                                 <li data-form="details_form">Данные о вас</li>
-                                <li data-form="project_form">Подробности</li>
-                                <li data-form="funder_form" hidden>Подробности</li>
-                                <li data-form="expert_form" hidden>Подробности</li>
+                                <li data-form="project_funder_expert_form" >Подробности</li>
                             </ul>
                         </div>
                     </div>
@@ -94,26 +92,26 @@
 
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two">
+                                    <input type="text" name="form_lastname" class="form-control required email" value=""
+                                        placeholder="Фамилия" required="">
+                                </div>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+                                <div class="form-group style-two">
                                     <input type="text" name="form_name" class="form-control" value="" placeholder="Имя"
                                         required="">
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two">
-                                    <input type="text" name="form_email" class="form-control required email" value=""
-                                        placeholder="Фамилия" required="">
-                                </div>
-                            </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12">
-                                <div class="form-group style-two">
-                                    <input type="text" name="form_email" class="form-control required email" value=""
+                                    <input type="text" name="form_fathername" class="form-control required email" value=""
                                         placeholder="Отчество" required="">
                                 </div>
                             </div>
                             
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two" id="email">
-                                    <input type="email" name="form_phone" class="form-control" value="" placeholder="Email"
+                                    <input type="email" name="form_email" class="form-control" value="" placeholder="Email"
                                         required="">
                                 </div>
                             </div>
@@ -135,7 +133,7 @@
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="details_form.html"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue"> далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -173,12 +171,12 @@
                                             placeholder="Сфера деятельности" required="">
                                     </div>
                                 </div>
-                            <div>
+                            <!-- <div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     Прикрепите фото
                                 </div>
                                 <input class="foto" type="file" name="document">
-                            </div>
+                            </div> -->
                         </div>
                         <div class="policy-form form-group" id="policy-form">
                             <p>Вы не ознакомились с политикой сайта</p>
@@ -333,7 +331,7 @@
                             <div class="form-group style-two">
                                 <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
                                 <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a
-                                        class="continue" href="project_details.html">далее</a></button>
+                                        class="continue">далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -376,7 +374,7 @@
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="project_status.html"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue"> далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -421,7 +419,7 @@
 
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait...">готово</button>
+                                <button class="theme-btn btn-style-one" id="register-ready-btn" type="submit" data-loading-text="Please wait...">готово</button>
                                 <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
                                 <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
                             </div>

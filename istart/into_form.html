@@ -44,7 +44,7 @@
                                     <a href="#fourth">Эксперты</a>
                                 </li>
                                 <li class="menu__item">
-                                    <a href="into_form.html">Вход</a><a href="reg_form.html"> / Регистрация</a>
+                                    <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
                                 </li>
                             </ul>
                         </nav>
@@ -71,25 +71,25 @@
         <section class="contact-form-section sp-two">
             <div class="container register-width">
                 <div class="default-form-area">
-                    <form id="contact-form" name="contact_form" class="contact-form style-two">
+                    <form class="contact-form style-two">
                         <div class="row clearfix">
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two" id="email">
-                                    <input type="email" name="form_phone" class="form-control" value="" placeholder="Email"
+                                    <input type="email" id="email-input" name="form_phone" class="form-control" value="" placeholder="Email"
                                         required="">
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two" id="password">
                                     <span>Пароли не совпадают</span>
-                                    <input name="form_passwd" type="password" class="form-control" value="" placeholder="Пароль"
+                                    <input name="form_passwd" id="password-input"  type="password" class="form-control" value="" placeholder="Пароль"
                                         required="">
                                 </div>
                             </div>
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="project_status.html"> войти</a></button>
+                                <button class="theme-btn btn-style-one" id="login-btn"  data-loading-text="Please wait...">войти</button>
                             </div>
                         </div>
                     </form>
@@ -119,7 +119,24 @@
 
 
 <script src="js/sticky-header.js"></script> -->
-    <script src="js/script_.js"></script>
+    <!-- <script src="js/script_.js"></script> -->
+
+    <script>
+        var loginBtn = document.getElementById("login-btn");
+        loginBtn.addEventListener("click", login);
+
+        function login(e)
+        {
+            e.preventDefault();
+            var email = document.getElementById("email-input").value;
+            var password = document.getElementById("password-input").value;
+            if(localStorage.getItem(email + ":" + password))
+            {
+                localStorage.setItem("login-info", email + ":" + password);
+                setTimeout(()=>window.location.href = "personal-area_funder.html", 1000);
+            }
+        }
+    </script>
 
 </body>
 

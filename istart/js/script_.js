@@ -7,6 +7,8 @@ var serverBody = {}
 
 function init()
 {
+
+
     //'submit' - стандартное событие. Оно говорит о том, что форма отправлена.
     // onSubmit - слушатель, который навешивается на событие.
     // getElementById('contact-form') и getElementById('details-form') -
@@ -43,10 +45,22 @@ function init()
         console.log('funder entity listener')
         document.getElementById('entity').addEventListener('click', onClickFunderEntity);
     }
+
+    if(document.getElementById("register-ready-btn"))
+    {
+        document.getElementById("register-ready-btn").addEventListener("click", onClickRegisterReady)
+    }
 }
 
 function toggleForm(formId)
 {
+    var labelId = formId
+
+    if(formId === "expert_form" || formId === "funder_form" || formId === "project_form")
+    {
+        labelId = "project_funder_expert_form";
+    }
+
     for(var f of FORMS)
     {
         f.hidden = f.getAttribute("id") != formId
@@ -56,8 +70,8 @@ function toggleForm(formId)
     {
         l.classList.remove("active")
     }
-    document.querySelector(`[data-form=${formId}]`).hidden = false
-    document.querySelector(`[data-form=${formId}]`).classList.add("active")
+    document.querySelector(`[data-form=${labelId}]`).hidden = false
+    document.querySelector(`[data-form=${labelId}]`).classList.add("active")
 }
 
 
@@ -66,12 +80,12 @@ function onSubmitContactForm(e)
     e.preventDefault();
     var formData = new FormData(document.querySelector('#contact-form'));
 
-    for (var [key, value] of formData.entries())
-    {
-        serverBody[key] = value;
-    }
     var pass = formData.get('form_passwd');
     var passrep = formData.get('form_passwd_repeat');
+    var email = formData.get("form_email");
+    var name = formData.get("form_name");
+    var lastname = formData.get("form_lastname");
+    var fathername = formData.get("form_fathername");
 
     if (pass === passrep)
     {
@@ -81,6 +95,14 @@ function onSubmitContactForm(e)
             input.classList.remove('err');
             input.classList.add('suc');
             
+
+            serverBody.password = pass;
+            serverBody.email = email;
+
+            serverBody.name = name;
+            serverBody.lastname = lastname;
+            serverBody.fathername = fathername;
+
             setTimeout(() => toggleForm("details_form"), 1000);
 
         }
@@ -162,6 +184,7 @@ function onSubmitDetailsForm(e)
 
     else
     {
+        serverBody.citizenship = citixenship
         var selectColor = document.getElementById('citixenship');
         selectColor.classList.remove('err');
         selectColor.classList.add('suc');
@@ -183,7 +206,7 @@ function onSubmitDetailsForm(e)
         selectColor.classList.add('suc');
     }
 
-    if (industry = '')
+    if (industry === '')
     {
         mistakes++;
         var selectColor = document.getElementById('industry');
@@ -194,6 +217,7 @@ function onSubmitDetailsForm(e)
 
     else
     {
+        serverBody.industry = industry
         var selectColor = document.getElementById('industry');
         selectColor.classList.remove('err');
         selectColor.classList.add('suc');
@@ -202,18 +226,21 @@ function onSubmitDetailsForm(e)
     if (mistakes == 0 && status=='developer')
     {
         allGreen();
+        serverBody.status = 'developer'
         setTimeout(() => toggleForm("project_form"), 1000)
     }
 
     if (mistakes == 0 && status=='funder')
     {
         allGreen();
+        serverBody.status = 'funder'
         setTimeout(() => toggleForm("funder_form"), 1000)
     }
 
     if (mistakes == 0 && status=='expert')
     {
         allGreen();
+        serverBody.status = 'expert'
         setTimeout(() => toggleForm("expert_form"), 1000)
     }
 
@@ -227,6 +254,8 @@ function allGreen()
         details.classList.remove('err');
         details.classList.add('suc');
     }
+
+    console.log(serverBody)
 }
 
 
@@ -268,8 +297,6 @@ function onClickFunderEntity()
     fund.hidden = entity!='ur' // прятать всегда когда entity не равно ur
     yurOrganization.hidden = entity!='ur'
     fizPrimaryWork.hidden = entity != "fiz"
-    
-
 
 }
 
@@ -286,4 +313,10 @@ function onClickCourses()
         industryContent.classList.remove('no-programming-courses');
         industryContent.classList.add('programming-courses');
     }
+}
+
+function onClickRegisterReady()
+{
+    localStorage.setItem(serverBody.email + ":" + serverBody.password, JSON.stringify(serverBody))
+    setTimeout(()=>window.location.href = "into_form.html", 1000)
 }
