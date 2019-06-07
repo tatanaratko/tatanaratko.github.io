@@ -61,7 +61,7 @@
             <div class=" personal-funder-data ">
                 <div class="post">
                     <img class="post-icon" src="images/letter.svg">
-                    <!-- <div class="post-quantity">36</div> -->
+                    <div class="post-quantity">0</div>
                 </div>
                 <figure>
                     <div class="funder-foto">
@@ -92,15 +92,89 @@
                     </ul>
                 </table>
             </div>
-            <div class=" personal-funder-collection ">
-                Veniam enim ea non est proident sint id ad ea in cupidatat proident dolor.
-                Do nulla quis amet nisi amet aliquip cillum et dolor aute consequat fugiat ea.
-                Excepteur in eu nostrud amet nulla voluptate amet est voluptate exercitation eu
-                dolore voluptate. Duis mollit ut Lorem enim quis excepteur commodo reprehenderit
-                irure eu do eiusmod amet. Culpa adipisicing ullamco aliquip dolore dolore id
-                exercitation consectetur dolor in elit ad exercitation culpa. In proident amet
-                dolore ex enim ut id laboris enim ipsum.
-            </div>
+            <div class="personal-funder-collection">
+                    <div class="funder-projects">
+                        <div class="funder-projects_item">
+                            <div class="item-sign">
+                                <div class="item-text">
+                                    добавленные
+                                </div>
+                                <div class="item-icon"><img src="images/add.svg"></div>
+                            </div>
+                            <div class="item-area">
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/2.jpg">
+                                    <p class="item-description_title"><a href="#">название</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/11.jpg">
+                                    <p class="item-description_title"><a href="#">название</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/5.jpg">
+                                    <p class="item-description_title"><a href="#">название</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="funder-projects_item">
+                            <div class="item-sign">
+                                <div class="item-text">
+                                    доступны к просмотру
+                                </div>
+                                <div class="item-icon"><img src="images/view.svg"></div>
+                            </div>
+                            <div class="item-area">
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/1jpg.jpg">
+                                    <p class="item-description_title"><a href="#">ghghh аппjjujg</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/снейл.jpg">
+                                    <p class="item-description_title"><a href="#">Снейл</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                            </div>
+    
+                        </div>
+                        <div class="funder-projects_item">
+                            <div class="item-sign">
+                                <div class="item-text">
+                                    возможно, вам будут интересны
+                                </div>
+                                <div class="item-icon"><img src="images/idea.svg"></div>
+                            </div>
+                            <div class="item-area">
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/автоматика.jpg">
+                                    <p class="item-description_title"><a href="#">Автоматика</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/9.jpg">
+                                    <p class="item-description_title"><a href="#">Ястро</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                                <div class="item-description">
+                                    <img src="images/проекты20.35/8.jpg">
+                                    <p class="item-description_title"><a href="#">Дизельное топливо</a></p>
+                                    <p class="item-description_text">текст текст текст</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="funder-projects_item">
+                            <div class="all-projects-btn">
+                                <a href="projects.html">посмотреть все проекты</a>
+                            </div>
+                            <div class="item-description">
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
         </div>
 
 
@@ -171,7 +245,7 @@
                     if(loginInfo)
                     {
                         loginInfo = JSON.parse(loginInfo);
-                        document.getElementById("fullname").textContent = loginInfo.lastname + " " + loginInfo.name + " " + loginInfo.fathername;
+                        document.getElementById("fullname").textContent = loginInfo.entity == "ur" ? loginInfo.organizationName : loginInfo.lastname + " " + loginInfo.name + " " + loginInfo.fathername;
                         document.getElementById("email").textContent = loginInfo.email;
                     }
                 }

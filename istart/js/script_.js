@@ -284,6 +284,7 @@ function onClickFunderEntity()
     var funderEntity = new FormData(document.querySelector('#funder-form'));
 
     var entity = funderEntity.get('entity');
+    serverBody.entity = entity
     var fund = funderEntity.get('fund');
     var organizationName = funderEntity.get('organization-name');
     var primaryWorking = funderEntity.get('primary-working');
@@ -317,6 +318,11 @@ function onClickCourses()
 
 function onClickRegisterReady()
 {
+    var yurOrganization=document.getElementById('organization-name');
+    if(yurOrganization)
+    {
+        serverBody.organizationName = yurOrganization.querySelector("input").value;
+    }
     localStorage.setItem(serverBody.email + ":" + serverBody.password, JSON.stringify(serverBody))
     setTimeout(()=>window.location.href = "into_form.html", 1000)
 }
