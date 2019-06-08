@@ -8124,7 +8124,7 @@ background-position: right center;
 }
 
 .item-icon {
-  width: 36px;
+  width: 15px;
 }
 
 .item-sign {
@@ -8136,4 +8136,15 @@ background-position: right center;
 }
 .item-text {
   padding-right: 15px;
+  padding-top: 20px;
+}
+
+.reg-suc {
+  font-size: 27px;
+  line-height: 43px;
+  padding-bottom: 50px;
+}
+
+.funder-profile-data {
+  line-height: 50px;
 }
