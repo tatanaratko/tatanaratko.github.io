@@ -8148,3 +8148,7 @@ background-position: right center;
 .funder-profile-data {
   line-height: 50px;
 }
+
+select.main-sphere {
+  margin-bottom: 15px;
+}
