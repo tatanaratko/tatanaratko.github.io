@@ -27,30 +27,30 @@
     <div class="page-wrapper">
         <!--Page Title-->
         <section class="head">
-                <div class="container">
-                    <div class="box">
-                        <nav>
-                            <ul class="menu">
-                                <li class="menu__item">
-                                    <a href="#">Отрасли</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#second">Инвестиционные фонды</a>
-                                </li>
-                                <li class="menu__item">
-                                    <img class="logo-head" src="images/logo.PNG">
-                                </li>
-                                <li class="menu__item">
-                                    <a href="#fourth">Эксперты</a>
-                                </li>
-                                <li class="menu__item">
-                                    <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
-                                </li>
-                            </ul>
-                        </nav>
-                    </div>
+            <div class="container">
+                <div class="box">
+                    <nav>
+                        <ul class="menu">
+                            <li class="menu__item">
+                                <a href="#">Отрасли</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="#second">Инвестиционные фонды</a>
+                            </li>
+                            <li class="menu__item">
+                                <img class="logo-head" src="images/logo.PNG">
+                            </li>
+                            <li class="menu__item">
+                                <a href="#fourth">Эксперты</a>
+                            </li>
+                            <li class="menu__item">
+                                <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-            </section>
+            </div>
+        </section>
         <!--End Page Title-->
 
         <!--Page Info-->
@@ -74,7 +74,7 @@
                             <ul id="progressbar" class="progressbar">
                                 <li data-form="reg_form" class="active">Регистрация</li>
                                 <li data-form="details_form">Данные о вас</li>
-                                <li data-form="project_funder_expert_form" >Подробности</li>
+                                <li data-form="project_funder_expert_form">Подробности</li>
                             </ul>
                         </div>
                     </div>
@@ -90,7 +90,7 @@
                         <div class="row clearfix">
 
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <!--                            <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two">
                                     <input type="text" name="form_lastname" class="form-control required email" value=""
                                         placeholder="Фамилия" required="">
@@ -108,20 +108,18 @@
                                         placeholder="Отчество" required="">
                                 </div>
                             </div>
-                            
+-->
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two" id="email">
-                                    <input type="email" name="form_email" class="form-control" value="" placeholder="Email"
-                                        required="">
+                                    <input type="email" name="form_email" class="form-control" value=""
+                                        placeholder="Email" required="">
                                 </div>
                             </div>
-                           
-                        
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two" id="password">
                                     <span>Пароли не совпадают</span>
-                                    <input name="form_passwd" type="password" class="form-control" value="" placeholder="Пароль"
-                                        required="">
+                                    <input name="form_passwd" type="password" class="form-control" value=""
+                                        placeholder="Пароль" required="">
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -133,7 +131,8 @@
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit"
+                                    data-loading-text="Please wait..."><a class="continue"> далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -145,32 +144,41 @@
         <section class="contact-form-section sp-two" id="details_form" hidden>
             <div class="container register-width">
                 <div class="default-form-area">
-                    <form id="details-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
+                    <form id="details-form" name="contact_form" class="contact-form style-two"
+                        enctype="multipart/form-data">
                         <div class="row clearfix">
 
                             <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="citixenship">
-                                <select name="citixenship" class="citixenship" >
+                                <select name="citixenship" class="citixenship">
                                     <option value="default-form-area">Гражданство</option>
                                     <option value="RF">РФ</option>
                                     <option value="SNG">СНГ</option>
                                     <option value="other">Другое</option>
                                 </select>
                             </div>
-                            
+
                             <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="status">
-                                <select name="status" class="citixenship" >
+                                <select name="status" class="citixenship">
                                     <option value="default-form-area">Статус</option>
                                     <option value="developer">Проектировщик</option>
                                     <option value="funder">Инвестор</option>
                                     <option value="expert">Эксперт</option>
                                 </select>
                             </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <div class="form-group style-two" id="industry">
-                                        <input type="text" name="industry" class="form-control required email" value=""
-                                            placeholder="Сфера деятельности" required="">
-                                    </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="main-sphere">
+                                <select name="main-sphere" class="main-sphere">
+                                    <option value="default-form-area">Основной вид деятельности</option>
+                                    <option value="study">Учёба в ВУЗе, колледже</option>
+                                    <option value="company-work">Работа в компании</option>
+                                    <option value="self-work">Самозанятость</option>
+                                </select>
+                            </div>
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="social-link">
+                                <div class="form-group style-two">
+                                    <input type="text" name="social-link" class="form-control required email"
+                                        value="" placeholder="Ссылка на социальную сеть" required="">
                                 </div>
+                            </div>
                             <!-- <div>
                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
                                     Прикрепите фото
@@ -181,12 +189,14 @@
                         <div class="policy-form form-group" id="policy-form">
                             <p>Вы не ознакомились с политикой сайта</p>
                             <input type="checkbox" name="agree" id="politics-form " value="agree" autocomplete="on">
-                            Я даю согласие на обработку персональных данных и ознакомлен с <a href="site-policy.html">политикой
+                            Я даю согласие на обработку персональных данных и ознакомлен с <a
+                                href="site-policy.html">политикой
                                 сайта.</a>
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait...">далее</button>
+                                <button class="theme-btn btn-style-one" type="submit"
+                                    data-loading-text="Please wait...">далее</button>
                                 <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
                                 <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
                             </div>
@@ -201,12 +211,13 @@
             <div class="container">
 
                 <div class="default-form-area sidebar">
-                    <form id="industry-form" name="contact_form" class="contact-form style-two" enctype="multipart/form-data">
+                    <form id="industry-form" name="contact_form" class="contact-form style-two"
+                        enctype="multipart/form-data">
                         <div class="row clearfix">
                             <div class="col-md-6 col-sm-6 col-xs-12">
                                 <div class="form-group style-two">
-                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Название проекта"
-                                        required="">
+                                    <input type="text" name="form_name" class="form-control" value=""
+                                        placeholder="Название проекта" required="">
                                 </div>
                                 <div class="form-group style-two">
                                     <input type="email" name="form_email" class="form-control required email" value=""
@@ -221,7 +232,8 @@
                                     <option value="other2">Другое 2</option>
                                 </select>
                                 <div class="form-group style-two">
-                                    <textarea name="form_message" class="form-control textarea required" placeholder="Суть проекта"></textarea>
+                                    <textarea name="form_message" class="form-control textarea required"
+                                        placeholder="Суть проекта"></textarea>
                                 </div>
                                 <select name="course" class="course" required="">
                                     <option value="default-form-area">Каких навыков вам не хватает?</option>
@@ -269,7 +281,8 @@
                                     </div>
                                     <div class="col status-btns">
                                         <div class="theme-btn btn-style-one " type="submit" id="course-analitic-btn"
-                                            data-loading-text="Please wait..."><a class="continue"> подбор курсов</a></button>
+                                            data-loading-text="Please wait..."><a class="continue"> подбор
+                                                курсов</a></button>
                                         </div>
                                     </div>
 
@@ -306,14 +319,18 @@
                         <section class="programming-data">
                             <div class="programming-courses  no-programming-courses" id="programming-courses">
                                 <span><img class=" " src="images/Python.png">
-                                    pyton: 
-                                    <a href="https://www.coursera.org/specializations/python">https://www.coursera.org/specializations/python</a> <br>
+                                    pyton:
+                                    <a
+                                        href="https://www.coursera.org/specializations/python">https://www.coursera.org/specializations/python</a>
+                                    <br>
                                 </span>
                                 <span><img class=" " src="images/js_logo.jpg">
-                                    js: <a href="https://coursehunters.net/course/JavaScript">https://coursehunters.net/course/JavaScript</a><br>
+                                    js: <a
+                                        href="https://coursehunters.net/course/JavaScript">https://coursehunters.net/course/JavaScript</a><br>
                                 </span>
                                 <span><img class=" " src="images/ISO_C++_Logo.svg">
-                                    c++: <a href="https://stepik.org/course/7/promo">https://stepik.org/course/7/promo</a><br>
+                                    c++: <a
+                                        href="https://stepik.org/course/7/promo">https://stepik.org/course/7/promo</a><br>
                                 </span>
                             </div>
                         </section>
@@ -329,9 +346,10 @@
 
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden" value="">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a
-                                        class="continue">далее</a></button>
+                                <input id="form_botcheck" name="form_botcheck" class="form-control" type="hidden"
+                                    value="">
+                                <button class="theme-btn btn-style-one" type="submit"
+                                    data-loading-text="Please wait..."><a class="continue">далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -347,12 +365,12 @@
                         <div class="row clearfix">
 
 
-                            <div class="col-md-12 col-sm-12 col-xs-12">
+                            <!-- <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two">
-                                    <input type="text"  class="form-control" value="" placeholder="Основной вид деятельности"
-                                        required="">
+                                    <input type="text" class="form-control" value=""
+                                        placeholder="Основной вид деятельности" required="">
                                 </div>
-                            </div>
+                            </div> -->
                             <div class="col-md-12 col-sm-12 col-xs-12">
                                 <div class="form-group style-two">
                                     <input type="text" class="form-control required email" value=""
@@ -360,21 +378,22 @@
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group style-two">
-                                        <input type="text" class="form-control required email" value=""
-                                            placeholder="Опыт проектной деятельности" required="">
-                                    </div>
+                                <div class="form-group style-two">
+                                    <input type="text" class="form-control required email" value=""
+                                        placeholder="Опыт проектной деятельности" required="">
+                                </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                    <div class="form-group style-two">
-                                        <input type="file" name="project-exp">
-                                    </div>
+                                <div class="form-group style-two">
+                                    <input type="file" name="project-exp">
+                                </div>
                             </div>
-                            
+
                         </div>
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue"> далее</a></button>
+                                <button class="theme-btn btn-style-one" type="submit"
+                                    data-loading-text="Please wait..."><a class="continue"> далее</a></button>
                             </div>
                         </div>
                     </form>
@@ -383,10 +402,11 @@
             </div>
         </section>
 
-        <section class="contact-form-section sp-two" id="funder_form" hidden >
+        <section class="contact-form-section sp-two" id="funder_form" hidden>
             <div class="container register-width">
                 <div class="default-form-area">
-                    <form id="funder-form" name="funder_form" class="contact-form style-two" enctype="multipart/form-data">
+                    <form id="funder-form" name="funder_form" class="contact-form style-two"
+                        enctype="multipart/form-data">
                         <div class="row clearfix">
 
                             <div class="col-md-12 col-sm-12 col-xs-12 form-group" id="entity">
@@ -403,23 +423,25 @@
                                     <option value="no-fund">Нет</option>
                                 </select>
                             </div>
-                            <div class="col-md-12 col-sm-12 col-xs-12" id="organization-name" name="organization-name" hidden>
+                            <div class="col-md-12 col-sm-12 col-xs-12" id="organization-name" name="organization-name"
+                                hidden>
                                 <div class="form-group style-two">
-                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Название организации"
-                                        required="">
+                                    <input type="text" name="form_name" class="form-control" value=""
+                                        placeholder="Название организации" required="">
                                 </div>
                             </div>
                             <div class="col-md-12 col-sm-12 col-xs-12" id="primary-working" hidden>
                                 <div class="form-group style-two">
-                                    <input type="text" name="form_name" class="form-control" value="" placeholder="Основной вид деятельности"
-                                        required="">
+                                    <input type="text" name="form_name" class="form-control" value=""
+                                        placeholder="Основной вид деятельности" required="">
                                 </div>
                             </div>
                         </div>
 
                         <div class="contact-section-btn text-center">
                             <div class="form-group style-two">
-                                <button class="theme-btn btn-style-one" id="register-ready-btn" type="submit" data-loading-text="Please wait...">готово</button>
+                                <button class="theme-btn btn-style-one" id="register-ready-btn" type="submit"
+                                    data-loading-text="Please wait...">готово</button>
                                 <!-- <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="investor.html"> далее</a></button>
                                 <button class="theme-btn btn-style-one" type="submit" data-loading-text="Please wait..."><a class= "continue" href="expert.html"> далее</a></button> -->
                             </div>
@@ -451,13 +473,14 @@
 
 
 <script src="js/sticky-header.js"></script> -->
-<script src="js/jquery.js"></script>
-<script src="js/plugins.js"></script>
-<script src="js/script.js"></script>
-<script src="js/script_.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/script_.js"></script>
 
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67" type="text/javascript"></script>
-<script src="js/ymaps.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67"
+        type="text/javascript"></script>
+    <script src="js/ymaps.js"></script>
 
 </body>
 
