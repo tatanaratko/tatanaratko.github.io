@@ -5,52 +5,25 @@ var LABELS = document.querySelectorAll("#progressbar > li")
 
 var serverBody = {}
 
-function init()
-{
-
-
-    //'submit' - стандартное событие. Оно говорит о том, что форма отправлена.
-    // onSubmit - слушатель, который навешивается на событие.
-    // getElementById('contact-form') и getElementById('details-form') -
-    // источники событий, у разных источников могут быть разные слушатели
-    // одного и того же события
-    //Здесь мы проверяем, нашли ли айди и подключаем слушателя событий
-
-    if (document.getElementById('contact-form'))
-    {
-        console.log("contact form listener")
-        document.getElementById('contact-form').addEventListener('submit', onSubmitContactForm);
-    }
-
-    if (document.getElementById('details-form'))
-    {
-        console.log("details form listener")
-        document.getElementById('details-form').addEventListener('submit', onSubmitDetailsForm);
-    }
-
-    if (document.getElementById('fund-analitic-btn'))
-    {
-        console.log('fund analitic listener')
-        document.getElementById('fund-analitic-btn').addEventListener('click', onClickFunds);
-    }
-
-    if (document.getElementById('course-analitic-btn'))
-    {
-        console.log('course analitic listener')
-        document.getElementById('course-analitic-btn').addEventListener('click', onClickCourses);
-    }
-
-    if (document.getElementById('entity'))
-    {
-        console.log('funder entity listener')
-        document.getElementById('entity').addEventListener('click', onClickFunderEntity);
-    }
-
-    if(document.getElementById("register-ready-btn"))
-    {
-        document.getElementById("register-ready-btn").addEventListener("click", onClickRegisterReady)
+function addListenerIfExist(elementToListenId, eventType, listener){
+    var element=document.getElementById(elementToListenId);
+    if (element){
+        console.log('listener is here')
+        element.addEventListener(eventType,listener);
     }
 }
+
+function init()
+{   
+    addListenerIfExist('contact-form','submit',onSubmitContactForm);
+    addListenerIfExist('details-form','submit',onSubmitDetailsForm);
+    addListenerIfExist('fund-analitic-btn','click',onClickFunds);
+    //Нужно редактировать onSubmitCourses, курсы должны появляться в зависимости от сферы проекта.
+    addListenerIfExist('course-analitic-btn','submit',onSubmitCourses);
+    addListenerIfExist('entity', 'click', onClickFunderEntity);
+    addListenerIfExist('register-ready-btn', 'click', onClickRegisterReady);
+}
+
 
 function toggleForm(formId)
 {
@@ -95,32 +68,15 @@ function onSubmitContactForm(e)
             input.classList.remove('err');
             input.classList.add('suc');
             
-
             serverBody.password = pass;
             serverBody.email = email;
-
             serverBody.name = name;
             serverBody.lastname = lastname;
             serverBody.fathername = fathername;
 
             setTimeout(() => toggleForm("details_form"), 1000);
-
         }
-        // console.log(serverBody)
-        // fetch('http://localhost:3050/reg', {
-        // 	method: "POST",
-        // 	headers: {
-        // 		'Accept': 'application/json',
-        // 		'Content-Type': 'application/json'
-        // 	  },
-        // 	body: JSON.stringify(serverBody)
-        // })
-        // 	.then(function(response) {
-        // 		return response.json()
-        // 	})
-        // 	.then(function (body) {
-        // 		console.log(body)
-        // 	})
+        
     }
 
     else
@@ -132,9 +88,22 @@ function onSubmitContactForm(e)
         passrepColor.classList.remove('suc');
         passColor.classList.add('err');
         passrepColor.classList.add('err');
-
-
     }
+};
+
+function setOneOfClasses(elementId, removeClass, addClass)
+{
+    var element = document.getElementById(elementId);
+    element.classList.remove(removeClass);
+    element.classList.add(addClass);
+}
+
+
+
+function validate(isValid, elementId, classOne, classTwo)
+{
+    isValid ? setOneOfClasses(elementId, classOne, classTwo) : setOneOfClasses(elementId, classTwo, classOne);
+    return +!isValid
 }
 
 function onSubmitDetailsForm(e)
@@ -150,77 +119,64 @@ function onSubmitDetailsForm(e)
 
     var citixenship = formDetails.get('citixenship');
     var status = formDetails.get('status');
-    var industry = formDetails.get('industry');
+    var industry = formDetails.get('social-link');
     var agree = formDetails.get('agree');
+    var mainSphere = formDetails.get('main-sphere');
+    var socialLink = formDetails.get('social-link');
 
     // Сколько полей заполено неправильно
     var mistakes = 0;
 
     //classList - взять весь список классов из стилей с указанным значением
-    if (agree == 'agree')
+    mistakes += validate(agree == 'agree', "policy-form", "no-agreement", "yes-agreement")// validate(false,"policy-form", "no-agreement", "yes-agreement" )
+ 
+
+    mistakes += validate(citixenship != 'default-form-area', "citixenship", "err", "suc");
+    // if (citixenship == 'default-form-area')
+    // {
+    //     mistakes++;
+
+    //     setOneOfClasses('citixenship','suc','err');
+    // }
+
+    // else
+    // {
+    //     serverBody.citizenship = citixenship;
+    //     setOneOfClasses('citixenship', 'err', 'suc');
+    // }
+
+    if (mainSphere == 'default-form-area')
     {
-
-        var yesAgree = document.getElementById('policy-form');
-        yesAgree.classList.remove('no-agreement');
-        yesAgree.classList.add('yes-agreement');
-
+        mistakes++;
+        setOneOfClasses('main-sphere','suc','err');
     }
 
     else
     {
-        mistakes++;
-        var notAgree = document.getElementById('policy-form');
-        notAgree.classList.remove('yes-agreement');
-        notAgree.classList.add('no-agreement');
-    }
-
-    if (citixenship == 'default-form-area')
-    {
-        mistakes++;
-        var selectColor = document.getElementById('citixenship');
-        selectColor.classList.remove('suc');
-        selectColor.classList.add('err');
-    }
-
-    else
-    {
-        serverBody.citizenship = citixenship
-        var selectColor = document.getElementById('citixenship');
-        selectColor.classList.remove('err');
-        selectColor.classList.add('suc');
+        setOneOfClasses('main-sphere', 'err','suc');
     }
 
     if (status == 'default-form-area')
     {
         mistakes++;
-        var selectColor = document.getElementById('status');
-        selectColor.classList.remove('suc');
-        selectColor.classList.add('err');
-
+        setOneOfClasses('status', 'suc','err');
     }
 
     else
     {
-        var selectColor = document.getElementById('status');
-        selectColor.classList.remove('err');
-        selectColor.classList.add('suc');
+        setOneOfClasses('status', 'err', 'suc');
     }
 
     if (industry === '')
     {
         mistakes++;
-        var selectColor = document.getElementById('industry');
-        selectColor.classList.remove('suc');
-        selectColor.classList.add('err');
-
+        setOneOfClasses('social-link','suc','err');
     }
 
     else
     {
-        serverBody.industry = industry
-        var selectColor = document.getElementById('industry');
-        selectColor.classList.remove('err');
-        selectColor.classList.add('suc');
+        serverBody.industry = industry;
+        setOneOfClasses('social-link', 'err','suc');
     }
     // Если нигде не ошиблись - подсвечиваем всё зелёным
     if (mistakes == 0 && status=='developer')
