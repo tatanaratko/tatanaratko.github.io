@@ -5,6 +5,15 @@ var LABELS = document.querySelectorAll("#progressbar > li")
 
 var serverBody = {}
 
+
+document.getElementById('menu-down_projects').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_projects").hidden = false)
+document.getElementById('menu-down_projects').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_projects").hidden = true)
+document.getElementById('menu-down_funders').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_funders").hidden = false)
+document.getElementById('menu-down_funders').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_funders").hidden = true)
+document.getElementById('menu-down_experts').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_experts").hidden = false)
+document.getElementById('menu-down_experts').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_experts").hidden = true)
+
+
 function addListenerIfExist(elementToListenId, eventType, listener){
     var element=document.getElementById(elementToListenId);
     if (element){
@@ -282,3 +291,4 @@ function onClickRegisterReady()
     localStorage.setItem(serverBody.email + ":" + serverBody.password, JSON.stringify(serverBody))
     setTimeout(()=>window.location.href = "into_form.html", 1000)
 }
+
