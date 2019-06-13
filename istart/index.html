@@ -10,7 +10,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/plugin.css" rel="stylesheet">
-
+    <link
+        href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+        rel="stylesheet">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -31,62 +33,65 @@
             <div class="container">
                 <div class="box">
                     <nav>
-                        <ul class="menu">
+                        <ul class="menu-main">
                             <li class="menu__item">
-                                <a href="#">Проекты</a>
+                                <a class="logo-text" href="index.html">Start</a>
                             </li>
-                            <li class="menu__item">
-                                <a href="#second">Инвесторы</a>
-                            </li>
-                            <li class="menu__item">
-                                <img class="logo-head" src="images/logo.PNG">
-                            </li>
-                            <li class="menu__item">
-                                <a href="#fourth">Эксперты</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
-                            </li>
+                            <div class="menu__item_block">
+                                <li class="menu__item menu__item_center">
+                                    <a href="#">Проекты</a>
+                                </li>
+                                <li class="menu__item menu__item_center">
+                                    <a href="#second">Инвесторы</a>
+                                </li>
+                                <li class="menu__item menu__item_center">
+                                    <a href="#fourth">Эксперты</a>
+                                </li>
+                            </div>
+                            <div class="menu__item-right">
+                                <li class="menu__item">
+                                    <img src="images/search.png">
+                                </li>
+                                <li class="menu__item">
+                                    <a class="menu__item-login" href="into_form.html">Вход </a><a
+                                        class="menu__item-signup" href="all_forms.html"> Регистрация</a>
+                                </li>
+                            </div>
                         </ul>
                     </nav>
                 </div>
             </div>
         </section>
         <!--End Page Title-->
-        <section class="first-display main-page-height">
-            <div class="container">
-                <div class="row flex-main-page">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <img class="first-illustration" src="images/first illustration.svg">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="quote">Мы не делаем ничего в этой жизни, если не имеем <a href="projects.html">идеи,</a></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="second-display main-page-height">
-            <div class="container">
-                <div class="row flex-main-page">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="quote">над которой готовы усердно работать...</div>
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <img class="first-illustration" src="images/second illustration.svg">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="first-display main-page-height">
-            <div class="container">
-                <div class="row flex-main-page">
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <img class="first-illustration" src="images/3.PNG">
-                    </div>
-                    <div class="col-md-6 col-sm-6 col-xs-12">
-                        <div class="quote">и добиваться результата.</div>
+        <section class="first-display">
+            <div class="first-display_bg">
+                <div class="container description-wrap">
+                    <div class="main-description">
+                        <div class=" col main-description_sector main-description_startap">
+                            <h3 class="main-description_header">Стартапы</h3>
+                            <div class="main-description_text">
+                                Станьте резидентом профильного акселерата,
+                                получите инвестиции и экспертную поддержку
+                                для ускореннного развития.
+                            </div>
+                            <div class="more-description"><img src="images/more.png"></div>
+                        </div>
+                        <div class="col main-description_sector main-description_funder">
+                            <h3 class="main-description_header">Инвесторы</h3>
+                            <div class="main-description_text">
+                                Сократите время на поиск и анализ инвестиционных идей.
+                                Получите доступ к базе проектов, прошедших акселерацию.
+                            </div>
+                            <div class="more-description"><img src="images/more.png"></div>
+                        </div>
+                        <div class="col main-description_sector main-description_expert">
+                            <h3 class="main-description_header">Эксперты</h3>
+                            <div class="main-description_text">
+                                Заработайте на экспертизе проектов в профильной области
+                                и повысьте свою узнаваемость.
+                            </div>
+                            <div class="more-description"><img src="images/more.png"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -142,7 +147,8 @@
         <script src="js/script.js"></script>
         <script src="js/script_.js"></script>
 
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67" type="text/javascript"></script>
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=7f44c0f6-28fb-4394-a3b5-d7c585ddca67"
+            type="text/javascript"></script>
 
 </body>
 
