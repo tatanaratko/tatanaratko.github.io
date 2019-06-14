@@ -10,7 +10,9 @@
     <link href="css/style.css" rel="stylesheet">
     <link href="css/responsive.css" rel="stylesheet">
     <link href="css/plugin.css" rel="stylesheet">
-
+    <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,800,900&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
+    rel="stylesheet">
 
     <!--Favicon-->
     <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
@@ -28,30 +30,50 @@
     <div class="page-wrapper">
         <!--Page Title-->
         <section class="head">
-            <div class="container">
-                <div class="box">
-                    <nav>
-                        <ul class="menu">
-                            <li class="menu__item">
-                                <a href="#">Проекты</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="#second">Инвесторы</a>
-                            </li>
-                            <li class="menu__item">
-                                <img class="logo-head" src="images/logo.PNG">
-                            </li>
-                            <li class="menu__item">
-                                <a href="#fourth">Эксперты</a>
-                            </li>
-                            <li class="menu__item">
-                                <a href="into_form.html">Вход</a><a href="all_forms.html"> / Регистрация</a>
-                            </li>
-                        </ul>
-                    </nav>
+                <div class="container head-container">
+                    <div class="box">
+                        <nav>
+                            <ul class="menu-main">
+                                <li class="menu__item">
+                                    <a class="logo-text" href="index.html">iStart</a>
+    
+                                </li>
+                                <div class="menu__item_block">
+                                    <li class="menu__item menu__item_center" id="menu-down_projects">
+                                        <a href="#">Проекты</a>
+                                        <ul class="menu-dropdown" id="menu-dropdown_projects" hidden>
+                                            <li><a href="projects.html">Стартапам</a></li>
+                                            <li><a href="projects.html">Проекты</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_center"id="menu-down_funders">
+                                        <a href="#">Инвесторы</a>
+                                        <ul class="menu-dropdown" id="menu-dropdown_funders" hidden>
+                                            <li><a href=".html">Инвесторам</a></li>
+                                            <li><a href="funders.html">Инвесторы</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu__item menu__item_center" id="menu-down_experts">
+                                        <a href="#">Эксперты</a>
+                                        <ul class="menu-dropdown" id="menu-dropdown_experts" hidden>
+                                            <li><a href=".html">Как стать экспертом?</a></li>
+                                            <li><a href="experts.html">Эксперты</a></li>
+                                        </ul>
+                                    </li>
+                                </div>
+                                <div class="menu__item-right">
+                                    <li class="menu__item search">
+                                        <img src="images/search.png">
+                                    </li>
+                                    <li class="menu__item">
+                                        <a class="menu__item-login" href="into_form.html">funder@gmail.com </a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <!--End Page Title-->
 
 
@@ -181,23 +203,44 @@
         <!--Page Info-->
 
         <section class="footer">
-            <div class="container">
-                <div class="footer-info">
-                    <div class="col">
-                        Контакты
-                    </div>
-                    <div class="col">
-                        О нас
-                    </div>
-                    <div class="col">
-                        Политика
-                    </div>
-                    <div class="col">
-                        Партнеры
+                <div class="container">
+                    <div class="footer-info">
+                        <div class="col">
+                            <div class="footer-title">Контакты</div>
+                            <div class="footer-text">
+                                <div class="">7 (777) 777-77-77</div>
+                                <div class="">istart@istart.com</div>
+                            </div>
+    
+                        </div>
+                        <div class="col">
+                            <div class="footer-title">Полезно</div>
+                            <div class="footer-text">
+                                <div class=""><a href="">О нас</a></div>
+                                <div class=""><a href="">Система оплаты</a></div>
+                                <div class=""><a href="">FAQ</a></div>
+                            </div>
+    
+                        </div>
+                        <div class="col">
+                            <div class="footer-title">Политика</div>
+                            <div class="footer-text">
+                                <div class=""><a href="">Персональные данные</a></div>
+                                <div class=""><a href="">Политика сайта</a></div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="footer-title">Партнеры</div>
+                            <div class="footer-text">
+                                <div class=""><a href="">Яндекс.Деньги</a></div>
+                                <div class=""><a href="">НТИ 20.35</a></div>
+                                <div class=""><a href="">АСИ</a></div>
+                            </div>
+    
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
         <!-- <section class="page-info">
             <div class="container">
                 <div class="flex-box-five">

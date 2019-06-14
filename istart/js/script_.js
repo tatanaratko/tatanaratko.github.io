@@ -6,29 +6,31 @@ var LABELS = document.querySelectorAll("#progressbar > li")
 var serverBody = {}
 
 
-document.getElementById('menu-down_projects').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_projects").hidden = false)
-document.getElementById('menu-down_projects').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_projects").hidden = true)
-document.getElementById('menu-down_funders').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_funders").hidden = false)
-document.getElementById('menu-down_funders').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_funders").hidden = true)
-document.getElementById('menu-down_experts').addEventListener("mouseover", (e)=>document.getElementById("menu-dropdown_experts").hidden = false)
-document.getElementById('menu-down_experts').addEventListener("mouseout", (e)=>document.getElementById("menu-dropdown_experts").hidden = true)
+document.getElementById('menu-down_projects').addEventListener("mouseover", (e) => document.getElementById("menu-dropdown_projects").hidden = false)
+document.getElementById('menu-down_projects').addEventListener("mouseout", (e) => document.getElementById("menu-dropdown_projects").hidden = true)
+document.getElementById('menu-down_funders').addEventListener("mouseover", (e) => document.getElementById("menu-dropdown_funders").hidden = false)
+document.getElementById('menu-down_funders').addEventListener("mouseout", (e) => document.getElementById("menu-dropdown_funders").hidden = true)
+document.getElementById('menu-down_experts').addEventListener("mouseover", (e) => document.getElementById("menu-dropdown_experts").hidden = false)
+document.getElementById('menu-down_experts').addEventListener("mouseout", (e) => document.getElementById("menu-dropdown_experts").hidden = true)
 
 
-function addListenerIfExist(elementToListenId, eventType, listener){
-    var element=document.getElementById(elementToListenId);
-    if (element){
+function addListenerIfExist(elementToListenId, eventType, listener)
+{
+    var element = document.getElementById(elementToListenId);
+    if (element)
+    {
         console.log('listener is here')
-        element.addEventListener(eventType,listener);
+        element.addEventListener(eventType, listener);
     }
 }
 
 function init()
-{   
-    addListenerIfExist('contact-form','submit',onSubmitContactForm);
-    addListenerIfExist('details-form','submit',onSubmitDetailsForm);
-    addListenerIfExist('fund-analitic-btn','click',onClickFunds);
+{
+    addListenerIfExist('contact-form', 'submit', onSubmitContactForm);
+    addListenerIfExist('details-form', 'submit', onSubmitDetailsForm);
+    addListenerIfExist('fund-analitic-btn', 'click', onClickFunds);
     //Нужно редактировать onSubmitCourses, курсы должны появляться в зависимости от сферы проекта.
-    addListenerIfExist('course-analitic-btn','submit',onSubmitCourses);
+    addListenerIfExist('course-analitic-btn', 'submit', onSubmitCourses);
     addListenerIfExist('entity', 'click', onClickFunderEntity);
     addListenerIfExist('register-ready-btn', 'click', onClickRegisterReady);
 }
@@ -38,17 +40,17 @@ function toggleForm(formId)
 {
     var labelId = formId
 
-    if(formId === "expert_form" || formId === "funder_form" || formId === "project_form")
+    if (formId === "expert_form" || formId === "funder_form" || formId === "project_form")
     {
         labelId = "project_funder_expert_form";
     }
 
-    for(var f of FORMS)
+    for (var f of FORMS)
     {
         f.hidden = f.getAttribute("id") != formId
     }
 
-    for(var l of LABELS)
+    for (var l of LABELS)
     {
         l.classList.remove("active")
     }
@@ -76,7 +78,7 @@ function onSubmitContactForm(e)
         {
             input.classList.remove('err');
             input.classList.add('suc');
-            
+
             serverBody.password = pass;
             serverBody.email = email;
             serverBody.name = name;
@@ -85,7 +87,7 @@ function onSubmitContactForm(e)
 
             setTimeout(() => toggleForm("details_form"), 1000);
         }
-        
+
     }
 
     else
@@ -138,7 +140,7 @@ function onSubmitDetailsForm(e)
 
     //classList - взять весь список классов из стилей с указанным значением
     mistakes += validate(agree == 'agree', "policy-form", "no-agreement", "yes-agreement")// validate(false,"policy-form", "no-agreement", "yes-agreement" )
- 
+
 
     mistakes += validate(citixenship != 'default-form-area', "citixenship", "err", "suc");
     // if (citixenship == 'default-form-area')
@@ -157,18 +159,18 @@ function onSubmitDetailsForm(e)
     if (mainSphere == 'default-form-area')
     {
         mistakes++;
-        setOneOfClasses('main-sphere','suc','err');
+        setOneOfClasses('main-sphere', 'suc', 'err');
     }
 
     else
     {
-        setOneOfClasses('main-sphere', 'err','suc');
+        setOneOfClasses('main-sphere', 'err', 'suc');
     }
 
     if (status == 'default-form-area')
     {
         mistakes++;
-        setOneOfClasses('status', 'suc','err');
+        setOneOfClasses('status', 'suc', 'err');
     }
 
     else
@@ -179,30 +181,30 @@ function onSubmitDetailsForm(e)
     if (industry === '')
     {
         mistakes++;
-        setOneOfClasses('social-link','suc','err');
+        setOneOfClasses('social-link', 'suc', 'err');
     }
 
     else
     {
         serverBody.industry = industry;
-        setOneOfClasses('social-link', 'err','suc');
+        setOneOfClasses('social-link', 'err', 'suc');
     }
     // Если нигде не ошиблись - подсвечиваем всё зелёным
-    if (mistakes == 0 && status=='developer')
+    if (mistakes == 0 && status == 'developer')
     {
         allGreen();
         serverBody.status = 'developer'
         setTimeout(() => toggleForm("project_form"), 1000)
     }
 
-    if (mistakes == 0 && status=='funder')
+    if (mistakes == 0 && status == 'funder')
     {
         allGreen();
         serverBody.status = 'funder'
         setTimeout(() => toggleForm("funder_form"), 1000)
     }
 
-    if (mistakes == 0 && status=='expert')
+    if (mistakes == 0 && status == 'expert')
     {
         allGreen();
         serverBody.status = 'expert'
@@ -233,8 +235,8 @@ function onClickFunds()
     var industry = formIndustry.get('sphere');
 
     var mistakes = 0;
-    
-    
+
+
 
     if (maxValue <= 500000 && industry == 'social')
     {
@@ -256,12 +258,12 @@ function onClickFunderEntity()
     // Сколько полей заполено неправильно
     var mistakes = 0;
 
-    var fund=document.getElementById('fund');
-    var yurOrganization=document.getElementById('organization-name');
-    var fizPrimaryWork=document.getElementById('primary-working');
+    var fund = document.getElementById('fund');
+    var yurOrganization = document.getElementById('organization-name');
+    var fizPrimaryWork = document.getElementById('primary-working');
 
-    fund.hidden = entity!='ur' // прятать всегда когда entity не равно ur
-    yurOrganization.hidden = entity!='ur'
+    fund.hidden = entity != 'ur' // прятать всегда когда entity не равно ur
+    yurOrganization.hidden = entity != 'ur'
     fizPrimaryWork.hidden = entity != "fiz"
 
 }
@@ -272,8 +274,8 @@ function onClickCourses()
     var formCourse = new FormData(document.querySelector('#industry-form'));
     var course = formCourse.get('course');
     var mistakes = 0;
-    
-    if (course=='programming')
+
+    if (course == 'programming')
     {
         var industryContent = document.getElementById('programming-courses');
         industryContent.classList.remove('no-programming-courses');
@@ -283,12 +285,12 @@ function onClickCourses()
 
 function onClickRegisterReady()
 {
-    var yurOrganization=document.getElementById('organization-name');
-    if(yurOrganization)
+    var yurOrganization = document.getElementById('organization-name');
+    if (yurOrganization)
     {
         serverBody.organizationName = yurOrganization.querySelector("input").value;
     }
     localStorage.setItem(serverBody.email + ":" + serverBody.password, JSON.stringify(serverBody))
-    setTimeout(()=>window.location.href = "into_form.html", 1000)
+    setTimeout(() => window.location.href = "into_form.html", 1000)
 }
 

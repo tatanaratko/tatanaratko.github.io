@@ -7954,7 +7954,7 @@ display: block;
     padding: 40px;
   }
 
-  .personal-funder-collection {
+  .personal-funder-collection , .personal-startup-collection {
     height: 800px;
     background-color: #8b8b8b1c;
     border-radius: 40px;
@@ -7984,7 +7984,7 @@ display: block;
     text-align: center;
   }
 
-  .funder-section {
+  .funder-section, .personal-startup-collection {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8065,10 +8065,6 @@ display: block;
     background-color: #e8c89f;
     color:#455b8e;
     
-  }
-
-  .image-box {
-    height: 150px;
   }
 
   .item-area {
@@ -8217,10 +8213,11 @@ li.menu__item {
 
 .main-description_sector { 
   text-align: center;
-  background-color: #32344e;
+  background-color: #4b324e;
 
   max-height: 450px;
   overflow: hidden;
+  height: 248px;
 
 }
 
@@ -8250,7 +8247,7 @@ li.menu__item {
 .start-btn {
   height: 56px;
   border-radius: 7px;
-  background-color: #ff4100;
+  background: #50d25b;
   text-align: center;
   font-weight: 800;
   font-size: 25px;
@@ -8419,6 +8416,7 @@ section.projects {
   text-align: center;
   width: 148px;
   padding: 10px 0;
+  z-index: 3;
 }
 
 .menu-dropdown a{
@@ -8429,3 +8427,99 @@ section.projects {
   line-height: 20px;
   padding: 10px 0;
 }
+
+.funders-block{
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+img.funder-logo {
+  width: 300px;
+  padding: 0 20px;
+  /* align-items: center; */
+  /* display: flex; */
+}
+
+section.funders {
+  height: 750px;
+  padding-top: 70px;
+}
+.team-section {
+  padding-top:60px;
+}
+
+.startup-projects>img {
+
+}
+
+.personal-startup-collection {
+
+}
+
+.link_block,.project-description_block, .project-tools_block {
+  display: flex;
+  padding: 30px  0;
+}
+
+.project-description_block>div ,
+.project-tools_block>div {
+  padding: 0 75px;
+  border-left: 1px solid black;
+}
+
+.project_title {
+padding: 30px 0;
+}
+
+.first-tools-block {
+  padding-top: 50px;
+}
+
+.link_block {
+  padding-top: 60px;
+}
+
+.link-question a{
+  color: #fff;
+  background-image: linear-gradient(to right, #50ceb8 0%, #4830F0 51%);
+  padding: 15px;
+  border-radius: 3px;
+}
+
+.project-option_block {
+  display: flex;
+margin-top: 20px;
+}
+
+.project-plan {
+  display: flex;
+  height: 40px;
+}
+
+input.plan-tag {
+  width: 100%;
+  height: 40px;
+  color: #0B2349;
+}
+
+.plan-tag-sector {
+  display: flex;
+}
+
+.plan-number {
+  height: 40px;
+}
+
+.swot-option {
+  font-size: 30px;
+  padding-top: 40px;
+}
+
+.swot-text>input {
+  width: 500px;
+  height: 45px;
+
+  margin: 2px 40px;
+}
+
