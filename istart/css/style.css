@@ -8213,7 +8213,7 @@ li.menu__item {
 
 .main-description_sector { 
   text-align: center;
-  background-color: #4b324e;
+  background-color: #000;
 
   max-height: 450px;
   overflow: hidden;
@@ -8222,8 +8222,8 @@ li.menu__item {
 }
 
 .main-description_sector:hover {
-  border-top: 5px solid red;
-  border-bottom: 5px solid red;
+  border-top: 5px solid #0310b5;
+  border-bottom: 5px solid #0816b9;
   transform: scale(1.1);
   transition: .5s;
   box-shadow: 0 0 20px 1px #32344e;
@@ -8247,7 +8247,7 @@ li.menu__item {
 .start-btn {
   height: 56px;
   border-radius: 7px;
-  background: #50d25b;
+  background: #6c9fff;
   text-align: center;
   font-weight: 800;
   font-size: 25px;
@@ -8523,3 +8523,13 @@ input.plan-tag {
   margin: 2px 40px;
 }
 
+
+.about-startup{
+  height: 880px;
+  background: url(../images/startup.png);
+  color: #fff;
+}
+ .project-introduction p, .greeting {
+   background: #000;
+   font-size: 36px;
+ }
