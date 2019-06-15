@@ -8603,10 +8603,22 @@ font-weight: 600;
 }
 
 .finance {
-  padding-right: 60px
+  padding-right: 60px;
+  border-right: 1px solid #00000080;
+  padding-left: 20px;
 }
 
 .sum {
   color: green;
 }
 
+.expert-foto {
+  object-fit: cover;
+  height: 500px;
+
+
+}
+
+.reg a {
+  color: blue !important;
+}
