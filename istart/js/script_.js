@@ -30,7 +30,7 @@ function init()
     addListenerIfExist('details-form', 'submit', onSubmitDetailsForm);
     addListenerIfExist('fund-analitic-btn', 'click', onClickFunds);
     //Нужно редактировать onSubmitCourses, курсы должны появляться в зависимости от сферы проекта.
-    addListenerIfExist('course-analitic-btn', 'submit', onSubmitCourses);
+    // addListenerIfExist('course-analitic-btn', 'submit', onSubmitCourses);
     addListenerIfExist('entity', 'click', onClickFunderEntity);
     addListenerIfExist('register-ready-btn', 'click', onClickRegisterReady);
 }
