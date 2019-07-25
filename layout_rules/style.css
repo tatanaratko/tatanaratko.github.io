@@ -98,7 +98,7 @@ body {
   }
   
   .rules {
-    width:910px;
+    max-width:910px;
     margin:90px auto 0 auto;
   }
   
@@ -123,3 +123,11 @@ body {
     background-position:center;
     margin:auto;
   }
+ 
+@media screen and (max-width: 1024px) {
+  .header {
+    height: 65vh;
+  }
+}
+
+
