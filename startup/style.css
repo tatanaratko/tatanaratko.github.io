@@ -1,4 +1,12 @@
 
+body {
+  
+    overflow-x:  hidden !important;
+}
+.overflow {
+    overflow-x: hidden;
+}
+/* 
 @media screen and (max-width: 2200px) {  
     .home__title {
         padding-right: 100px;
@@ -92,7 +100,7 @@
 
     .services__text,
     .text__about,
-    .blog__body,
+    .blog__body
     {
         font-size: 17px;
         padding-right:25px; 
@@ -127,7 +135,7 @@
 
 @media screen and (max-width:768px) {
 
-}
+} */
 
 body { 
     font-family: "Roboto Slab" , Arial, sans-serif;

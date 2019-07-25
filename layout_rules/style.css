@@ -1,0 +1,125 @@
+body {
+    font-family: 'Fira Sans';
+   /* overflow-x:auto; */
+  }
+/* html {
+  overflow-x:auto;
+}
+  .overflow {
+    overflow-x: hidden;
+  } */
+ 
+  
+  
+  .header {
+    height: 100vh;
+    background-color: rgba(255, 0, 0, 0.7);
+    text-align: center;
+    color: #fff;
+    background-image: url(https://pictures.s3.yandex.net/background.jpg);
+    background-size: cover;
+    background-position: center bottom;
+    padding-top:230px;
+  }
+  
+  h1 {
+    font-size: 140px;
+    line-height: 200px;
+    font-family: 'Amatic SC', cursive;
+    text-transform: uppercase;
+     font-weight:bold;
+  }
+  
+  h2 {
+    width: 880px;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 0.5px;
+    margin-top: 46px;
+    margin-left: auto;
+    margin-right: auto;
+    margin: 46px auto 0 auto;
+    font-family: 'Comfortaa', cursive;
+    font-weight: bold;
+}
+
+  
+  .card h3 {
+   font-size:45px; 
+    font-family: 'Amatic SC', cursive;
+    font-weight:bold;
+    margin:44px 0 30px 0;
+    
+  }
+  
+  .card p {
+  font-size:24px;
+    line-height:35px;
+      margin-bottom:90px;
+      font-family: 'Comfortaa', cursive;
+  }
+  
+  .card {
+    display:inline-block;
+    vertical-align:top;
+  width:420px;
+    min-height:420px;
+    margin-right:65px;
+    
+  }
+  
+  .module {
+  width:420px;
+  height:420px;
+    border-width: 5px; 
+  border-style: solid; 
+  border-color: #ff3333;
+    background-image:url('https://pictures.s3.yandex.net/grid.jpg');
+  }
+  
+  .image {
+  width:420px;
+  height:420px;
+    background-size: cover;
+    background-position:center;
+    box-sizing:border-box;
+  }
+  
+  .near {
+    background-image:url('https://pictures.s3.yandex.net/proximity.jpg');
+  }
+  
+  .fonts {
+     background-image:url('https://pictures.s3.yandex.net/type.jpg');
+  }
+  
+  .colors {
+    background-image:url('https://pictures.s3.yandex.net/color.jpg');
+  }
+  
+  .rules {
+    width:910px;
+    margin:90px auto 0 auto;
+  }
+  
+  .module-card,
+  .colors-card {
+    margin-right:0;
+  }
+  
+  .footer {
+    height:100px;
+    background-color:#000000;
+    box-sizing: border-box;     
+  padding-top: 30px;
+  }
+  
+  .logo {
+  width:148px;
+  height:38px;
+  background-image: url(https://pictures.s3.yandex.net/logotype.png);
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:auto;
+  }
