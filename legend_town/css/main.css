@@ -58,6 +58,22 @@ ul, li {
   
     padding-top: 60px;
 }
+.right-items {
+    position: absolute;
+    right: 100px;
+}
+.right-item-1 a, .right-item-2 a{
+    color: #ffffff;
+}
+
+.right-item-1 {
+    position: absolute;
+}
+
+.right-item-2 {
+  
+    border:1px solid #ffffff;
+}
 
 .left-item {
 
@@ -144,6 +160,7 @@ color: #000051;
     font-size: 20px;
     margin-bottom: 23px;
     line-height: 24px;
+    padding: 13px  8px;
 }
 
 .dowload {
