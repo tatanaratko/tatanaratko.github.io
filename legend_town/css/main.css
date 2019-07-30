@@ -54,9 +54,14 @@ ul, li {
     padding-top: 10px;
     font-size: 16px;
 }
-.right-item-1 {
-    position: absolute;
-    right: 100px;
+.menu-custom-container {
+  
+    padding-top: 60px;
+}
+
+li.menu__item.right-item-1 {
+    position: absolute !important;
+    right: 100px !important;
 }
 
 .menu__item {
