@@ -162,7 +162,7 @@ color: #9E9E9E;
     position: absolute;
 }
 .blue-bg {
-    background-image: url('../img/blue_screen.svg') ;
+    /* background-image: url('../img/blue_screen.svg') ; */
     position: absolute;
     height: 650px;;
     right: 0;
