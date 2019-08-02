@@ -5,14 +5,13 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>legend_town</title>
-
+    <title>legend_city</title>
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link
         href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap&subset=cyrillic,cyrillic-ext,latin-ext"
         rel="stylesheet">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
-        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+        integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
 
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -20,8 +19,12 @@
 <body class="animated bounceInLeft">
     <div class="overflow">
         <div class="header" class="header">
-                <div class="foto-bg-mask"></div>
-                <div class="foto-bg"></div>
+            <div class="yellow-bg"><img src="img/yellow_bg.svg"></div>
+            <div class="white-bg"><img src="img/white_bg.svg"></div>
+            <div class="grey-bg-1"><img src="img/grey_bg-1.svg"></div>
+            <div class="foto-bg-mask"><img src="img/first_foto.svg"></div>
+            <div class="foto-bg"><img src="img/first_foto.svg"></div>
+            <div class="rio-bg"><img src="img/rio.png"></div>
             <div class="container menu-custom-container">
                 <div class="row">
                     <div class="col-lg-3">
@@ -31,12 +34,16 @@
                         <nav>
                             <ul class="menu">
                                 <li class="menu__item left-item">
-                                    <a href="#">Пользователям
+                                    <a href="#">Заказать звонк
                                     </a>
-                                    <img src="">
+
                                 </li>
                                 <li class="menu__item center-menu">
-                                    <a href="#">О нас</a>
+                                    <img src="img/phone.svg">
+                                </li>
+                                <li class="menu__item call-menu">
+                                    <div class="telephone">8 800 511 00 11</div>
+                                    <div class="call">Звонок бесплатный</div>
                                 </li>
 
                             </ul>
@@ -46,56 +53,64 @@
 
             </div>
         </div>
-        <div class="blue-bg"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-7">
-                    <div class="offer">
-                        <h1 class="offer__title">
-                            Лето - отличная пора <br>
-                            для отдыха на воде!
-                        </h1>
-                        <div class="yellow-element">
-                            <div class="yellow-line">
+        <section class="main-screen">
+            <div class="blue-bg"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-7">
+                        <div class="offer">
+                            <h1 class="offer__title">
+                                Лето - отличная пора <br>
+                                для отдыха на воде!
+                            </h1>
+                            <div class="yellow-element">
+                                <div class="yellow-line">
+                                </div>
+                                <div class="yellow-circle">
+                                </div>
                             </div>
-                            <div class="yellow-circle">
-                            </div>
-                        </div>
-                        <div class="offer__intro-1">
+                            <div class="offer__intro-1">
                                 Поэтому до конца июля мы дарим нашим новым друзьям
-                        </div>
-                        <div class="offer__intro-2">
-                                1 бонус = 1 рубль 
-                        </div>
-                        <div class="offer__intro-3">
+                            </div>
+                            <div class="offer__intro-2">
+                                300 бонусов в аквапарк Акварио
+                            </div>
+                            <div class="offer__intro-3">
+                                1 бонус = 1 рубль
+                            </div>
+                            <div class="offer__intro-4">
                                 Скорее зарегистрируйте бесплатную онлайн карту Город Легенд в мобильном
                                 приложении по промокоду ниже и забирайте свой подарок!
-                        </div>
-
-                        <div class="call-download">
-                            <div class="call-dowload_text">
-                                    Ваш промокод: 34D4Ah
                             </div>
-                            <div class="call-dowload_btns">
-                                <div class="google-play">
-                                    <img src="img/google-play.svg">
-                                    Google Play
+
+                            <div class="call-download">
+                                <div class="call-dowload_text">
+                                    Ваш промокод: 34D4Ah
                                 </div>
-                                <div class="app-store">
-                                    <img src="img/app-store.svg">
-                                    App Store
-                                </div>
-                                <div class="play">
-                                    <img src="img/polygon.png">
+                                <div class="call-dowload_btns">
+                                    <div class="google-play">
+                                        <img src="img/google-play.svg">
+                                        <div class="dowload-text">
+                                            <div class="dowload-map">android app on</div>
+                                            <div class="dowload-name">Google Play</div>
+                                        </div>
+                                    </div>
+                                    <div class="app-store">
+                                        <img src="img/app-store.svg">
+                                        <div class="dowload-text">
+                                            <div class="dowload-map">dowload on the</div>
+                                            <div class="dowload-name">App Store</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <section>
+        <!-- <section>
             <div class="features">
                 <div class="container">
                     <div class="row">
@@ -110,302 +125,225 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section> -->
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-tablet feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Responsive
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
+
+
+
+
+
+
+        <section class="about-us">
+            <div class="container custom-container">
+                <div class="row">
+                    <div class="col-lg-5">
+                        <div class="grey-decoration">
+                            <div class="grey-figure">
+                                <img src="img/grey_bg-2.svg">
+                                <div class="yellow-ellipse"><img src="img/yellow_ellipse.svg"></div>
                             </div>
                         </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-object-group feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Layered PSD
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="col-lg-7">
+                        <div class="about">
+                            <h2 class="about-us-title subtitle">
+                                Узнай о нас больше
+                            </h2>
+                            <p class="about-us_text subtitle-text">
+                                Мы объединили для Вас более 200 заведений города Омска,
+                                чтобы ежедневные покупки приносили Вам удовольствие и выгоду!
+                            </p>
+                            <p class="about-us_text subtitle-text">
+                                Всего одна дисконтная карта Город Легенд даст Вам преимущество влиять на сервис
+                                обслуживания,
+                                пользоваться эксклюзивными предложениями, участвовать в розыгрышах подарков и при
+                                этом освободит Ваш кошелек от "лишнего" пластика! </p>
                         </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-undo feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Font Awesome Icons
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
                     </div>
 
                 </div>
             </div>
         </section>
-        <section>
-            <div class="features">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="title">
-                                <h2 class="title__main">
-                                    Получайте скидки и бонусы
-                                </h2>
-                                <p class="title__text">
-                                    Держатели карт получают гарантированные скидки и бонусы от любимых заведений
-                                </p>
-                            </div>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-tablet feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Responsive
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-object-group feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Layered PSD
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-undo feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Font Awesome Icons
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
 
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="features">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="title">
-                                <h2 class="title__main">
-                                    Копите Баллы Легенд
-                                </h2>
-                                <p class="title__text">
-                                    Как получить LB (Баллы Легенд)?
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-tablet feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Responsive
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-object-group feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Layered PSD
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-undo feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Font Awesome Icons
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="features">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="title">
-                                <h2 class="title__main">
-                                    Тратьте Баллы Легенд на подарки
-                                </h2>
-                                <p class="title__text">
-                                    Обменивайте накопленный Баллы Легенд на товары и услуги
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-tablet feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Responsive
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-object-group feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Fully Layered PSD
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4">
-                            <div class="feature">
-                                <i class="fa fa-undo feature__icon"></i>
-                                <div class="feature__block">
-                                    <h3 class="feature__title">
-                                        Font Awesome Icons
-                                    </h3>
-                                    <p class="feature__text">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                        Praesent vitae eros eget tellus tristique bibendum.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        <section>
-            <div class="touch">
-                <div class="conteiner">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="title">
-                                <h2 class="title__main" id="touch">
-                                    Где вам не хватает Легенды?
-                                </h2>
-                                <p class="title__text" id="touch__intro">
-                                    Напишите нам, где бы вы хотели пользоваться картой
-                                    легенда и наш агент обязательно решит этот вопрос</p>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div class="row">
-                        <div class="col-lg-10">
-                            <form action="#" class="form">
-                                <input type="email" placeholder="Enter your email" class="form__input" required>
-                                <button type="submit" class="form__btn">SUBMIT</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <footer>
+        <section class="videos">
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-4">
+                        <div class="video">
+                            <div class="blue-rectangle"><img src="img/blue_rectangle.svg"></div>
+                            <img class="video-content" src="img/video_1.svg">
+                            <div class="video-mask"></div>
+                            <img class="video-play" src="img/video_play.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="video">
+                            <div class="green-ell"><img src="img/green_ell.svg"></div>
+                            <img class="video-content" src="img/video_2.svg">
+                            <div class="video-mask"></div>
+                            <img class="video-play" src="img/video_play.svg">
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="video">
+                            <div class="big-yellow-el"><img src="img/big_yellow_el.svg"></div>
+                            <img class="video-content" src="img/video_3.svg">
+                            <div class="video-mask"></div>
+                            <img class="video-play" src="img/video_play.svg">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
                     <div class="col-lg-12">
-                        <div class="credits">
-                            HALOVIETNAM LTD
-                            66, Dang Van ngu, Dong Da
-                            Hanoi, Vietnam
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <section class="grey-section">
+            <div class="grey-bg">
+                <div class="yellow-big-line">
+                    <svg width="100%" height="158" viewBox="0 0 1980 158" preserveAspectRatio="none" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g filter="url(#filter0_d)">
+                        <path d="M1883 108.701C1883 83.0744 1859.63 63.6711 1834.37 67.9962C1737.62 84.5628 1509.68 118.626 1271.15 118.626C955.987 118.626 856.094 4.74792e-05 543.926 3.84111e-05C259.544 3.01502e-05 45.2144 109.878 9.31276 129.439C5.95693 131.267 4.00051 134.75 4.00051 138.572C4.00052 144.497 8.80387 149.3 14.7292 149.3L1842.4 149.3C1864.82 149.3 1883 131.124 1883 108.701Z" fill="url(#paint1_linear)"/>
+                        </g>
+                        <defs>
+                        <filter id="filter0_d" x="0.000488281" y="6.10352e-05" width="1887" height="157.3" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/>
+                        <feOffset dy="4"/>
+                        <feGaussianBlur stdDeviation="2"/>
+                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.08 0"/>
+                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                        </filter>
+                        <linearGradient id="paint1_linear" x1="943.501" y1="2.69494e-05" x2="943.501" y2="149.3" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFDB13"/>
+                        <stop offset="1" stop-color="#FAAC2B"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>                        
+                </div>
+                
+                <div class="line-mask">
+                        <svg width="100%" height="502"  preserveAspectRatio="none"  viewBox="0 0 1920 502" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1920 31.3561C1920 31.3561 1584 115.378 1268.5 115.378C953 115.378 853 9.63024e-05 540.5 0.000101844C228 0.000107386 0.000297464 128.773 0.000297464 128.773L0.000452014 502L1920 502L1920 31.3561Z" fill="url(#paint2_linear)"/>
+                        <defs>
+                        <linearGradient id="paint2_linear" x1="960" y1="231.819" x2="960" y2="478.16" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#F9F9F9"/>
+                        <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                        </linearGradient>
+                        </defs>
+                        </svg>
+                        </div>
+                <div class="container">
+
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <div class="company-choice">
+                                <div class="company">Компании</div>
+                                <div class="inter-shop">Интернет-магазины</div>
+                            </div>
+                            <div class="company-content">
+                                images
+                            </div>
+                        </div>
+
+                        <div class="company-slider">
+                            <div class="slider-color">
+                                <div class="blue-trigon"><img src="img/blue_trigon.svg"></div>
+                                <div class="white-rect"><img src="img/white_middle_rect.svg"></div>
+                                <div class="circle-group"><img src="img/circle_group.svg"></div>
+                                <div class="arrow-ellipse"><img src="img/arrow_ellipse.svg"></div>
+                                <div class="left-arrow"><img src="img/left_arrow.svg"></div>
+                                <div class="right-arrow"><img src="img/right_arrow.svg"></div>
+                                <div class="white-ellipse"><img src="img/white_ellipse.svg"></div>
+                                <div class="c1 view-company"><img src="img/company_slider/1c.svg"></div>
+                                <div class="c2 "><img src="img/company_slider/2c.svg"></div>
+                                <div class="c3 "><img src="img/company_slider/3c.svg"></div>
+                                <div class="c4 "><img src="img/company_slider/4c.svg"></div>
+                                <div class="c5 "><img src="img/company_slider/5c.svg"></div>
+                                <div class="c6 "><img src="img/company_slider/6c.svg"></div>
+                                <div class="c7 "><img src="img/company_slider/7c.svg"></div>
+                                <div class="c8 "><img src="img/company_slider/8c.svg"></div>
+                                <div class="c9 "><img src="img/company_slider/9c.svg"></div>
+                                <img src="img/green_rectangle.svg">
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="grey-bottom-line">
+                        <svg width="100%" height="502"  preserveAspectRatio="none"   viewBox="0 0 1920 502" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1920 470.644C1920 470.644 1584 428.5 1268.5 428.5C953 428.5 853 502 540.5 502C228 502 0.000480341 454 0.000480341 454L0.000405242 3.05075e-05L1920 0.000366211L1920 470.644Z" fill="url(#paint0_linear)"/>
+                            <defs>
+                            <linearGradient id="paint0_linear" x1="960" y1="270.181" x2="960" y2="23.8396" gradientUnits="userSpaceOnUse">
+                            <stop offset="0.333333" stop-color="#F9F9F9"/>
+                            <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                            </linearGradient>
+                            </defs>
+                            </svg>
+                            
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section class="numerals">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <div class="users-number">
+                            <div class="number">500 000 человек</div>
+                            <div class="econom"> уже экономили</div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="calculator">
+                            <div class="card"></div>
+                            <div class="calculator-text"></div>
                         </div>
                     </div>
                 </div>
 
+
+
+                <div class="row">
+                    <div class="col-lg-6">
+
+                    </div>
+                    <div class="col-lg-6">
+
+                    </div>
+                </div>
+
+
             </div>
-        </footer>
+        </section>
+
+
+
+
+
+
+
+
+
+
     </div>
 </body>
 
