@@ -473,6 +473,10 @@ z-index: 0;
     padding-top: 130px;
 }
 
+.grey-section img{
+    user-select: none;
+}
+
 
 .yellow-big-line, 
 .line-mask,
@@ -531,6 +535,11 @@ z-index: 0;
 .company-slider {
    position: relative;
     z-index: 4;
+}
+
+.company-info-img{
+    width: 106px;
+    height: 103px;
 }
 
 .slider-color {
@@ -655,7 +664,7 @@ z-index: 0;
     font-weight: bold;
 }
 
-.company-number {
+.company-subtitle {
     font-size: 24px;
     padding: 15px 0;
 }
