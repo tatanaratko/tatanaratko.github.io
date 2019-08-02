@@ -482,15 +482,14 @@ z-index: 0;
 
 }
 
+.line-mask-svg{
+    position: absolute;
+}
+
 .yellow-big-line {
-    /* background-image: url('../img/yellow_big_line.svg');  */
-    height: 150px;
-    left: 0;
-    right: 0;
-    transform: matrix(1, 0, 0, 1, 60, 0);
-    z-index: 0;
+    transform: matrix(1, 0, 0, 1, 112, 0);
+    z-index: -1;
     position:absolute;
-    /* transform: rotate(-1deg); */
 }
 
 .line-mask {
@@ -639,7 +638,16 @@ z-index: 0;
     color: #ffffff;
     right: 245px;
     max-width: 540px;
+    min-width: 540px;
 
+}
+
+.company-info.company-info-right {
+    right: -595px;
+}
+
+.company-info.company-info-left {
+    right: 985px;
 }
 
 .company-title {
