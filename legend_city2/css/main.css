@@ -168,7 +168,7 @@ color: #9E9E9E;
     right: 0;
     left: 0;
     z-index: 1;
-    background-repeat-y: no-repeat;
+    background-repeat: no-repeat;
     /* background-size: contain; */
   background-position: center
 }
@@ -191,6 +191,16 @@ color: #9E9E9E;
     top: 38px;
     z-index: 2;
 }
+
+.foto-bg-mask-transparent {
+    top: 76px;
+    opacity: 0.1;
+}
+
+.foto-bg-mask path{
+    fill: #448AFF;
+}
+
 
 .rio-bg {
     /* background-image: url('../img/first_foto.svg') ; */
@@ -559,6 +569,20 @@ z-index: 0;
     z-index:5;
 }
 
+.right-arrow path,
+.left-arrow path
+{
+    fill:#00C853;
+}
+
+.right-arrow path:hover,
+.left-arrow path:hover
+{
+    stroke-width: 2px;
+    stroke: #00C853;
+    cursor: pointer;
+}
+
 .c2, .c3{
     right:1040px;
 }
@@ -609,6 +633,28 @@ z-index: 0;
     top: 174px;
 }
 
+.company-info {
+    position: absolute;
+    top:140px;
+    color: #ffffff;
+    right: 245px;
+    max-width: 540px;
+
+}
+
+.company-title {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.company-number {
+    font-size: 24px;
+    padding: 15px 0;
+}
+
+.company-text {
+    font-size: 16px;
+}
 
 /*fifth display*/
 
