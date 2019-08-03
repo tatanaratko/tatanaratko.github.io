@@ -8,53 +8,6 @@
     var ANIMATION_FADING_STEP = 0.1;
     var ANIMATION_PERIOD = 15;
 
-    var isDebounceBlocked = false;
-
-    var mockCompanies = [
-        {
-            title: "Рыбный мир",
-            subTitle: "24 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 3 до 7%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/2c.svg"
-        },
-        {
-            title: "Сказка",
-            subTitle: "222 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 3 до 70%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/3c.svg"
-        },
-        {
-            title: "Линейка",
-            subTitle: "2112134 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 300 до 700%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/4c.svg"
-        },
-        {
-            title: "ОЭК",
-            subTitle: "77777 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 3 до 7%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/5c.svg"
-        },
-        {
-            title: "АкваРИО",
-            subTitle: "24513246 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 333333 до 731414%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/6c.svg"
-        },
-        {
-            title: "Фасоль",
-            subTitle: "1242 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 3 до 4%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/7c.svg"
-        },
-        {
-            title: "ДНС",
-            subTitle: "2 филиала по городу",
-            text: "По единой карте Город Легенд действует накопительная скидка от 2 до 7%. Больше покупок - больше экономия!!!",
-            imageUri: "img/company_slider/8c.svg"
-        },
-    ];
-
     var companyInfoCenter = document.querySelector(".company-info-center");
     var companyImg = document.querySelector(".company-info-img");
 
@@ -110,69 +63,94 @@
         return promise;
     };
 
-    var renderCompanyInfo = async function(el, info) {
+    
 
-        isDebounceBlocked = true;
+    var Slider = function(leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data){
 
-       await animateFading(el);
+        this.isDebounceBlocked = false;
 
-        var title = el.querySelector(".company-title");
-        var subTitle = el.querySelector(".company-subtitle");
-        var text = el.querySelector(".company-text");
+        this.sliderData = null;
+        
+        this.renderCompanyInfo = async function(el, info) {
 
-        title.textContent = info.title;
-        subTitle.textContent = info.subTitle;
-        text.textContent = info.text;
+            this.isDebounceBlocked = true;
+    
+           await animateFading(el);
+    
+            var title = el.querySelector(".company-title");
+            var subTitle = el.querySelector(".company-subtitle");
+            var text = el.querySelector(".company-text");
+    
+            title.textContent = info.title;
+            subTitle.textContent = info.subTitle;
+            text.textContent = info.text;
+    
+            this.companyImg.setAttribute("src", info.imageUri);
+    
+            await animateAppearance(el);
+    
+            this.isDebounceBlocked = false;
+    
+        };
+    
+        this.initialRender = async function()
+        {
+            await this.renderCompanyInfo(companyInfoCenter, this.sliderData[0]);
+        }
+    
+    
+        this.goTo = (function(direction) {
+    
+            if(this.isDebounceBlocked)
+            {
+                return;
+            }
+    
+            if(direction === LEFT_DIRECTION)
+            {
+                var leftElement = this.sliderData.pop();
+    
+                this.renderCompanyInfo(companyInfoCenter, leftElement);
+    
+                this.sliderData.unshift(leftElement);
+            }
+            else if(direction === RIGHT_DIRECTION && this.sliderData.length > 1)
+            {
+                var rightElement = this.sliderData[1];
+    
+                this.renderCompanyInfo(companyInfoCenter, rightElement);
+    
+                this.sliderData.push(this.sliderData.shift());
+            }
+        }).bind(this);
+    
+        this.onClickRight = (function() {
+            this.goTo(RIGHT_DIRECTION);
+        }).bind(this);
+    
+        this.onClickLeft = (function() {
+            this.goTo(LEFT_DIRECTION);
+        }).bind(this)
 
-        companyImg.setAttribute("src", info.imageUri);
+        this.leftArrow = document.querySelector(leftArrowSelector);
+        this.rightArrow = document.querySelector(rightArrowSelector);
+        this.companyInfoCenter = document.querySelector(companyInfoSelector);
+        this.companyImg = document.querySelector(companyImgSelector);
 
-        await animateAppearance(el);
+        this.sliderData = data;
 
-        isDebounceBlocked = false;
-
+        var that = this;
+        
+        this.initialRender().then(function(){
+            leftArrow.addEventListener('click', that.onClickLeft);
+            rightArrow.addEventListener('click', that.onClickRight);
+        });
     };
 
-
-    var goTo = function(direction) {
-
-        if(isDebounceBlocked)
-        {
-            return;
+    window.slider = {
+        init: function(leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data){
+            return new Slider(leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data);
         }
-
-        if(direction === LEFT_DIRECTION)
-        {
-            var leftElement = mockCompanies.pop();
-
-            renderCompanyInfo(companyInfoCenter, leftElement);
-
-            mockCompanies.unshift(leftElement);
-        }
-        else if(direction === RIGHT_DIRECTION && mockCompanies.length > 1)
-        {
-            var rightElement = mockCompanies[1];
-
-            renderCompanyInfo(companyInfoCenter, rightElement);
-
-            mockCompanies.push(mockCompanies.shift());
-        }
-    }
-
-    var onClickRight = function() {
-        goTo(RIGHT_DIRECTION);
-    }
-
-    var onClickLeft = function() {
-        goTo(LEFT_DIRECTION);
-    }
-
-    var _init = function() {
-        leftArrow.addEventListener('click', onClickLeft);
-        rightArrow.addEventListener('click', onClickRight);
-    }
-
-
-
-    document.addEventListener("DOMContentLoaded", _init);
+    };
 
 })();
