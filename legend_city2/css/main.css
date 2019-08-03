@@ -679,7 +679,8 @@ z-index: 0;
 }
 
 .slider-btn-visited{
-    font-weight: bold;
+    color: #448AFF;
+    text-decoration: underline;
 }
 
 .c-size {
@@ -804,8 +805,20 @@ z-index: 0;
     color: #00C853;
 }
 
+.grey-bg-bottom {
+    background: #f9f9f9;
+    height: 100px;
+    margin-top: -81px;
+}
 
 
+
+.user-slider-figure {
+    
+        position: absolute;
+        right: 1000px;
+        bottom: -95px;
+    } 
 
 
 
