@@ -537,9 +537,21 @@ z-index: 0;
     z-index: 4;
 }
 
+/* .company-info {
+    opacity: 0;
+    transition: linear 3s;
+}
+
+.company-info:hover {
+    opacity: 0.5;
+    transition-delay: 0s;
+
+} */
+
+
 .company-info-img{
-    width: 106px;
-    height: 103px;
+    width: 120px;
+    height: 98px;
 }
 
 .slider-color {
@@ -572,7 +584,7 @@ z-index: 0;
 .right-arrow,
 .white-ellipse,
 .view-company,
-.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9{
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10{
     position: absolute;
     z-index:5;
 }
@@ -614,9 +626,29 @@ z-index: 0;
 }
 
 .c6 {
-    right: 1400px;
-    top: 300px;
+    right: 1410px;
+    top: 218px;
 
+}
+
+.c7 {
+    right: 1350px;
+    top: 20px;
+}
+
+.c8 {
+    right: 1600px;
+    top: 400px;
+}
+
+.c9 {
+    right: 1550px;
+    top: 100px;
+}
+
+.c10 {
+    right: 1250px;
+    top: 400px;
 }
 .left-arrow,
 .right-arrow {

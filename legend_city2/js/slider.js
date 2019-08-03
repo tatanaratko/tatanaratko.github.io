@@ -5,6 +5,11 @@
     var LEFT_DIRECTION = -1;
     var RIGHT_DIRECTION = 1;
 
+    var ANIMATION_FADING_STEP = 0.1;
+    var ANIMATION_PERIOD = 15;
+
+    var isDebounceBlocked = false;
+
     var mockCompanies = [
         {
             title: "Рыбный мир",
@@ -51,15 +56,66 @@
     ];
 
     var companyInfoCenter = document.querySelector(".company-info-center");
-    var companyInfoRight = document.querySelector(".company-info-right");
-    var companyInfoLeft = document.querySelector(".company-info-left");
-
     var companyImg = document.querySelector(".company-info-img");
 
     var leftArrow = document.querySelector(".left-arrow");
     var rightArrow = document.querySelector(".right-arrow");
 
-    var renderCompanyInfo = function(el, info) {
+    var animateFading = function(el){
+
+        if(!el.style.opactiy)
+        {
+            el.style.opacity = '1';
+        }
+
+        var promise = new Promise(function(resolve, reject){
+
+            var fadingInterval = setInterval(function(){
+                var newOpacity = parseFloat(el.style.opacity) - ANIMATION_FADING_STEP;
+                el.style.opacity = newOpacity.toString();
+    
+                if(newOpacity <= 0)
+                {
+                    clearInterval(fadingInterval);
+                    resolve();
+                }
+            }, ANIMATION_PERIOD);
+        });
+
+        return promise;
+    };
+
+    var animateAppearance = function(el){
+
+        if(!el.style.opactiy)
+        {
+            el.style.opacity = '0';
+        }
+
+        var promise = new Promise(function(resolve, reject){
+
+
+            var appearanceInterval = setInterval(function(){
+                var newOpacity = parseFloat(el.style.opacity) + ANIMATION_FADING_STEP;
+                el.style.opacity = newOpacity.toString();
+    
+                if(newOpacity >= 1)
+                {
+                    clearInterval(appearanceInterval);
+                    resolve();
+                }
+            }, ANIMATION_PERIOD);
+        });
+
+        return promise;
+    };
+
+    var renderCompanyInfo = async function(el, info) {
+
+        isDebounceBlocked = true;
+
+       await animateFading(el);
+
         var title = el.querySelector(".company-title");
         var subTitle = el.querySelector(".company-subtitle");
         var text = el.querySelector(".company-text");
@@ -70,9 +126,20 @@
 
         companyImg.setAttribute("src", info.imageUri);
 
+        await animateAppearance(el);
+
+        isDebounceBlocked = false;
+
     };
 
+
     var goTo = function(direction) {
+
+        if(isDebounceBlocked)
+        {
+            return;
+        }
+
         if(direction === LEFT_DIRECTION)
         {
             var leftElement = mockCompanies.pop();
