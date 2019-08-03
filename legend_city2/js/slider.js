@@ -145,6 +145,11 @@
             leftArrow.addEventListener('click', that.onClickLeft);
             rightArrow.addEventListener('click', that.onClickRight);
         });
+
+        this.remove = function(){
+            leftArrow.removeEventListener('click', this.onClickLeft);
+            rightArrow.removeEventListener('click', this.onClickRight);
+        }
     };
 
     window.slider = {

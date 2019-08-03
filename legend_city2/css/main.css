@@ -549,6 +549,7 @@ z-index: 0;
 } */
 
 
+
 .company-info-img{
     width: 120px;
     height: 98px;
@@ -603,7 +604,94 @@ z-index: 0;
     cursor: pointer;
 }
 
-.c2, .c3{
+.company-slider-companies .c2{
+    background-image: url('../img/company_slider/2c.svg');
+}
+
+.company-slider-inetshops .c2{
+    background-image: url('../img/company_slider/2i.svg');
+}
+
+.company-slider-companies .c3{
+    background-image: url('../img/company_slider/3c.svg');
+}
+
+.company-slider-inetshops .c3{
+    background-image: url('../img/company_slider/3i.svg');
+}
+
+.company-slider-companies .c4{
+    background-image: url('../img/company_slider/4c.svg');
+}
+
+.company-slider-inetshops .c4{
+    background-image: none;
+}
+
+.company-slider-companies .c5{
+    background-image: url('../img/company_slider/5c.svg');
+}
+
+.company-slider-inetshops .c5{
+    background-image: none;
+}
+
+.company-slider-companies .c6{
+    background-image: url('../img/company_slider/6c.svg');
+}
+
+.company-slider-inetshops .c6{
+    background-image: url('../img/company_slider/6i.svg');
+}
+
+.company-slider-companies .c7{
+    background-image: url('../img/company_slider/7c.svg');
+}
+
+.company-slider-inetshops .c7{
+    background-image: url('../img/company_slider/7i.svg');
+}
+
+.company-slider-companies .c8{
+    background-image: url('../img/company_slider/8c.svg');
+}
+
+.company-slider-inetshops .c8{
+    background-image: url('../img/company_slider/8i.svg');
+}
+
+
+.company-slider-companies .c9{
+    background-image: url('../img/company_slider/9c.svg');
+}
+
+.company-slider-inetshops .c9{
+    background-image: url('../img/company_slider/9i.svg');
+}
+
+
+.company-slider-companies .c10{
+    background-image: url('../img/company_slider/10c.svg');
+}
+
+.company-slider-inetshops .c10{
+    background-image: none;
+}
+
+.slider-btn-visited{
+    font-weight: bold;
+}
+
+.c-size {
+    width: 105px;
+    height: 105px;
+    background-repeat: no-repeat;
+}
+
+.c2 {
+    right: 930px;
+}
+ .c3{
     right:1040px;
 }
 .arrow-ellipse {
@@ -621,8 +709,10 @@ z-index: 0;
 }
 
 .c5 {
-    right: 1130px;
-    bottom: 450px;
+    
+        right: 1050px;
+        bottom: 310px;
+    
 }
 
 .c6 {
