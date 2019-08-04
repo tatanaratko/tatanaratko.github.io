@@ -440,7 +440,7 @@ margin-left: 6px;
     display: block;
     color: #FFF;
     background: rgba(0, 0, 0, .6);
-    border-radius: 11px;
+    border-radius: 9px;
 }
 
 .blue-rectangle, 
@@ -776,7 +776,7 @@ z-index: 0;
     color: #ffffff;
     right: 245px;
     max-width: 540px;
-    min-width: 540px;
+    /* min-width: 540px; */
 
 }
 
@@ -786,6 +786,15 @@ z-index: 0;
 
 .company-info.company-info-left {
     right: 985px;
+}
+.company-info-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    background-color: white;
+    /* border-color: white; */
+    border-width: 17px;
 }
 
 .company-slider .title,
@@ -944,57 +953,10 @@ footer{
 
 
 
-
-
-
-
-
-/*media-requests*/
-
-@media screen and (max-width:992px) { 
-    .logo {
-        display: flex;
-        margin: 0 auto 40px;
-    }
-
-    .offer { 
-        text-align: center;
-    }
-
-    .offer__text, ul, li {
-        margin: 0 auto;
-    }
-
-    .icons__item a {
-        padding: 20px 21px 0px;
-    }
-
-    .form__input {
-        margin: 0px 40px;
-        width: 60%;
-    }
-
-    .form__btn {
-        margin: 25px 40px 0px;
-        width: 40%;
-    }
-
-    .title__text, .offer__text, .offer {
-        width: auto;
-    }    
+.bullet-group {
+    display: none;
 }
 
-@media screen and (max-width:576px) {
-    .ipad {
-        width: 100%;
-    }
-
-    .menu {
-        flex-direction: column;
-    }
-
-    .menu__item {
-        margin:0 auto;   
-        padding-bottom: 12px; 
-    }
+.mobile-green-slider {
+    display: none;
 }
