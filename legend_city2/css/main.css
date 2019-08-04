@@ -860,7 +860,6 @@ z-index: 0;
         right: 1400px;
     }
     .users-slider .u3{
-        background-image: url('../img/users_slider/u3.svg');
         right: 1500px;
         bottom: 150px;
     }
@@ -900,7 +899,7 @@ z-index: 0;
 .video-2 {
     position: absolute;
     right: 900px;
-    top: 100px;
+    bottom: 70px;
 
 }
 
@@ -957,6 +956,7 @@ footer{
     display: none;
 }
 
-.mobile-green-slider {
+.mobile-green-slider,
+.mobile-blue-slider {
     display: none;
 }

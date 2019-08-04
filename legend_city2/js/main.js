@@ -101,7 +101,7 @@ var USERS_DATA = [
         title: "Марина 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендавать друзтям. На данный момент получаю исключительно положительные эмоции.",
         imageUri: "img/video_1.svg",
-        additionalImageUri: "img/users_slider/u1.svg"
+        additionalImageUri: "img/users_slider/u3.svg"
     },
     {
         title: "Даша 25 лет. г.Москва",
