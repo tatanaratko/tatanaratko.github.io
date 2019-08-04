@@ -8,12 +8,6 @@
     var ANIMATION_FADING_STEP = 0.1;
     var ANIMATION_PERIOD = 15;
 
-    var companyInfoCenter = document.querySelector(".company-info-center");
-    var companyImg = document.querySelector(".company-info-img");
-
-    var leftArrow = document.querySelector(".left-arrow");
-    var rightArrow = document.querySelector(".right-arrow");
-
     var animateFading = function(el){
 
         if(!el.style.opactiy)
@@ -70,6 +64,15 @@
         this.isDebounceBlocked = false;
 
         this.sliderData = null;
+
+        this.leftArrow = document.querySelector(leftArrowSelector);
+        this.rightArrow = document.querySelector(rightArrowSelector);
+        this.sliderInfoEl = document.querySelector(companyInfoSelector);
+
+        this.companyImg = typeof companyImgSelector === "string" ? document.querySelector(companyImgSelector) : document.querySelector(companyImgSelector[0]);
+        this.additionalImg = typeof companyImgSelector === "object" ? document.querySelector(companyImgSelector[1]) : null;
+
+        this.sliderData = data;
         
         this.renderCompanyInfo = async function(el, info) {
 
@@ -77,15 +80,23 @@
     
            await animateFading(el);
     
-            var title = el.querySelector(".company-title");
-            var subTitle = el.querySelector(".company-subtitle");
-            var text = el.querySelector(".company-text");
+            var title = el.querySelector(".title");
+            var subTitle = el.querySelector(".subtitle");
+            var text = el.querySelector(".text");
     
             title.textContent = info.title;
-            subTitle.textContent = info.subTitle;
+            if(subTitle)
+            {
+                subTitle.textContent = info.subTitle;
+            }
             text.textContent = info.text;
     
             this.companyImg.setAttribute("src", info.imageUri);
+
+            if(this.additionalImg && info.additionalImageUri)
+            {
+                this.additionalImg.setAttribute("src", info.additionalImageUri);
+            }
     
             await animateAppearance(el);
     
@@ -95,7 +106,7 @@
     
         this.initialRender = async function()
         {
-            await this.renderCompanyInfo(companyInfoCenter, this.sliderData[0]);
+            await this.renderCompanyInfo(this.sliderInfoEl, this.sliderData[0]);
         }
     
     
@@ -110,7 +121,7 @@
             {
                 var leftElement = this.sliderData.pop();
     
-                this.renderCompanyInfo(companyInfoCenter, leftElement);
+                this.renderCompanyInfo(this.sliderInfoEl, leftElement);
     
                 this.sliderData.unshift(leftElement);
             }
@@ -118,7 +129,7 @@
             {
                 var rightElement = this.sliderData[1];
     
-                this.renderCompanyInfo(companyInfoCenter, rightElement);
+                this.renderCompanyInfo(this.sliderInfoEl, rightElement);
     
                 this.sliderData.push(this.sliderData.shift());
             }
@@ -132,23 +143,16 @@
             this.goTo(LEFT_DIRECTION);
         }).bind(this)
 
-        this.leftArrow = document.querySelector(leftArrowSelector);
-        this.rightArrow = document.querySelector(rightArrowSelector);
-        this.companyInfoCenter = document.querySelector(companyInfoSelector);
-        this.companyImg = document.querySelector(companyImgSelector);
-
-        this.sliderData = data;
-
         var that = this;
         
         this.initialRender().then(function(){
-            leftArrow.addEventListener('click', that.onClickLeft);
-            rightArrow.addEventListener('click', that.onClickRight);
+            that.leftArrow.addEventListener('click', that.onClickLeft);
+            that.rightArrow.addEventListener('click', that.onClickRight);
         });
 
         this.remove = function(){
-            leftArrow.removeEventListener('click', this.onClickLeft);
-            rightArrow.removeEventListener('click', this.onClickRight);
+            that.leftArrow.removeEventListener('click', that.onClickLeft);
+            that.rightArrow.removeEventListener('click', that.onClickRight);
         }
     };
 

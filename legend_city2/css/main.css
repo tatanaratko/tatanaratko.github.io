@@ -17,7 +17,7 @@ body {
     color: #000051;
 }
 
-.subtitle-text {
+.subtitle-text{
     font-family: 'Roboto';
     font-size: 14px;
     color: #BDBDBD;
@@ -532,7 +532,7 @@ z-index: 0;
 }
 
 
-.company-slider {
+.company-slider, .users-slider {
    position: relative;
     z-index: 4;
 }
@@ -582,10 +582,13 @@ z-index: 0;
 
 .arrow-ellipse,
 .left-arrow,
+.left-arrow-2,
 .right-arrow,
+.right-arrow-2,
 .white-ellipse,
 .view-company,
-.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10{
+.c1,.c2,.c3,.c4,.c5,.c6,.c7,.c8,.c9,.c10,
+.u1, .u2, .u3, .u4, .u5 {
     position: absolute;
     z-index:5;
 }
@@ -746,11 +749,13 @@ z-index: 0;
     top: 380px;
 }
 
-.left-arrow {
+.left-arrow,
+.left-arrow-2 {
     right: 625px;
 }
 
-.right-arrow {
+.right-arrow,
+.right-arrow-2 {
     right: 570px;
 }
 
@@ -764,7 +769,8 @@ z-index: 0;
     top: 174px;
 }
 
-.company-info {
+.company-info, 
+.users-info {
     position: absolute;
     top:140px;
     color: #ffffff;
@@ -782,21 +788,33 @@ z-index: 0;
     right: 985px;
 }
 
-.company-title {
+.company-slider .title,
+.users-slider .title {
     font-size: 30px;
     font-weight: bold;
 }
 
-.company-subtitle {
+.company-slider .subtitle {
     font-size: 24px;
     padding: 15px 0;
+    color: white;
 }
 
-.company-text {
+.company-slider .text {
     font-size: 16px;
 }
 
 /*fifth display*/
+
+.users-slider .text {
+    max-width: 410px;
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.users-slider .title {
+    padding-bottom: 25px;
+}
 
 .users-number .number {
     font-weight: bold;
@@ -821,23 +839,75 @@ z-index: 0;
     } 
 
 
+    .users-slider .u1{
+        background-image: url('../img/users_slider/u1.svg');
+        right: 1150px;
+        bottom: 390px;
+    }
+
+    .users-slider .u2{
+        background-image: url('../img/users_slider/u2.svg');
+        bottom: 350px;
+        right: 1400px;
+    }
+    .users-slider .u3{
+        background-image: url('../img/users_slider/u3.svg');
+        right: 1500px;
+        bottom: 150px;
+    }
+    .users-slider .u4{
+        background-image: url('../img/users_slider/u4.svg');
+        top: 350px;
+        right: 1420px;
+    }
+    .users-slider .u5{
+        background-image: url('../img/users_slider/u5.svg');
+        right: 1250px;
+    top: 450px;
+    }
+
+    .left-arrow-2, .right-arrow-2 {
+        top: 400px;
+    } 
+    .right-arrow-2 path,
+    .left-arrow-2 path
+    {
+        fill:#000051;
+    }
+    
+    .right-arrow-2 path:hover,
+    .left-arrow-2 path:hover
+    {
+        stroke-width: 2px;
+        stroke: #000051;
+        cursor: pointer;
+    }
+    .arrow-ellipse-2 {
+        top: 380px;
+    }
 
 
 
+.video-2 {
+    position: absolute;
+    right: 900px;
+    top: 100px;
 
+}
 
+.green-video-rectangle {
+position: absolute;
+z-index: 0;
+}
 
+.green-video-rectangle {
+    right: 80px;
+    bottom: 80px;
+}
 
-
-
-
-
-
-
-
-
-
-
+.users-info {
+    right: 100px;
+}
 
 /*footer*/
 
