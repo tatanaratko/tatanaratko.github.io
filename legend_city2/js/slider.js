@@ -266,7 +266,15 @@
             
             this.initialX = null;
             this.initialY = null;
-            e.preventDefault();
+
+            try{
+
+                e.preventDefault();
+            }
+            catch(e)
+            {
+                //do nothing
+            }
         }).bind(this);
 
         this.initialRender().then(function ()
