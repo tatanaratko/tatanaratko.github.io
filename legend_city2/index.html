@@ -44,7 +44,7 @@
             <div class="foto-bg"><img src="img/first_foto.svg"></div>
             <div class="rio-bg"><img src="img/rio.png"></div>
             <div class="container menu-custom-container">
-                <div class="row">
+                <div class="row menu-align">
                     <div class="col-lg-3">
                         <img src="./img/logo_blue.svg" alt="legend_town" class="logo">
                     </div>
@@ -54,16 +54,17 @@
                                 <li class="menu__item left-item">
                                     <a href="#">Заказать звонк
                                     </a>
-
-                                </li>
-                                <li class="menu__item center-menu">
-                                    <img src="img/phone.svg">
-                                </li>
-                                <li class="menu__item call-menu">
-                                    <div class="telephone">8 800 511 00 11</div>
-                                    <div class="call">Звонок бесплатный</div>
                                 </li>
 
+                                <div class="right-menu">
+                                    <li class="menu__item center-menu">
+                                        <img src="img/phone.svg">
+                                    </li>
+                                    <li class="menu__item call-menu">
+                                        <div class="telephone">8 800 511 00 11</div>
+                                        <div class="call">Звонок бесплатный</div>
+                                    </li>
+                                </div>
                             </ul>
                         </nav>
                     </div>
@@ -193,7 +194,7 @@
 
 
         <section class="videos">
-            <div class="container">
+            <div class="container custom-container">
                 <div class="row videos">
                     <div class="col-lg-12 col-md-12 col-xl-4">
                         <div class="video v-1">
@@ -298,6 +299,10 @@
                         <div class="white-rect"><img src="img/white_middle_rect.svg"></div>
                         <div class="circle-group"><img src="img/circle_group.svg"></div>
                         <div class="arrow-ellipse"><img src="img/arrow_ellipse.svg"></div>
+                        <div class="white-tiny-ellipce-1 tiny-ellipce"></div>
+                        <div class="white-tiny-ellipce-2 tiny-ellipce"></div>
+                        <div class="yellow-tiny-ellipce tiny-ellipce"></div>
+                        <div class="blue-tiny-ellipce tiny-ellipce"></div>
                         <div class="left-arrow">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
@@ -516,14 +521,14 @@
                     </div>
                     <div class="col-lg-12 our-number-all">
                         <div class="our-number our-number-right">
-                        <div class="single-number">  1</div>
-                        <div class="single-number">  0</div>
-                        <div class="single-number">  0</div>
+                            <div class="single-number"> 1</div>
+                            <div class="single-number"> 0</div>
+                            <div class="single-number"> 0</div>
                         </div>
                         <div class="our-number our-number-left">
-                        <div class="single-number">  1</div>
-                        <div class="single-number">  1</div>
-                        <div class="single-number">  5</div>
+                            <div class="single-number"> 1</div>
+                            <div class="single-number"> 1</div>
+                            <div class="single-number"> 5</div>
                         </div>
                     </div>
                 </div>
@@ -685,12 +690,81 @@
 
 
     <section class="map-zone">
-<div class="map-bg">
+        <div class="map-bg">
+            <svg width="1484" height="728" viewBox="0 0 1484 728" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="36.2256" width="1450.55" height="840.917" rx="84" transform="rotate(3.56066 36.2256 0)"
+                    fill="url(#paint6_linear)" />
+                <defs>
+                    <linearGradient id="paint6_linear" x1="761.5" y1="0" x2="761.5" y2="840.917"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFDB13" />
+                        <stop offset="1" stop-color="#FAAC2B" />
+                    </linearGradient>
+                </defs>
+            </svg>
 
-</div>
-<div class="map">
-    
-</div>
+        </div>
+        <div class="map">
+            <svg width="1919" height="773" viewBox="0 0 1919 773" fill="none" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink">
+                <image xlink:href="img/map/map.svg" x="0" y="0"></image>
+                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-69" y="0" width="1988" height="1004">
+                    <rect x="-69" y="174.565" width="1920" height="832" rx="84" transform="rotate(-5.21649 -69 174.565)"
+                        fill="#000051" />
+                </mask>
+                <g mask="url(#mask0)">
+                    <rect x="-13" y="-58" width="1920" height="1184" fill="url(#pattern0)" />
+                    <rect opacity="0.3" x="-69" y="174.565" width="1920" height="832" rx="84"
+                        transform="rotate(-5.21649 -69 174.565)" fill="#000051" />
+                </g>
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0" transform="translate(-0.00016172) scale(0.000703957 0.00114155)" />
+                    </pattern>
+                </defs>
+            </svg>
+
+        </div>
+
+        <div class="container">
+            <div class="row form-row">
+                <div class="col-lg-6 location">
+                    <img src="img/map/location.svg" alt="" class="location-yellow">
+                    <div class="location-white"></div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="form">
+                        <div class="form-text">
+                            <div class="mail form-content">
+                                <div class="mail-icon form-icon"><img src="img/form/email.svg"></div>
+                                <div class="mail-text content-text">
+                                    E-mail: <b>info@legendcity.ru</b></div>
+                            </div>
+                            <div class="number form-content">
+                                <div class=" form-icon"><img src="img/form/phone-call.svg"></div>
+                                <div class="number-text content-text">
+                                    Тел.: 8 (3812) <b>638-201
+                                        8 800 511 63 21</b> <br>
+                                    <span>Звонок бесплатный</span></div>
+                            </div>
+                            <div class="adress form-content">
+                                <div class=" form-icon"><img src="img/form/placeholder.svg"></div>
+                                <div class="adress-text content-text">
+                                    Россия, г. Омск, просп.<b> Комарова, 21,
+                                        корп.1</b>, офис 224. Индекс 644074
+                                </div>
+                            </div>
+                        </div>
+                        <img src="img/form/form_figure.svg" alt="" class="blue-form-fig">
+                        <div class="form-height"></div>
+                        <img src="img/form/form_white_figure.svg" alt="" class="white-form-fig">
+                        <img src="img/form/form_yellow_figure.svg" alt="" class="yellow-form-fig">
+
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
     </div>
