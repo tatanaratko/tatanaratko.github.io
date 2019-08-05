@@ -129,7 +129,13 @@ var USERS_DATA = [
         additionalImageUri: "img/users_slider/u5.svg"
     },
 ];
+
+
 var _init = function(){
+    var ourNumbersEl = document.querySelector(".our-number-all");
+    
+    window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
+
     var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
     var blueSlider = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-info", [".video-2 .video-content", ".u3"], USERS_DATA);
 
@@ -153,6 +159,8 @@ var _init = function(){
         inetShopsBtn.classList.remove("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
     });
+
+    window.userScrolling.activateEvents();
     
 };
 

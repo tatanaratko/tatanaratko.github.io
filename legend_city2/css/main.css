@@ -1142,6 +1142,10 @@ border: 1px solid #efefef;
     margin: 0 12px;
 }
 
+.our-number.our-number-right .single-number{
+    font-weight: 100;
+}
+
 .single-number span {
     margin-right: 100px;
 }
