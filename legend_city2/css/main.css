@@ -637,6 +637,10 @@ border: 1px solid #dadada;;
     height: 98px;
 }
 
+.company-info-center{
+    width:100%;
+}
+
 .slider-color {
     position: absolute;
     top: -150px;
@@ -706,6 +710,13 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c2{
     background-image: url('../img/company_slider/2i.svg');
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    width: 55px;
+    height: 55px;
+    right: 1080px;
+    top:-30px;
 }
 
 .company-slider-companies .c3{
@@ -746,7 +757,7 @@ border: 1px solid #dadada;;
         /* left: 370px; */
         border-radius: 50%;
         /* top: 503px; */
-        /* background: #FFFFFF; */
+        background-color: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
 
 }
@@ -812,6 +823,12 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c9{
     background-image: url('../img/company_slider/9i.svg');
+    border-radius: 50%;
+    /* top: 503px; */
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    width:80px;
+    height:80px;
 }
 
 
@@ -1273,7 +1290,13 @@ border: 1px solid #dadada;;
         right: 1500px;
         bottom: 150px;
         border-radius: 50%;
-        border: 13px solid #fff;
+        border: 17px solid #fff;
+        width:145px;
+        height: 145px;
+    }
+
+    .users-slider div.u3{
+        border: 1px dashed #36c150;
     }
     .users-slider .u4 {
         background-image: url(../img/users_slider/u4.svg);
