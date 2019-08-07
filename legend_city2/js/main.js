@@ -158,6 +158,9 @@ var _init = function(){
 
     var companySliderEl = document.querySelector(".company-slider");
 
+    var spendingRange = new window.RangeSlider(".price-filter", 0, 100000, '\u20BD', 10000);
+    var periodRange = new window.RangeSlider(".period-filter", 0, 12, '', 2, 12);
+
     inetShopsBtn.addEventListener('click', function(){
         greenSlider.remove();
         companySliderEl.classList.replace("company-slider-companies", "company-slider-inetshops");
