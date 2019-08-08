@@ -13,9 +13,9 @@
     }
 
     .video-play {
-    
+        position: initial;
         transform: translateX(-50%);
-        top: 30%;
+       
     }
     
 }
@@ -158,14 +158,15 @@
 .bullet-group {
     display: flex;
     /* margin: auto; */
-    position: absolute;
+    /* position: absolute; */
     max-width: 175px;
     justify-content: center;
     bottom: -70px;
-    transform: translateX(-50%);
-    left: 50%;
-}
+    /* transform: translateX(-50%); */
+    /* left: 50%; */
+    margin: 0 auto;
 
+}
 .bullet {
 
         width: 7px;
@@ -412,5 +413,9 @@ section.videos {
     padding-top: 10px;
 }
 
+.video.v-1 {
+    display: flex;
+    margin: 0 auto;
+}
 
 }
