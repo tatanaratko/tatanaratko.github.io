@@ -392,6 +392,7 @@ section.videos {
 .statistic-num-row {
     position: absolute;
     bottom: 155px;
+    width: 100%;
 }
 
 
@@ -418,4 +419,117 @@ section.videos {
     margin: 0 auto;
 }
 
+
+.arrow-ellipse,
+.right-arrow,
+.left-arrow {
+    display: none;
+}
+
+
+.user-numerals {
+    display: none;
+}
+
+.user-numerals-mobile {
+    display: block;
+}
+
+.calculator-text .title {
+    font-size: 16px;
+}
+
+.calculator-text {
+    padding-left: 20px;
+}
+
+
+.mounth-sum{
+    height: 120px;
+}
+.calculate-section {
+    display: block;
+}
+
+.sale {
+    margin-top: 90px;
+}
+
+.users-number {
+ 
+    text-align: center;
+}
+
+.users-number .number span ,
+.users-number .econom,
+.users-number .number{
+    font-size: 18px;
+}
+.users-number .number {
+    font-weight: 600;
+}
+.users-number .econom {
+    color: #b3aeae;
+    text-align: center;
+    padding-left: 80px;
+    padding-right: 0;
+}
+
+.range-slider-container {
+    position: relative;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.calculate-section {
+    display: block;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.user-numerals-mobile {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.calculate-section .text {
+    padding-left: 20px;
+}
+
+.sale .sum {
+    padding-left: 20px;
+}
+
+.card-1 {
+    display: flex;
+    margin: 0 auto;
+}
+
+.mobile-app {
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.about-us {
+    display: flex;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.price-filter,
+.period-filter{
+    width: 200px;
+    display: flex;
+    margin: 0 auto;
+}
 }
