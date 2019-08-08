@@ -187,7 +187,7 @@ color: #9E9E9E;
     margin-top: 60px;
     position: absolute;
 }
-.blue-bg {
+.blue-bg-desktop {
     /* background-image: url('../img/blue_screen.svg') ; */
     position: absolute;
     height: 650px;;
@@ -1525,7 +1525,7 @@ color: #000051;
 }
 
 .our-number-pentagon {
-    background-image: url(../img/user_numerals/our_number_pentagon.svg);
+
     position: absolute;
     width: 280px;
     height: 280px;
@@ -1533,7 +1533,7 @@ color: #000051;
 }
 
 .our-number-circle {
-    background-image: url(../img/user_numerals/our_number_circle.svg);
+  
     position: absolute;
     width: 144px;
     height: 144px;
@@ -1543,7 +1543,7 @@ color: #000051;
 }
 
 .our-yellow-circle {
-    background-image: url(../img/user_numerals/our_yel_circle.svg);
+    
     position: absolute;
     width: 58px;
     height: 58px;
