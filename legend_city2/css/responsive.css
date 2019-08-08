@@ -366,26 +366,51 @@ section.videos {
 }
 
 
+.blue-trigon {
+    right: 0px;
+    top: 400px;
+}
 
 
 
 
+.grey-bottom-line {
+    display: none;
+}
+
+.grey-bottom-line-mobile {
+    display: block;
+}
 
 
 
+.statistic-num-container {
+    position: relative;
+}
+
+.statistic-num-row {
+    position: absolute;
+    bottom: 155px;
+}
 
 
 
+.statistic-num {
+    position: initial;
+    display: flex;
+    margin: 0 auto;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 12px;
+    color: #000051;
+    padding-top: -100px;
 
+}
 
-
-
-
-
-
-
-
-
+.align-num {
+    padding-top: 10px;
+}
 
 
 }

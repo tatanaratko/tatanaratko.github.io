@@ -832,11 +832,6 @@ border: 1px solid #dadada;;
     height:80px;
 }
 
-
-.company-slider-companies .c10{
-    /* background-image: url('../img/company_slider/10c.svg'); */
-}
-
 .company-slider-inetshops .c10{
     background-image: none;
 }
@@ -1639,4 +1634,12 @@ img.logo {
 
 .subtitle-slider {
     font-weight: normal;
+}
+
+
+
+
+
+.grey-bottom-line-mobile {
+    display: none;
 }
