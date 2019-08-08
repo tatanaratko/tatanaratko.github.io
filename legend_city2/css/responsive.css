@@ -13,7 +13,7 @@
     }
 
     .video-play {
-        left: 45%;
+    
         transform: translateX(-50%);
         top: 30%;
     }
@@ -155,30 +155,17 @@
     z-index: 5;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .bullet-group {
     display: flex;
-    margin: auto;
-    max-width: 150px;
+    /* margin: auto; */
+    position: absolute;
+    max-width: 175px;
     justify-content: center;
+    bottom: -70px;
+    transform: translateX(-50%);
+    left: 50%;
 }
+
 .bullet {
 
         width: 7px;
@@ -236,7 +223,15 @@
  {
     right: 0px;
     left: 0px;
-    margin: 0 20px;
+    margin: 0 10px;
+    max-width: 290px;
+}
+
+.company-slider .text {
+    font-size: 14px;
+    max-height: 200px;
+    overflow: hidden;
+    height: 80px;
 }
 
 .company-info-img {
@@ -322,7 +317,12 @@
 }
 
 
-
+.company-slider .subtitle {
+    font-size: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    padding: 0 0 15px
+}
 
 .company-choice {
     display: none;
@@ -330,18 +330,40 @@
 
 
 
+.about-us {
+    margin-top: 190px;
+    margin-bottom: 35px;
+}
 
 
 
+section.videos {
+    margin-bottom: 70px;
+}
 
 
+.company-slider .title, .users-slider .title {
+    font-size: 18px;
+    padding-top: 27px;
+}
 
 
+.white-rect {
+    position: absolute;
+    bottom: 315px;
+    right: 0;
+}
 
-
-
-
-
+.white-rect img {
+    width: 130px;
+    height: 130px;
+}
+.circle-group {
+    position: absolute;
+    top: 355px;
+    /* right: 10px; */
+    left: -25px;
+}
 
 
 
