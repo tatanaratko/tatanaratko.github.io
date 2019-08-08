@@ -9,7 +9,7 @@
     border-radius: 7px 7px 0px 0px;
     z-index: 1;
     position: absolute;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -81,7 +81,7 @@
     z-index: 4;
     top: 13px;
     left: 170px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
@@ -97,7 +97,7 @@
     position: absolute;
     z-index:4;
     top: 55px;
-    font-family: Roboto;
+    font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 12px;

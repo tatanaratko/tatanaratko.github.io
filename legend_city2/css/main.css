@@ -11,14 +11,14 @@ body {
      font-family: 'Roboto',sans-serif;
  }
 .subtitle {
-    font-family: 'Roboto';
+    
     font-weight: 500;
     font-size: 24px;
     color: #000051;
 }
 
 .subtitle-text{
-    font-family: 'Roboto';
+ 
     font-size: 14px;
     color: #BDBDBD;
 
@@ -122,9 +122,9 @@ ul, li {
 
 
 .telephone {
-    font-family: 'Roboto';
+
 font-style: normal;
-font-weight: 500;
+font-weight: 600;
 font-size: 18px;
 color: #000051;
 }
@@ -137,7 +137,7 @@ color: #BDBDBD;
 
 .left-item {
 
-    font-family: 'Roboto';
+ 
 font-style: normal;
 font-weight: 500;
 font-size: 14px;
@@ -236,7 +236,7 @@ color: #9E9E9E;
     z-index: 3;
 }
 .offer__title {
-    font-family: 'Roboto';
+    /* font-family: 'Roboto'; */
     font-style: normal;
     font-weight: 500;
     font-size: 60px;
@@ -281,7 +281,8 @@ color: #9E9E9E;
 .call-dowload_text {
     padding-top: 20px;
     padding-bottom:20px;
-    font-family: 'Roboto';
+   
+
     font-weight: bold;
     font-size: 24px;
     color: #FBC02D;
@@ -1627,3 +1628,10 @@ img.logo {
 /* } */
 
 
+.blue-bg-mobile {
+    display: none;
+}
+
+.foto-bg-mobile {
+    display: none;
+}
