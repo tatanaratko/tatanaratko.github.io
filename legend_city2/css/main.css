@@ -1649,3 +1649,18 @@ img.logo {
 .user-numerals-mobile {
     display:none;
 }
+
+
+.users-section-mobile {
+    display: none;
+}
+
+.footer {
+    text-align: center;
+    color: #898989;
+    font-size: 14px;
+}
+
+.map-zone-mobile {
+    display: none;
+}

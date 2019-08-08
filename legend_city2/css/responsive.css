@@ -257,59 +257,62 @@
     width: 300px;
 }
 
-.users-slider .u1 {
+.users-section-mobile .u1 {
     background-image: url(../img/users_slider/u1.svg);
     width: 60px;
-    right: 180px;
-    bottom: 400px;
+    right: 195px;
+    bottom: 395px;
 }
-.users-slider .u2 {
+.users-section-mobile .u2 {
     background-image: url(../img/users_slider/u2.svg);
-    bottom: 400px;
-    right: 200px;
-    /* width: 50px; */
+    bottom: 380px;
+    right: 250px;
 }
 
-.users-slider .u3 {
+.users-section-mobile .u3 {
     right: 120px;
-    bottom: 440px;
+    bottom: 395px;
     background-size: contain;
     width: 70px;
     height: 70px;
 }
 
-.users-slider .u33 {
+.users-section-mobile .u33 {
     height: 70px;
 }
-.users-slider .u4 {
+.users-section-mobile .u4 {
     background-image: url(../img/users_slider/u4.svg);
-    top: -120px;
-    right: 20px;
-    bottom: 400px;
+    bottom: 395px;
+    left: 205px;
 }
 
-.users-slider .u5 {
+.users-section-mobile .u5 {
     background-image: url(../img/users_slider/u5.svg);
-    top: -100px;
-    left: 320px;
+    left: 250px;
+    bottom: 380px;
 }
 
-.users-slider .u1,
-.users-slider .u2,
-.users-slider .u4,
-.users-slider .u5 {
-    width: 50px;
-    height: 50px;
+.users-section-mobile .u1,
+.users-section-mobile .u2,
+.users-section-mobile .u4,
+.users-section-mobile .u5 {
+    width: 40px;
+    height: 40px;
     background-size: contain;
 }
 
 .users-section {
-    margin-top: 200px;
+    display: none;
+}
+
+.users-section-mobile {
+    margin: 260px auto 50px;
     display: flex;
     flex-direction: column;
-    max-width: 500px;
-    margin: 0 auto;
     justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 320px;
 }
 
 .video-2 {
@@ -702,4 +705,53 @@ img.logo {
 .yellow-element {
     justify-content: center;
 }
+
+.video-user {
+    width: 290px;
+}
+
+.mobile-user-slider {
+    position: relative;
+}
+
+
+.user-video {
+    position: absolute;
+    bottom: 190px;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.video-play-user {
+    position: initial;
+    /* top: 100px; */
+    /* bottom: 59px; */
+    /* transform: translateX(-50%); */
+    z-index: 5;
+    transform: none;
+}
+
+.users-info.users-info-mobile {
+    top: 100px;
+}
+
+.map-zone-mobile {
+    display:block;
+    position: relative;
+}
+
+.map-zone {
+    display: none;
+}
+
+.mobile-bg {
+    position: absolute;
+    z-index: 0;
+}
+
+.mobile-map {
+    position: absolute;
+    z-index: 1;
+}
+
 }
