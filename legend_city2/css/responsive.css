@@ -242,7 +242,7 @@ section.videos .row.videos .bullet-active {
     font-size: 14px;
     max-height: 200px;
     overflow: hidden;
-    height: 80px;
+    height: 160px;
 }
 
 .company-info-img {
@@ -838,4 +838,13 @@ img.logo {
 .footer {
     display: flex;
 }
+
+.grey-section-mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 320px;
+}
+
 }
