@@ -776,4 +776,37 @@ img.logo {
     left: 217px;
     z-index: 3;
 }
+
+.form-mobile {
+    height: 370px;
+    width: 290px;
+    z-index: 4;
+}
+
+.form-text-mobile {
+    padding: 0;
+}
+.contact-info-mobile {
+
+    font-size: 16px; 
+}
+
+.form-wrap-mobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 350px;
+    position: relative;
+}
+
+.blue-form-fig {
+ 
+    width: 290px;
+ }
+
+ .form-height {
+    width: 290px;
+    height: 370px;
+}
 }
