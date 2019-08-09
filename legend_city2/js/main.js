@@ -151,7 +151,7 @@ var _init = function(){
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
 
     var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
-    var blueSlider = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-info", [".video-user .video-content", ".u3"], USERS_DATA);
+    var blueSlider = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content", ".users-slider .u3"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
    
     var inetShopsBtn = document.querySelector(".inter-shop");
