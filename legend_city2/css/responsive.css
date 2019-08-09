@@ -787,8 +787,10 @@ img.logo {
     padding: 0;
 }
 .contact-info-mobile {
-
-    font-size: 16px; 
+    line-height: 40px;
+    font-size: 16px;
+    padding-bottom: 40px;
+    text-align: center;
 }
 
 .form-wrap-mobile {
@@ -796,17 +798,31 @@ img.logo {
     justify-content: center;
     flex-direction: column;
     margin: 0 auto;
-    max-width: 350px;
+    max-width:290px;
     position: relative;
 }
 
 .blue-form-fig {
  
-    width: 290px;
+    width: 295px;
  }
 
  .form-height {
     width: 290px;
     height: 370px;
+}
+
+
+.content-text-mobile{
+    font-size: 14px;
+}
+
+.form-content {
+ 
+    padding: 7px 0;
+}
+
+.content-text-mobile span {
+    display: none;
 }
 }
