@@ -146,6 +146,9 @@ var USERS_DATA = [
 
 
 var _init = function(){
+    var spending = 48000;
+    var percent = 5;
+
     var ourNumbersEl = document.querySelector(".our-number-all");
     
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
@@ -162,17 +165,48 @@ var _init = function(){
 
     var spendingRangeDesktop = new window.RangeSlider(
        ".price-filter-desktop", 
-        0, 100000, '\u20BD', 10000);
+        0, 100000, '\u20BD', spending);
     var spendingRangeMobile = new window.RangeSlider(
        ".price-filter-mobile", 
-        0, 100000, '\u20BD', 10000);
+        0, 100000, '\u20BD', spending);
 
     var percentRangeDesktp = new window.RangeSlider(
        ".period-filter-desktop", 
-        0, 12, '%', 2, 12);
+        0, 12, '%', percent, 12);
     var percentRangeMobile = new window.RangeSlider(
        ".period-filter-mobile", 
-        0, 12, '%', 2, 12);
+        0, 12, '%', percent, 12);
+
+
+    
+    var changeSpending = function(newSpending)
+    {
+        spending = newSpending
+        redrawBenefitSum()
+    }
+    
+    var changePercent = function(newPercent)
+    {
+        percent = newPercent
+        redrawBenefitSum()
+    }
+
+    var redrawBenefitSum = function()
+    {
+        var benefitSums = Array.from(document.querySelectorAll(".benefit-sum"));
+
+        for(var bs of benefitSums)
+        {
+            bs.textContent = window.RangeSlider.prototype.formatNumber(spending * 0.01 * percent);
+        }
+
+    };
+
+    spendingRangeDesktop.addCallback(changeSpending);
+    spendingRangeMobile.addCallback(changeSpending);
+
+    percentRangeDesktp.addCallback(changePercent);
+    percentRangeMobile.addCallback(changePercent);
 
     inetShopsBtn.addEventListener('click', function(){
         greenSlider.remove();
@@ -189,7 +223,7 @@ var _init = function(){
         inetShopsBtn.classList.remove("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
     });
-
+    redrawBenefitSum();
     window.userScrolling.activateEvents();
     
 };
