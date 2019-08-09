@@ -87,6 +87,9 @@
     {
 
         this.isDebounceBlocked = false;
+        this.isAutoRotationBlocked = false;
+
+        this.rotationInterval = null;
 
         this.sliderData = null;
 
@@ -217,11 +220,13 @@
     
         this.onClickRight = (function ()
         {
+            this.disallowAutoRotation();
             this.goTo(RIGHT_DIRECTION);
         }).bind(this);
     
         this.onClickLeft = (function ()
         {
+            this.disallowAutoRotation();
             this.goTo(LEFT_DIRECTION);
         }).bind(this)
 
@@ -236,6 +241,16 @@
             this.initialY = e.touches[0].clientY;
         }).bind(this);
 
+        this.allowAutoRotation = function(){
+            this.isAutoRotationBlocked = false;
+        }
+
+        this.disallowAutoRotation = function(){
+            this.isAutoRotationBlocked = true;
+
+            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
+        };
+
         this.onSwipeLeft = (function(){
             this.goTo(RIGHT_DIRECTION);
         }).bind(this);
@@ -246,6 +261,7 @@
 
         this.moveTouch = (function (e)
         {
+            
             if (this.initialX === null)
             {
                 return;
@@ -264,6 +280,7 @@
 
             if (Math.abs(diffX) > Math.abs(diffY))
             {
+                this.disallowAutoRotation();
                 if (diffX > 0)
                 {
                     this.onSwipeLeft();
@@ -301,18 +318,40 @@
 
         this.remove = function ()
         {
-            that.leftArrow.removeEventListener('click', that.onClickLeft);
-            that.rightArrow.removeEventListener('click', that.onClickRight);
+            this.leftArrow.removeEventListener('click', this.onClickLeft);
+            this.rightArrow.removeEventListener('click', this.onClickRight);
 
-            that.sliderInfoEl.removeEventListener("touchstart", that.startTouch);
-            that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
+            this.sliderInfoEl.removeEventListener("touchstart", this.startTouch);
+            this.sliderInfoEl.removeEventListener("touchmove", this.moveTouch);
+
+            if(this.rotationInterval)
+            {
+                clearInterval(this.rotationInterval);
+            }
+
+            this.isDebounceBlocked = false;
+            this.isAutoRotationBlocked = false;
+            this.sliderData = null;
+        };
+
+        this.autoRotate = function(){
+            if(this.isAutoRotationBlocked)
+            {
+                return;
+            }
+            this.goTo(RIGHT_DIRECTION)
         };
 
         this.startAutoRotation = function(){
-            setInterval(()=>this.goTo(RIGHT_DIRECTION), AUTO_ROTATION_INTERVAL);
+            this.rotationInterval = setInterval(this.autoRotate, AUTO_ROTATION_INTERVAL);
         };
 
         this.startAutoRotation = this.startAutoRotation.bind(this);
+        this.autoRotate = this.autoRotate.bind(this);
+        this.allowAutoRotation = this.allowAutoRotation.bind(this);
+        this.disallowAutoRotation = this.disallowAutoRotation.bind(this);
+        this.remove = this.remove.bind(this);
+        
     };
 
     window.slider = {
