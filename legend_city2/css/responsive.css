@@ -747,11 +747,25 @@ img.logo {
 .mobile-bg {
     position: absolute;
     z-index: 0;
+    width: 100%
 }
 
 .mobile-map {
     position: absolute;
     z-index: 1;
+    width: 100%
+}
+.location-yellow-mobile{
+    position: absolute;
+    top: 80px;
+    left: 200px;
+    z-index: 3;
 }
 
+.location-white-mobile {
+    position: absolute;
+    top: 130px;
+    left: 217px;
+    z-index: 3;
+}
 }
