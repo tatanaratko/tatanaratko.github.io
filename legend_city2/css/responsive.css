@@ -291,6 +291,12 @@ section.videos .row.videos .bullet-active {
     height: 70px;
 }
 
+body > section.users-section-mobile > div > img.u3.u33.c-size {
+    padding: 2px;
+    border: 1px dashed green;
+    border-radius: 50%;
+}
+
 
 .users-section-mobile .u4 {
     background-image: url(../img/users_slider/u4.svg);
