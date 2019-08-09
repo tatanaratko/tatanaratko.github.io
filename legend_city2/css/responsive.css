@@ -99,7 +99,7 @@
 
 .offer__intro-4 ,
 .offer__intro-1 {
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .offer__intro-4 {
@@ -277,7 +277,7 @@ section.videos .row.videos .bullet-active {
     right: 250px;
 }
 
-.users-section-mobile .u3 {
+.users-section-mobile .u33 {
     right: 120px;
     bottom: 395px;
     background-size: contain;
@@ -285,9 +285,7 @@ section.videos .row.videos .bullet-active {
     height: 70px;
 }
 
-.users-section-mobile .u33 {
-    height: 70px;
-}
+
 .users-section-mobile .u4 {
     background-image: url(../img/users_slider/u4.svg);
     bottom: 395px;
@@ -846,5 +844,21 @@ img.logo {
     margin: 0 auto;
     max-width: 320px;
 }
+.u3 .u33 .c-size {
+    border: 10px solid white;
+}
 
+.u3 .c-size {
+    border: 1px dashed green;
+    border-radius: 50%; 
+}
+
+.circle-group.circle-group-2 {
+    top: -15px;
+    left: 230px;
+    z-index: 0;
+}
+.users-info.users-info-mobile .text {
+    height: 125px;
+}
 }
