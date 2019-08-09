@@ -971,17 +971,23 @@ border: 1px solid #dadada;;
 
 .left-arrow,
 .right-arrow {
-    top: 380px;
+    top: 340px;
 }
 
-.left-arrow,
-.left-arrow-2 {
-    right: 625px;
+.left-arrow, .left-arrow-2 {
+    right: 660px;
+    border: 23px solid white;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
 }
 
-.right-arrow,
-.right-arrow-2 {
+.right-arrow, .right-arrow-2 {
     right: 570px;
+    border: 23px solid white;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.08);
 }
 
 .white-ellipse {
@@ -1316,7 +1322,7 @@ border: 1px solid #dadada;;
     }
 
     .left-arrow-2, .right-arrow-2 {
-        top: 400px;
+        top: 340px;
     } 
     .right-arrow-2 path,
     .left-arrow-2 path
