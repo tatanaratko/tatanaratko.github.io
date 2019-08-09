@@ -24,6 +24,10 @@ body {
 
 }
 
+.bullet-active{
+    background-color: white;
+}
+
 .title__main{
     padding-top: 100px;
     font-size: 32px;

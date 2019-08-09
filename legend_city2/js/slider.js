@@ -119,12 +119,21 @@
             var subTitle = el.querySelector(".subtitle");
             var text = el.querySelector(".text");
     
-            title.textContent = info.title;
+            if(title)
+            {
+                title.textContent = info.title;
+            }
+
+
             if (subTitle)
             {
                 subTitle.textContent = info.subTitle;
             }
-            text.textContent = info.text;
+
+            if(text)
+            {
+                text.textContent = info.text;
+            }
     
             this.companyImg.setAttribute("src", info.imageUri);
 
@@ -273,14 +282,17 @@
             }
             catch(e)
             {
-                //do nothing
+                console.log(e)
             }
         }).bind(this);
 
         this.initialRender().then(function ()
         {
-            that.leftArrow.addEventListener('click', that.onClickLeft);
-            that.rightArrow.addEventListener('click', that.onClickRight);
+            if(that.leftArrow && that.rightArrow)
+            {
+                that.leftArrow.addEventListener('click', that.onClickLeft);
+                that.rightArrow.addEventListener('click', that.onClickRight);
+            }
 
             that.sliderInfoEl.addEventListener("touchstart", that.startTouch, false);
             that.sliderInfoEl.addEventListener("touchmove", that.moveTouch, false);
