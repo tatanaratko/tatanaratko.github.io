@@ -75,12 +75,24 @@
     position: absolute;
     z-index: 4;
     top: 13px;
-    left: 170px;
     font-family: 'Roboto';
     font-style: normal;
     font-weight: normal;
     font-size: 16px;
     line-height: 19px;
+}
+
+
+@media screen and (min-width: 768px){
+    .range-slider-suffix{
+        left: 170px;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .range-slider-suffix{
+        left: 270px;
+    }
 }
 .range-slider-progress{
     position: relative;

@@ -190,9 +190,17 @@
 
 
 
-.bb3 {
-    background-color: #4B82FA;
+section.videos .row.videos .bullet-2 {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    border: 1px solid #4B82FA;
+    cursor: pointer;
+    margin: 0 6px;
+}
 
+section.videos .row.videos .bullet-active {
+    background-color: #4B82FA;
 }
 
 .wb3 {
