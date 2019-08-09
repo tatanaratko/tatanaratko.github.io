@@ -15,6 +15,7 @@
 
     var ANIMATION_FADING_STEP = 0.1;
     var ANIMATION_PERIOD = 15;
+    var AUTO_ROTATION_INTERVAL = 5000;
 
     var BULLET_TEMPLATE = function(cls)
     {
@@ -119,12 +120,21 @@
             var subTitle = el.querySelector(".subtitle");
             var text = el.querySelector(".text");
     
-            title.textContent = info.title;
+            if(title)
+            {
+                title.textContent = info.title;
+            }
+
+
             if (subTitle)
             {
                 subTitle.textContent = info.subTitle;
             }
-            text.textContent = info.text;
+
+            if(text)
+            {
+                text.textContent = info.text;
+            }
     
             this.companyImg.setAttribute("src", info.imageUri);
 
@@ -273,14 +283,17 @@
             }
             catch(e)
             {
-                //do nothing
+                console.log(e)
             }
         }).bind(this);
 
         this.initialRender().then(function ()
         {
-            that.leftArrow.addEventListener('click', that.onClickLeft);
-            that.rightArrow.addEventListener('click', that.onClickRight);
+            if(that.leftArrow && that.rightArrow)
+            {
+                that.leftArrow.addEventListener('click', that.onClickLeft);
+                that.rightArrow.addEventListener('click', that.onClickRight);
+            }
 
             that.sliderInfoEl.addEventListener("touchstart", that.startTouch, false);
             that.sliderInfoEl.addEventListener("touchmove", that.moveTouch, false);
@@ -293,7 +306,13 @@
 
             that.sliderInfoEl.removeEventListener("touchstart", that.startTouch);
             that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
-        }
+        };
+
+        this.startAutoRotation = function(){
+            setInterval(()=>this.goTo(RIGHT_DIRECTION), AUTO_ROTATION_INTERVAL);
+        };
+
+        this.startAutoRotation = this.startAutoRotation.bind(this);
     };
 
     window.slider = {

@@ -146,20 +146,79 @@ var USERS_DATA = [
 
 
 var _init = function(){
+    var spending = 48000;
+    var percent = 5;
+
     var ourNumbersEl = document.querySelector(".our-number-all");
     
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
 
-    var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
-    var blueSlider = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-info", [".video-2 .video-content", ".u3"], USERS_DATA);
+    var greenSliderEl = document.querySelector(".company-info-center");
+    var blueSliderDesktopEl = document.querySelector(".users-slider .users-info");
+    var blueSliderMobileEl = document.querySelector(".mobile-user-slider .users-info");
+    var videoSliderEl = document.querySelector("section.videos .row.videos");
 
+    
+    
+    var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
+    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content", ".users-slider .u3"], USERS_DATA);
+    var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3"], USERS_DATA);
+    var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
+    
+    window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(blueSliderDesktopEl, blueSlideDesktop.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(blueSliderMobileEl, blueSlideMobile.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(videoSliderEl, videoSlider.startAutoRotation);
+    
     var inetShopsBtn = document.querySelector(".inter-shop");
     var companiesBtn = document.querySelector(".company-btn");
 
     var companySliderEl = document.querySelector(".company-slider");
 
-    var spendingRange = new window.RangeSlider(".price-filter", 0, 100000, '\u20BD', 10000);
-    var periodRange = new window.RangeSlider(".period-filter", 0, 12, '', 2, 12);
+    var spendingRangeDesktop = new window.RangeSlider(
+       ".price-filter-desktop", 
+        0, 100000, '\u20BD', spending);
+    var spendingRangeMobile = new window.RangeSlider(
+       ".price-filter-mobile", 
+        0, 100000, '\u20BD', spending);
+
+    var percentRangeDesktp = new window.RangeSlider(
+       ".period-filter-desktop", 
+        0, 12, '%', percent, 12);
+    var percentRangeMobile = new window.RangeSlider(
+       ".period-filter-mobile", 
+        0, 12, '%', percent, 12);
+
+
+    
+    var changeSpending = function(newSpending)
+    {
+        spending = newSpending
+        redrawBenefitSum()
+    }
+    
+    var changePercent = function(newPercent)
+    {
+        percent = newPercent
+        redrawBenefitSum()
+    }
+
+    var redrawBenefitSum = function()
+    {
+        var benefitSums = Array.from(document.querySelectorAll(".benefit-sum"));
+
+        for(var bs of benefitSums)
+        {
+            bs.textContent = window.RangeSlider.prototype.formatNumber(spending * 0.01 * percent);
+        }
+
+    };
+
+    spendingRangeDesktop.addCallback(changeSpending);
+    spendingRangeMobile.addCallback(changeSpending);
+
+    percentRangeDesktp.addCallback(changePercent);
+    percentRangeMobile.addCallback(changePercent);
 
     inetShopsBtn.addEventListener('click', function(){
         greenSlider.remove();
@@ -176,7 +235,7 @@ var _init = function(){
         inetShopsBtn.classList.remove("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
     });
-
+    redrawBenefitSum();
     window.userScrolling.activateEvents();
     
 };
