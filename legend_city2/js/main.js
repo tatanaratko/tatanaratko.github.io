@@ -166,10 +166,16 @@ var _init = function(){
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
     window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
-    window.userScrolling.addUserSeeEvent(blueSliderDesktopEl, blueSlideDesktop.startAutoRotation);
-    window.userScrolling.addUserSeeEvent(blueSliderMobileEl, blueSlideMobile.startAutoRotation);
-    window.userScrolling.addUserSeeEvent(videoSliderEl, videoSlider.startAutoRotation);
-    
+    if(window.innerWidth > 768)
+    {
+        window.userScrolling.addUserSeeEvent(blueSliderDesktopEl, blueSlideDesktop.startAutoRotation);
+    }
+    else
+    {
+        window.userScrolling.addUserSeeEvent(blueSliderMobileEl, blueSlideMobile.startAutoRotation);
+        window.userScrolling.addUserSeeEvent(videoSliderEl, videoSlider.startAutoRotation);
+    }
+
     var inetShopsBtn = document.querySelector(".inter-shop");
     var companiesBtn = document.querySelector(".company-btn");
 
@@ -225,7 +231,8 @@ var _init = function(){
         companySliderEl.classList.replace("company-slider-companies", "company-slider-inetshops");
         companiesBtn.classList.remove("slider-btn-visited");
         inetShopsBtn.classList.add("slider-btn-visited");
-        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);
+        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
+        window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
 
     companiesBtn.addEventListener('click', function(){
@@ -233,7 +240,8 @@ var _init = function(){
         companySliderEl.classList.replace("company-slider-inetshops", "company-slider-companies");
         companiesBtn.classList.add("slider-btn-visited");
         inetShopsBtn.classList.remove("slider-btn-visited");
-        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
+        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);;
+        window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
     redrawBenefitSum();
     window.userScrolling.activateEvents();

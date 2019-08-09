@@ -87,7 +87,9 @@
     {
 
         this.isDebounceBlocked = false;
-        this.autoRotationBlocked = false;
+        this.isAutoRotationBlocked = false;
+
+        this.rotationInterval = null;
 
         this.sliderData = null;
 
@@ -240,13 +242,13 @@
         }).bind(this);
 
         this.allowAutoRotation = function(){
-            this.autoRotationBlocked = false;
+            this.isAutoRotationBlocked = false;
         }
 
         this.disallowAutoRotation = function(){
-            this.autoRotationBlocked = true;
+            this.isAutoRotationBlocked = true;
 
-            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
+            this.rotationInterval = setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
         };
 
         this.onSwipeLeft = (function(){
@@ -321,10 +323,19 @@
 
             that.sliderInfoEl.removeEventListener("touchstart", that.startTouch);
             that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
+
+            if(this.rotationInterval)
+            {
+                clearInterval(this.rotationInterval);
+            }
+
+            this.isDebounceBlocked = false;
+            this.isAutoRotationBlocked = false;
+            this.sliderData = null;
         };
 
         this.autoRotate = function(){
-            if(this.autoRotationBlocked)
+            if(this.isAutoRotationBlocked)
             {
                 return;
             }
@@ -339,6 +350,7 @@
         this.autoRotate = this.autoRotate.bind(this);
         this.allowAutoRotation = this.allowAutoRotation.bind(this);
         this.disallowAutoRotation = this.disallowAutoRotation.bind(this);
+        
     };
 
     window.slider = {
