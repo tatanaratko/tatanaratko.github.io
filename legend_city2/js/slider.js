@@ -15,6 +15,7 @@
 
     var ANIMATION_FADING_STEP = 0.1;
     var ANIMATION_PERIOD = 15;
+    var AUTO_ROTATION_INTERVAL = 5000;
 
     var BULLET_TEMPLATE = function(cls)
     {
@@ -305,7 +306,13 @@
 
             that.sliderInfoEl.removeEventListener("touchstart", that.startTouch);
             that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
-        }
+        };
+
+        this.startAutoRotation = function(){
+            setInterval(()=>this.goTo(RIGHT_DIRECTION), AUTO_ROTATION_INTERVAL);
+        };
+
+        this.startAutoRotation = this.startAutoRotation.bind(this);
     };
 
     window.slider = {

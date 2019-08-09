@@ -153,11 +153,23 @@ var _init = function(){
     
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
 
+    var greenSliderEl = document.querySelector(".company-info-center");
+    var blueSliderDesktopEl = document.querySelector(".users-slider .users-info");
+    var blueSliderMobileEl = document.querySelector(".mobile-user-slider .users-info");
+    var videoSliderEl = document.querySelector("section.videos .row.videos");
+
+    
+    
     var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
     var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content", ".users-slider .u3"], USERS_DATA);
     var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
-   
+    
+    window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(blueSliderDesktopEl, blueSlideDesktop.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(blueSliderMobileEl, blueSlideMobile.startAutoRotation);
+    window.userScrolling.addUserSeeEvent(videoSliderEl, videoSlider.startAutoRotation);
+    
     var inetShopsBtn = document.querySelector(".inter-shop");
     var companiesBtn = document.querySelector(".company-btn");
 
