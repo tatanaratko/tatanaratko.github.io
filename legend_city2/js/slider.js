@@ -248,7 +248,7 @@
         this.disallowAutoRotation = function(){
             this.isAutoRotationBlocked = true;
 
-            this.rotationInterval = setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
+            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
         };
 
         this.onSwipeLeft = (function(){
@@ -318,11 +318,11 @@
 
         this.remove = function ()
         {
-            that.leftArrow.removeEventListener('click', that.onClickLeft);
-            that.rightArrow.removeEventListener('click', that.onClickRight);
+            this.leftArrow.removeEventListener('click', this.onClickLeft);
+            this.rightArrow.removeEventListener('click', this.onClickRight);
 
-            that.sliderInfoEl.removeEventListener("touchstart", that.startTouch);
-            that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
+            this.sliderInfoEl.removeEventListener("touchstart", this.startTouch);
+            this.sliderInfoEl.removeEventListener("touchmove", this.moveTouch);
 
             if(this.rotationInterval)
             {
@@ -343,13 +343,14 @@
         };
 
         this.startAutoRotation = function(){
-            setInterval(this.autoRotate, AUTO_ROTATION_INTERVAL);
+            this.rotationInterval = setInterval(this.autoRotate, AUTO_ROTATION_INTERVAL);
         };
 
         this.startAutoRotation = this.startAutoRotation.bind(this);
         this.autoRotate = this.autoRotate.bind(this);
         this.allowAutoRotation = this.allowAutoRotation.bind(this);
         this.disallowAutoRotation = this.disallowAutoRotation.bind(this);
+        this.remove = this.remove.bind(this);
         
     };
 
