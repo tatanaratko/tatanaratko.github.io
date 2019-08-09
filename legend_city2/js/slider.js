@@ -87,6 +87,7 @@
     {
 
         this.isDebounceBlocked = false;
+        this.autoRotationBlocked = false;
 
         this.sliderData = null;
 
@@ -217,11 +218,13 @@
     
         this.onClickRight = (function ()
         {
+            this.disallowAutoRotation();
             this.goTo(RIGHT_DIRECTION);
         }).bind(this);
     
         this.onClickLeft = (function ()
         {
+            this.disallowAutoRotation();
             this.goTo(LEFT_DIRECTION);
         }).bind(this)
 
@@ -236,6 +239,16 @@
             this.initialY = e.touches[0].clientY;
         }).bind(this);
 
+        this.allowAutoRotation = function(){
+            this.autoRotationBlocked = false;
+        }
+
+        this.disallowAutoRotation = function(){
+            this.autoRotationBlocked = true;
+
+            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
+        };
+
         this.onSwipeLeft = (function(){
             this.goTo(RIGHT_DIRECTION);
         }).bind(this);
@@ -246,6 +259,7 @@
 
         this.moveTouch = (function (e)
         {
+            
             if (this.initialX === null)
             {
                 return;
@@ -264,6 +278,7 @@
 
             if (Math.abs(diffX) > Math.abs(diffY))
             {
+                this.disallowAutoRotation();
                 if (diffX > 0)
                 {
                     this.onSwipeLeft();
@@ -308,11 +323,22 @@
             that.sliderInfoEl.removeEventListener("touchmove", that.moveTouch);
         };
 
+        this.autoRotate = function(){
+            if(this.autoRotationBlocked)
+            {
+                return;
+            }
+            this.goTo(RIGHT_DIRECTION)
+        };
+
         this.startAutoRotation = function(){
-            setInterval(()=>this.goTo(RIGHT_DIRECTION), AUTO_ROTATION_INTERVAL);
+            setInterval(this.autoRotate, AUTO_ROTATION_INTERVAL);
         };
 
         this.startAutoRotation = this.startAutoRotation.bind(this);
+        this.autoRotate = this.autoRotate.bind(this);
+        this.allowAutoRotation = this.allowAutoRotation.bind(this);
+        this.disallowAutoRotation = this.disallowAutoRotation.bind(this);
     };
 
     window.slider = {
