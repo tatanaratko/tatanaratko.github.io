@@ -1660,9 +1660,14 @@ img.logo {
 }
 
 .footer {
+    display: none;
     text-align: center;
     color: #898989;
     font-size: 14px;
+    position: relative;
+   
+    max-width: 210px;
+    margin: 0 auto;
 }
 
 .map-zone-mobile {
