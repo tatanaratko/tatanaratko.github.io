@@ -4,12 +4,23 @@
 
     var SCROLLING_RATIO = 0.75;
 
+    var cumulativeOffset = function(element) {
+        var top = 0, left = 0;
+        do {
+            top += element.offsetTop  || 0;
+            left += element.offsetLeft || 0;
+            element = element.offsetParent;
+        } while(element);
+    
+        return top;
+    };
+
     window.userScrolling = {
 
         listeners: [],
 
-        addUserSeeEvent: function(el, listener){
-            var elPositionTop = el.offsetTop - window.innerHeight*SCROLLING_RATIO;
+        addUserSeeEvent: function(el, listener, position=SCROLLING_RATIO){
+            var elPositionTop = cumulativeOffset(el) - window.innerHeight*position;
 
             this.listeners.push({position:elPositionTop, listener:listener});
 

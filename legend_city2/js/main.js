@@ -149,9 +149,28 @@ var _init = function(){
     var spending = 48000;
     var percent = 5;
 
-    var ourNumbersEl = document.querySelector(".our-number-all");
+    function fadingText() {
+        fadeText.classList.add("in-down");
+    }
     
+    function fadingCalculator() {
+        fadeCalculator.classList.add("in-down");
+    }
+
+    function fadingMobile() {
+        fadeMobile.classList.add("in-down");
+    }
+    
+    var ourNumbersEl = document.querySelector(".our-number-all");
+    var fadeText = document.querySelector("body > div > section.about-us > div > div > div.col-lg-7 > div");
+    var fadeCalculator = document.querySelector("body > div > section:nth-child(8) > div > div > div.col-lg-7 > div.calculator");
+    var fadeMobile = document.querySelector("body > div > section.mobile-app > div > div.row.mobile-align > div:nth-child(1)");
+
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
+    window.userScrolling.addUserSeeEvent(fadeText, fadingText, 0.6);
+    window.userScrolling.addUserSeeEvent(fadeCalculator, fadingCalculator, 0.5);
+    window.userScrolling.addUserSeeEvent(fadeMobile, fadingMobile,0.6);
+
 
     var greenSliderEl = document.querySelector(".company-info-center");
     var blueSliderDesktopEl = document.querySelector(".users-slider .users-info");
