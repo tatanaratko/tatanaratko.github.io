@@ -12,9 +12,6 @@
 
     var LEFT_DIRECTION = -1;
     var RIGHT_DIRECTION = 1;
-
-    var ANIMATION_FADING_STEP = 0.1;
-    var ANIMATION_PERIOD = 15;
     var AUTO_ROTATION_INTERVAL = 5000;
 
     var BULLET_TEMPLATE = function(cls)
@@ -26,62 +23,6 @@
         return bullet;
     }
 
-    var animateFading = function (el)
-        {
-
-        if (!el.style.opactiy)
-        {
-            el.style.opacity = '1';
-        }
-
-        var promise = new Promise(function (resolve, reject)
-        {
-
-            var fadingInterval = setInterval(function ()
-            {
-                var newOpacity = parseFloat(el.style.opacity) - ANIMATION_FADING_STEP;
-                el.style.opacity = newOpacity.toString();
-    
-                if (newOpacity <= 0)
-                {
-                    clearInterval(fadingInterval);
-                    resolve();
-                }
-            }, ANIMATION_PERIOD);
-        });
-
-        return promise;
-    };
-
-    var animateAppearance = function (el)
-    {
-
-        if (!el.style.opactiy)
-        {
-            el.style.opacity = '0';
-        }
-
-        var promise = new Promise(function (resolve, reject)
-        {
-
-
-            var appearanceInterval = setInterval(function ()
-            {
-                var newOpacity = parseFloat(el.style.opacity) + ANIMATION_FADING_STEP;
-                el.style.opacity = newOpacity.toString();
-    
-                if (newOpacity >= 1)
-                {
-                    clearInterval(appearanceInterval);
-                    resolve();
-                }
-            }, ANIMATION_PERIOD);
-        });
-
-        return promise;
-    };
-
-    
 
     var Slider = function (leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data)
     {
@@ -96,6 +37,10 @@
         this.leftArrow = document.querySelector(leftArrowSelector);
         this.rightArrow = document.querySelector(rightArrowSelector);
         this.sliderInfoEl = document.querySelector(companyInfoSelector);
+
+        this.$title = this.sliderInfoEl.querySelector(".title");
+        this.$subTitle = this.sliderInfoEl.querySelector(".subtitle");
+        this.$text = this.sliderInfoEl.querySelector(".text");
 
         this.companyImg = typeof companyImgSelector === "string" ? document.querySelector(companyImgSelector) : document.querySelector(companyImgSelector[0]);
         this.additionalImg = typeof companyImgSelector === "object" ? document.querySelector(companyImgSelector[1]) : null;
@@ -112,43 +57,48 @@
 
 
         
-        this.renderCompanyInfo = async function (el, info)
+        this.renderCompanyInfo = function (el, info)
         {
 
-            this.isDebounceBlocked = true;
-    
-           await animateFading(el);
-    
-            var title = el.querySelector(".title");
-            var subTitle = el.querySelector(".subtitle");
-            var text = el.querySelector(".text");
-    
-            if(title)
-            {
-                title.textContent = info.title;
-            }
+            this.isDebounceBlocked = !!this.leftArrow;
+            
+            var that = this;
 
+            el.addEventListener("animationend", function onFadeAnimationEnd(){
 
-            if (subTitle)
-            {
-                subTitle.textContent = info.subTitle;
-            }
-
-            if(text)
-            {
-                text.textContent = info.text;
-            }
+                el.removeEventListener("animationend", onFadeAnimationEnd);
+                el.addEventListener("animationend", function onShowAnimationEnd(){
+                    that.isDebounceBlocked = false;
+                    el.removeEventListener("animationend", onShowAnimationEnd)
+                });
+                
+                if(that.$title)
+                {
+                    that.$title.textContent = info.title;
+                }
     
+    
+                if (that.$subTitle)
+                {
+                    that.$subTitle.textContent = info.subTitle;
+                }
+    
+                if(that.$text)
+                {
+                    that.$text.textContent = info.text;
+                }
+
+                el.classList.remove("slider-text-faded");
+            }, false);
+    
+            el.classList.add("slider-text-faded");
+
             this.companyImg.setAttribute("src", info.imageUri);
 
             if (this.additionalImg && info.additionalImageUri)
             {
                 this.additionalImg.setAttribute("src", info.additionalImageUri);
             }
-    
-            await animateAppearance(el);
-    
-            this.isDebounceBlocked = false;
     
         };
     
