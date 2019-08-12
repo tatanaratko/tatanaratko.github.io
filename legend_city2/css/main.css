@@ -108,19 +108,6 @@ body {
     z-index: 2;
 }
  
-
-.company-slider-companies .c2 {
-   
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 9px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-}
-
 .header {
    
     color: #b19999;
@@ -744,15 +731,7 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c2{
     background-image: url('../img/company_slider/2i.svg');
-    border-radius: 50%;
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-    width: 55px;
-    height: 55px;
-    right: 1080px;
-    top:-30px;
 }
-
 .company-slider-companies .c3{
     background-image: url('../img/company_slider/3c.svg');
 }
@@ -784,13 +763,8 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c6{
     background-image: url('../img/company_slider/6i.svg');
-  
-        background-image: url(../img/company_slider/6i.svg);
         width: 174px;
-        height: 174px;
-        /* left: 370px; */
         border-radius: 50%;
-        /* top: 503px; */
         background-color: #FFFFFF;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
 
@@ -806,21 +780,6 @@ border: 1px solid #dadada;;
     border-width: 11px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
 }
-
-.company-slider-companies .c7{
-    background-image: url('../img/company_slider/7c.svg');
-  
-        background-image: url(../img/company_slider/7i.svg);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        background-color: white;
-        border-color: white;
-        border-width: 11px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-    }
-
 
     .company-slider-inetshops .c7 {
         background-image: url(../img/company_slider/7i.svg);
@@ -927,76 +886,10 @@ border: 1px solid #dadada;;
     top: 400px;
 }
 
-
-.company-slider-companies .c6 {
-    background-image: url(../img/company_slider/6c.svg);
-    /* border: solid #942929; */
-    /* border-width: 31px; */
-    border-radius: 50%;
-    /* background: #FFFFFF; */
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 54px solid #fff;
-    background-color: white;
-    /* border-color: white; */
-    border-width: 37px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-}
-
-.company-slider-companies .c9 {
-    background-image: url(../img/company_slider/9c.svg);
-    /* background-image: url(../img/company_slider/6c.svg); */
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 15px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-}
-
 .company-slider-companies .c7 {
     background-image: url(../img/company_slider/7c.svg);
-    /* background-image: url(../img/company_slider/9c.svg); */
-    /* background-image: url(../img/company_slider/6c.svg); */
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 20px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
 }
 
-.company-slider-companies .c5 {
-   
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-    padding-top: -51px;
-    /* padding-bottom: 18px; */
-}
-
-
-.company-slider-companies .c3 {
-
-    width: 90px;
-    height: 90px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-}
 
 .left-arrow,
 .right-arrow {
@@ -1707,4 +1600,128 @@ img.logo {
 
 .map-zone-mobile {
     display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*company borders */
+
+.c-border {
+    background-size: contain;
+}
+
+.company-slider-companies .c-border2 {
+   
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 9px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.company-slider-companies .c-border3 {
+
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.company-slider-companies .c-border4 {
+    width: 105px;
+    height: 105px;
+    background-repeat: no-repeat;
+}
+
+.company-slider-companies .c-border5 {
+   
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);   
+}
+
+
+.company-slider-companies .c-border6 {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 54px solid #fff;
+    background-color: white;
+    border-width: 37px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+ .company-slider-inetshops .c-border6 {
+    width: 140px;
+    height: 140px;
+    border: 20px solid #fff;
+}
+
+.company-slider-companies .c-border7 {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+
+}
+
+.company-slider-companies .c-border8 {
+    width: 58px;
+    height: 58px;
+}
+
+.company-slider-companies .c-border9 {
+
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+
+
+
+.company-slider-inetshops .c-border2 {
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    width: 55px;
+    height: 55px;
+    right: 1080px;
+    top:-30px;
+
 }
