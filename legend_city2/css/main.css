@@ -4,6 +4,35 @@ body {
     font-family: 'Roboto', sans-serif;
     overflow-x:  hidden !important;
 }
+
+.slider-text-shown.slider-text-faded {
+    animation-duration: 250ms;
+    animation-name: fadein;
+}
+
+.slider-text-shown{
+    animation-duration: 250ms;
+    animation-name: fadeout;
+}
+
+@keyframes fadein {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .overflow {
     overflow-x: hidden;
 }
