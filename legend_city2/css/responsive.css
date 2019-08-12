@@ -14,7 +14,7 @@
 
     .video-play {
         position: initial;
-        transform: translateX(-50%);
+       z-index: 3;
        
     }
     
@@ -448,8 +448,12 @@ section.videos {
 .video.v-1 {
     display: flex;
     margin: 0 auto;
+    max-width: 290px;
 }
 
+.blue-rectangle {
+    right: 40px;
+}
 
 .arrow-ellipse,
 .right-arrow,
@@ -483,7 +487,7 @@ section.videos {
 }
 
 .sale {
-    margin-top: 90px;
+    margin-top: 25px;
 }
 
 .users-number {
@@ -598,7 +602,6 @@ section.videos {
 
 .mobile-slogan {
     font-size: 16px;
-    font-weight: 600;
 }
 
 .mobile-app {
@@ -624,7 +627,6 @@ width: 100%
 .our-number-text {
     text-align: left;
     font-size: 16px;
-    font-weight: 600;
     padding-bottom: 60px;
     padding-top: 10px;
 }
@@ -689,8 +691,7 @@ width: 100%
 
 .connect-call {
     font-size: 16px;
-    font-weight: 600;
-    /* padding-bottom: 35px; */
+    padding-bottom: 30px;
 }
 
 .user-slider-figure {
@@ -872,5 +873,10 @@ img.logo {
 }
 .users-info.users-info-mobile .text {
     height: 125px;
+}
+
+.green-mobile-trigon {
+    right: 0px;
+    top: 255px;
 }
 }
