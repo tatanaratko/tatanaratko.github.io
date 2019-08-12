@@ -763,52 +763,21 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c6{
     background-image: url('../img/company_slider/6i.svg');
-        width: 174px;
-        border-radius: 50%;
-        background-color: #FFFFFF;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    
+}
 
-}
-.company-slider-inetshops .c3 {
-    background-image: url(../img/company_slider/3i.svg);
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 11px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-}
 
     .company-slider-inetshops .c7 {
         background-image: url(../img/company_slider/7i.svg);
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        border: 1px solid #fff;
-        background-color: white;
-        border-color: white;
-        border-width: 15px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
     }
-
+    
 .company-slider-companies .c8{
     background-image: url('../img/company_slider/8c.svg');
 }
 
 .company-slider-inetshops .c8 {
     background-image: url(../img/company_slider/8i.svg);
-    width: 57px;
-    height: 57px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    background-color: white;
-    border-color: white;
-    border-width: 1px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
 }
-
 
 .company-slider-companies .c9{
     background-image: url('../img/company_slider/9c.svg');
@@ -816,12 +785,6 @@ border: 1px solid #dadada;;
 
 .company-slider-inetshops .c9{
     background-image: url('../img/company_slider/9i.svg');
-    border-radius: 50%;
-    /* top: 503px; */
-    background-color: #FFFFFF;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
-    width:80px;
-    height:80px;
 }
 
 .company-slider-inetshops .c10{
@@ -1681,7 +1644,12 @@ img.logo {
     width: 140px;
     height: 140px;
     border: 20px solid #fff;
-}
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    
+    }
+
 
 .company-slider-companies .c-border7 {
     width: 80px;
@@ -1724,4 +1692,49 @@ img.logo {
     right: 1080px;
     top:-30px;
 
+}
+
+.company-slider-inetshops .c-border3 {
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 11px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.company-slider-inetshops .c-border7 {
+        
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+.company-slider-inetshops .c-border8 {
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
+    border-width: 1px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+
+}
+
+.company-slider-inetshops .c-border9 {
+    
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+    width:80px;
+    height:80px;
 }
