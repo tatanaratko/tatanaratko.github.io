@@ -806,16 +806,16 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     background-image: url('../img/company_slider/4c.svg');
 }
 
-.company-slider-inetshops .c4{
-    background-image: none;
+.company-slider-inetshops .c-border4{
+    display: none;
 }
 
 .company-slider-companies .c5{
     background-image: url('../img/company_slider/5c.svg');
 }
 
-.company-slider-inetshops .c5{
-    background-image: none;
+.company-slider-inetshops .c-border5{
+    display: none;
 }
 
 .company-slider-companies .c6{

@@ -139,6 +139,9 @@ var USERS_DATA = [
     },
 ];
 
+var CLASSES_TO_RESET = ["c2","c3","c4","c5","c6","c7","c8","c9"];
+var RESET_SELECTOR = ".c-size";
+
 var companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
 var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 
@@ -195,9 +198,15 @@ var _init = function(){
 
     var initSliderElements = function(elements, classes)
     {
-        for(let i = 0; i<elements.length; i++)
+        var all = document.querySelectorAll(RESET_SELECTOR);
+
+        for(var i=0;i<all.length;i++)
         {
-            elements[i].classList.remove(classes);
+            all[i].classList.remove(...CLASSES_TO_RESET);
+        }
+
+        for(var i = 0; i<elements.length; i++)
+        {
             elements[i].classList.add(classes[i]);
         }
     };
@@ -297,6 +306,8 @@ var _init = function(){
         companiesBtn.classList.remove("slider-btn-visited");
         inetShopsBtn.classList.add("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
+        inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
+        inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(inetshopsElements, inetshopsClassState);
         greenSlider.addEventListener("sliderchange", onInetshopsSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
@@ -308,7 +319,9 @@ var _init = function(){
         companySliderEl.classList.replace("company-slider-inetshops", "company-slider-companies");
         companiesBtn.classList.add("slider-btn-visited");
         inetShopsBtn.classList.remove("slider-btn-visited");
-        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);;
+        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
+        companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
+        companyElements = [".c-border1", ".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(companyElements, companyClassState);
         greenSlider.addEventListener("sliderchange", onGreenSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
