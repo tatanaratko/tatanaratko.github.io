@@ -101,9 +101,7 @@ var INTERNET_SHOPS_DATA = [
         subTitle: "Интернет-магазин электроники, компьютерных комплектующих и бытовой техники",
         text: "Вернем 10% Легенд Баллами с любой суммы покупки!",
         imageUri: "img/company_slider/9i.svg"
-    },
-
-   
+    },  
 ];
 
 
@@ -166,6 +164,10 @@ var _init = function(){
         fadeMobile.classList.add("in-down");
     }
 
+    function fadingCalculatorMobile () {
+        fadeCalculatorMobile.classList.add("in-down");
+    }
+
     var onGreenSliderChange = function(){
         var classStateShifted = [...companyClassState];
         classStateShifted.push(classStateShifted.shift());
@@ -199,10 +201,6 @@ var _init = function(){
             elements[i].classList.add(classes[i]);
         }
     };
-    
-    function fadingCalculatorMobile () {
-        fadeCalculatorMobile.classList.add("in-down");
-    }
 
     var ourNumbersEl = document.querySelector(".our-number-all");
     var fadeText = document.querySelector("body > div > section.about-us > div > div > div.col-lg-7 > div");
