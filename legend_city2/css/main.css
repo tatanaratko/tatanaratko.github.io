@@ -58,7 +58,8 @@ body {
 
 body > div > section.about-us > div > div > div.col-lg-7 > .about,
 body > div > section:nth-child(8) > div > div > div.col-lg-7 > div.calculator,
-body > div > section.mobile-app > div > div.row.mobile-align > div:nth-child(1){
+body > div > section.mobile-app > div > div.row.mobile-align > div:nth-child(1),
+body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     opacity:0;
     -webkit-transform: translatey(-10px);
     -moz-transform: translatey(-10px);

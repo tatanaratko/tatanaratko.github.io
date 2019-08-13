@@ -1,5 +1,13 @@
 var COMPANY_SLIDER_DATA = [
     {
+        title: "Рыбный мир",
+        subTitle: "24 киоска со свежей рыбной продукцией по городу",
+        text: "Скидка от 3 до 7% по Вашей карте Город Легенд! Отличное качество продукции для Вас по выгодным ценам!",
+        imageUri: "img/company_slider/10c.svg"
+    },
+
+    {
+        
         title: "Сказка",
         subTitle: "Комплекс загородного отдыха",
         text: "Оплатите посещение по карте Город Легенд и Вам вернуться 10-25% от суммы чека бонусами! Оплачивайте ими до 50% от суммы чека и наслаждайтесь прекрасными пейзажами, чистым воздухом и активными развлечениями! 1 бонус = 1 рубль",
@@ -48,12 +56,7 @@ var COMPANY_SLIDER_DATA = [
         text: "Отдых в английском стиле позволит вернуть Вам 10% бонусами на Вашу карту Город Легенд! Оплачивайте ими до 50% от суммы следущего чека! Заходя сюда гостем, Вы быстро становитесь другом!",
         imageUri: "img/company_slider/9c.svg"
     },
-    {
-        title: "Рыбный мир",
-        subTitle: "24 киоска со свежей рыбной продукцией по городу",
-        text: "Скидка от 3 до 7% по Вашей карте Город Легенд! Отличное качество продукции для Вас по выгодным ценам!",
-        imageUri: "img/company_slider/10c.svg"
-    },
+    
 ];
 
 var INTERNET_SHOPS_DATA = [
@@ -161,16 +164,21 @@ var _init = function(){
         fadeMobile.classList.add("in-down");
     }
     
+    function fadingCalculatorMobile () {
+        fadeCalculatorMobile.classList.add("in-down");
+    }
+
     var ourNumbersEl = document.querySelector(".our-number-all");
     var fadeText = document.querySelector("body > div > section.about-us > div > div > div.col-lg-7 > div");
     var fadeCalculator = document.querySelector("body > div > section:nth-child(8) > div > div > div.col-lg-7 > div.calculator");
     var fadeMobile = document.querySelector("body > div > section.mobile-app > div > div.row.mobile-align > div:nth-child(1)");
+    var fadeCalculatorMobile=document.querySelector("body > div > section.user-numerals.user-numerals-mobile > div.calculator");
 
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
     window.userScrolling.addUserSeeEvent(fadeText, fadingText, 0.6);
     window.userScrolling.addUserSeeEvent(fadeCalculator, fadingCalculator, 0.5);
     window.userScrolling.addUserSeeEvent(fadeMobile, fadingMobile,0.6);
-
+    window.userScrolling.addUserSeeEvent(fadeCalculatorMobile, fadingCalculatorMobile, 0.5);
 
     var greenSliderEl = document.querySelector(".company-info-center");
     var blueSliderDesktopEl = document.querySelector(".users-slider .users-info");
