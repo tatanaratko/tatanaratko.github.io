@@ -101,9 +101,7 @@ var INTERNET_SHOPS_DATA = [
         subTitle: "Интернет-магазин электроники, компьютерных комплектующих и бытовой техники",
         text: "Вернем 10% Легенд Баллами с любой суммы покупки!",
         imageUri: "img/company_slider/9i.svg"
-    },
-
-   
+    },  
 ];
 
 
@@ -141,7 +139,7 @@ var USERS_DATA = [
     },
 ];
 
-var companyClassState = ["c1","c3","c4","c5","c6","c7","c8","c9", "c10"];
+var companyClassState = ["c10","c2","c3","c4", "c5", "c6","c7","c8","c9"];
 var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 
 var companyElements;
@@ -151,7 +149,7 @@ var _init = function(){
     var spending = 48000;
     var percent = 5;
 
-    companyElements = [".c-border1",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9", ".c-border10"].map(e=>document.querySelector(e));
+    companyElements = [".c-border10",".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     
     function fadingText() {
@@ -164,6 +162,10 @@ var _init = function(){
 
     function fadingMobile() {
         fadeMobile.classList.add("in-down");
+    }
+
+    function fadingCalculatorMobile () {
+        fadeCalculatorMobile.classList.add("in-down");
     }
 
     var onGreenSliderChange = function(){
@@ -199,10 +201,6 @@ var _init = function(){
             elements[i].classList.add(classes[i]);
         }
     };
-    
-    function fadingCalculatorMobile () {
-        fadeCalculatorMobile.classList.add("in-down");
-    }
 
     var ourNumbersEl = document.querySelector(".our-number-all");
     var fadeText = document.querySelector("body > div > section.about-us > div > div > div.col-lg-7 > div");
