@@ -23,10 +23,24 @@
         return bullet;
     }
 
-
+    var Emitter = function() {
+        var eventTarget = document.createDocumentFragment();
+        
+        var delegate = function(method) {
+            this[method] = eventTarget[method].bind(eventTarget)
+        };
+        
+        [
+            "addEventListener",
+            "dispatchEvent",
+            "removeEventListener"
+        ].forEach(delegate, this)
+    };
+    
     var Slider = function (leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data)
     {
 
+        Emitter.call(this);
         this.isDebounceBlocked = false;
         this.isAutoRotationBlocked = false;
 
@@ -55,6 +69,7 @@
             return e;
         });
 
+        this.event = new Event("sliderchange");
 
         
         this.renderCompanyInfo = function (el, info)
@@ -165,6 +180,8 @@
             {
                 this.setActiveBullet();
             }
+
+            this.dispatchEvent(this.event);
 
         }).bind(this);
     
