@@ -85,12 +85,6 @@ var INTERNET_SHOPS_DATA = [
         imageUri: "img/company_slider/6i.svg"
     },
     {
-        title: "Aliexpress",
-        subTitle: "Интернет-магазин модных новинок",
-        text:"Вернем 10% Легенд Баллами с любой суммы покупки!",
-        imageUri: "img/company_slider/1i.svg"
-    },
-    {
         title: "Adidas",
         subTitle: "Интернет-магазин спортивной одежды и обуви",
         text:"Вернем 10% Легенд Баллами с любой суммы покупки!",
@@ -147,11 +141,19 @@ var USERS_DATA = [
     },
 ];
 
+var companyClassState = ["c1","c3","c4","c5","c6","c7","c8","c9", "c10"];
+var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
+
+var companyElements;
+var inetshopsElements;
 
 var _init = function(){
     var spending = 48000;
     var percent = 5;
 
+    companyElements = [".c-border1",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9", ".c-border10"].map(e=>document.querySelector(e));
+    inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
+    
     function fadingText() {
         fadeText.classList.add("in-down");
     }
@@ -163,6 +165,40 @@ var _init = function(){
     function fadingMobile() {
         fadeMobile.classList.add("in-down");
     }
+
+    var onGreenSliderChange = function(){
+        var classStateShifted = [...companyClassState];
+        classStateShifted.push(classStateShifted.shift());
+
+        for(let i = 0; i<companyClassState.length; i++)
+        {
+            companyElements[i].classList.replace(companyClassState[i], classStateShifted[i]);
+        }
+
+        companyClassState = [...classStateShifted];
+
+    };
+
+    var onInetshopsSliderChange = function(){
+        var classStateShifted = [...inetshopsClassState];
+        classStateShifted.push(classStateShifted.shift());
+
+        for(let i = 0; i<inetshopsClassState.length; i++)
+        {
+            inetshopsElements[i].classList.replace(inetshopsClassState[i], classStateShifted[i]);
+        }
+
+        inetshopsClassState = [...classStateShifted];
+    };
+
+    var initSliderElements = function(elements, classes)
+    {
+        for(let i = 0; i<elements.length; i++)
+        {
+            elements[i].classList.remove(classes);
+            elements[i].classList.add(classes[i]);
+        }
+    };
     
     function fadingCalculatorMobile () {
         fadeCalculatorMobile.classList.add("in-down");
@@ -192,6 +228,7 @@ var _init = function(){
     var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
+
     window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     if(window.innerWidth > 768)
     {
@@ -202,6 +239,8 @@ var _init = function(){
         window.userScrolling.addUserSeeEvent(blueSliderMobileEl, blueSlideMobile.startAutoRotation);
         window.userScrolling.addUserSeeEvent(videoSliderEl, videoSlider.startAutoRotation);
     }
+
+    greenSlider.addEventListener("sliderchange", onGreenSliderChange);
 
     var inetShopsBtn = document.querySelector(".inter-shop");
     var companiesBtn = document.querySelector(".company-btn");
@@ -254,20 +293,26 @@ var _init = function(){
     percentRangeMobile.addCallback(changePercent);
 
     inetShopsBtn.addEventListener('click', function(){
+        greenSlider.removeEventListener("sliderchange", onGreenSliderChange);
         greenSlider.remove();
         companySliderEl.classList.replace("company-slider-companies", "company-slider-inetshops");
         companiesBtn.classList.remove("slider-btn-visited");
         inetShopsBtn.classList.add("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
+        initSliderElements(companyElements, companyClassState);
+        greenSlider.addEventListener("sliderchange", onInetshopsSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
 
     companiesBtn.addEventListener('click', function(){
+        greenSlider.removeEventListener("sliderchange", onInetshopsSliderChange);
         greenSlider.remove();
         companySliderEl.classList.replace("company-slider-inetshops", "company-slider-companies");
         companiesBtn.classList.add("slider-btn-visited");
         inetShopsBtn.classList.remove("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);;
+        initSliderElements(inetshopsElements, companyClassState);
+        greenSlider.addEventListener("sliderchange", onGreenSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
     redrawBenefitSum();
