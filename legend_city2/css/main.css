@@ -777,7 +777,7 @@ border: 1px solid #dadada;;
     padding-bottom: 30px;
 }
 .company-slider-companies .c1{
-    background-image:  url('../img/company_slider/2c.svg');
+    background-image:  url('../img/company_slider/1c.svg');
 }
 
 .company-slider-inetshops .c1{
@@ -788,7 +788,6 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     background-image: none;
 }
 .company-slider-companies .c2{
-    visibility: hidden;
     background-image: url('../img/company_slider/2c.svg');
 }
 
@@ -850,7 +849,8 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 }
 
 .company-slider-companies .c10{
-    background-image: url('../img/company_slider/10c.svg');
+    display: none;
+    background-image: none;
 }
 
 .company-slider-inetshops .c10{

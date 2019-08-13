@@ -141,7 +141,7 @@ var USERS_DATA = [
     },
 ];
 
-var companyClassState = ["c1","c3","c4","c5","c6","c7","c8","c9", "c10"];
+var companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
 var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 
 var companyElements;
@@ -151,7 +151,7 @@ var _init = function(){
     var spending = 48000;
     var percent = 5;
 
-    companyElements = [".c-border1",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9", ".c-border10"].map(e=>document.querySelector(e));
+    companyElements = [".c-border1", ".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     
     function fadingText() {
@@ -299,7 +299,7 @@ var _init = function(){
         companiesBtn.classList.remove("slider-btn-visited");
         inetShopsBtn.classList.add("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
-        initSliderElements(companyElements, companyClassState);
+        initSliderElements(inetshopsElements, inetshopsClassState);
         greenSlider.addEventListener("sliderchange", onInetshopsSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
@@ -311,7 +311,7 @@ var _init = function(){
         companiesBtn.classList.add("slider-btn-visited");
         inetShopsBtn.classList.remove("slider-btn-visited");
         greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);;
-        initSliderElements(inetshopsElements, companyClassState);
+        initSliderElements(companyElements, companyClassState);
         greenSlider.addEventListener("sliderchange", onGreenSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
