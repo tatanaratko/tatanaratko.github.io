@@ -334,4 +334,21 @@ var _init = function(){
 
 document.addEventListener("DOMContentLoaded", _init);
 
+function onClickPlayMarket() {
+    // console.log('play market is here');
+    document.location.href = 'https://play.google.com/store/apps/details?id=com.legendcity.legendcity&hl=ru&utm_source=app-web&utm_campaign=app-web&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1http://www.mozilla.org';
+}
+
+function onClickAppStore() {
+    // console.log('app is here');
+    document.location.href='https://apps.apple.com/ru/app/legendcity/id1229070695';
+}
+
+
+document.getElementById('google-play').addEventListener('click', onClickPlayMarket);
+document.getElementById('google-play-2').addEventListener('click', onClickPlayMarket);
+
+document.getElementById('app-store').addEventListener('click', onClickAppStore);
+document.getElementById('app-store-2').addEventListener('click', onClickAppStore);
+
 
