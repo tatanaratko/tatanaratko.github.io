@@ -681,6 +681,7 @@ border-radius:50%;
 }
 
 .line-mask {
+    background-image: url('../img/grey_line_top.svg');
     left: 0;
     right: 0;
     height: 502px;
