@@ -428,6 +428,12 @@ section.videos {
 }
 
 .grey-bottom-line-mobile {
+    background-image: url('../img/mobile/mobile_under_green_slider.svg');
+    left: 0;
+    right: 0;
+    z-index:2;
+    position: relative;
+    background-repeat: no-repeat;
     display: block;
 }
 
