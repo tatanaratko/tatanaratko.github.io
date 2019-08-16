@@ -659,26 +659,33 @@ border-radius:50%;
     user-select: none;
 }
 
-.grey-bottom-line {
-    background-image: url('../img/grey_line_bottom.svg');
-}
 
 
 .yellow-big-line, 
 .line-mask,
 .grey-bottom-line {     
     background-repeat: no-repeat;
-
+    
 }
 
 /* .line-mask-svg{
     position: absolute;
 } */
 
-.yellow-big-line {
+/* .yellow-big-line { */
     /* transform: matrix(1, 0, 0, 1, 62, -4); */
     /* z-index: -1;
     position:absolute; */
+    /* } */
+    
+    .grey-bottom-line {
+    background-image: url('../img/grey_line_bottom.svg');
+    left: 0;
+    right: 0;
+    height: 158px;
+    z-index:2;
+    position: relative;
+    background-repeat: no-repeat;
 }
 
 .line-mask {
