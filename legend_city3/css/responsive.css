@@ -474,9 +474,9 @@ section.videos {
     /* max-width: 290px; */
 }
 
-.blue-rectangle {
+/* .blue-rectangle {
     right: 40px;
-}
+} */
 
 .arrow-ellipse,
 .right-arrow,
@@ -991,6 +991,11 @@ img.logo {
         background-image: none;
     }
 
+    .blue-rectangle {
+        /* right: 40px; */
+        left: -10px;
+        top: -30px;
+    }
 }
 
 
