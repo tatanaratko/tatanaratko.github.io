@@ -185,7 +185,7 @@ body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 0;
     width: 11vw;
     height: 16vw;
     background-size: cover;
@@ -197,10 +197,11 @@ body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     position: absolute;
     top: 70px;
     left: 114px;
-    width: 150px;
+    width: 9vw;
     z-index: 3;
-    height: 140px;
+    height: 8vw;
     background-repeat: no-repeat;
+    background-size: contain;
 }
  
 
@@ -210,8 +211,8 @@ body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     top: 0;
     right: 558px;
     z-index: 2;
-    width: 120px;
-    height: 100px;
+    width: 7vw;
+    height: 7vw;
     background-repeat: no-repeat;
 }
  
@@ -231,6 +232,8 @@ ul, li {
     padding-top: 10px;
     font-size: 16px;
     align-items: end;
+    position: relative;
+    z-index: 2;;
 }
 .menu-custom-container {
     padding-bottom: 45px;
@@ -280,7 +283,7 @@ li.menu__item.right-item-1 {
     right: 100px !important;
 }
 
-li.menu__item.center-menu {
+li.center-menu {
     margin-right: 0px;
     background-image: url('../img/phone.svg');
     width: 22px;
@@ -1710,6 +1713,8 @@ border-radius: 15px;
 
 img.logo {
     cursor: pointer;
+    position: relative;
+    z-index: 2;
 }
 
 .menu__item a:hover {

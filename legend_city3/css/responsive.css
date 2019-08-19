@@ -65,10 +65,10 @@
     padding-top: 0;
 }
 
-.menu {
+/* .menu {
     display: flex;
     flex-direction: column-reverse;
-}
+} */
 
 .center-menu,
 .call {
@@ -920,9 +920,35 @@ img.logo {
         background-position: center
     }
 
+    .menu {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .right-item-mobile {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+.call-place {
+    display: flex;
+    flex-direction: column-reverse;
+    float: right;
+    position: relative;
+    right: 0;
+}
+
+.men {
+    max-width: 200px;
+}
+
+.menu-row {
+    justify-content: space-between;
+    align-items: center;
+}
+}
     /* .blue-bg-mobile {
     } */
-}
+
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) and (max-width: 767.98px) {  }
