@@ -960,7 +960,7 @@ img.logo {
     .menu-row {
         display: block;
     } 
-    
+
     .rio-bg {
         right: 10vw;
     }
@@ -972,7 +972,18 @@ img.logo {
         right: 15vw;
     }
   }
-
+  @media (min-width: 576px) and (max-width: 1199.98px) {
+    .foto-bg {
+        background-image: url(../img/mobile/mobile_foto_bg.svg);
+        position: absolute;
+        height: 68vw;
+        width: 35vw;
+        right: 0;
+        z-index: 2;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .rio-bg {
@@ -985,3 +996,5 @@ img.logo {
         font-size: 3.1vw;
     }
  }
+
+
