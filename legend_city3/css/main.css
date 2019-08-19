@@ -680,6 +680,11 @@ border-radius:50%;
     user-select: none;
 }
 
+.grey-section-company {
+    background-image: url(../img/grey_sec_bg.svg);
+    background-repeat: no-repeat;
+    height: 1050px;
+}
 
 
 .yellow-big-line, 
