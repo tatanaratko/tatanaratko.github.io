@@ -186,8 +186,9 @@ body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     top: 0;
     left: 0;
     z-index: 2;
-    width: 200px;
-    height: 300px;
+    width: 11vw;
+    height: 16vw;
+    background-size: cover;
     background-repeat: no-repeat;
 }
  
@@ -328,13 +329,18 @@ color: #9E9E9E;
     background-position: center
 }
 
+.blue-bg-mobile {
+    display: none;
+}
+
 .foto-bg {
     background-image: url('../img/first_foto.svg');
     position: absolute;
-    height: 826px;
-    width: 807px;
+    height: 44vw;
+    width: 43vw;
     right: 0;
     z-index: 2;
+    background-size: cover;
 }
 /* 
 .foto-bg-mask {
@@ -362,10 +368,16 @@ color: #9E9E9E;
    top: 350px;
     z-index: 3;
 }
+
+.rio-bg img {
+       width: 14vw;
+    height: 14vw;
+    background-size: contain; 
+}
 .offer__title {
     font-style: normal;
     font-weight: 500;
-    font-size: 60px;
+    /* font-size: 3.75rem; */
  
     color: #FFFFFF;
 }
