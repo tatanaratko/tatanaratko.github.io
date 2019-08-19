@@ -443,11 +443,11 @@ section.videos {
     position: relative;
 }
 
-.statistic-num-row {
+/* .statistic-num-row {
     position: absolute;
     bottom: 155px;
     width: 100%;
-}
+} */
 
 
 
@@ -989,6 +989,7 @@ img.logo {
 
     .grey-section-company {
         background-image: none;
+        padding-top: 40px;
     }
 
     .blue-rectangle {
@@ -1039,6 +1040,14 @@ img.logo {
         }
 
   }
+
+  @media (min-width: 576px) and (max-width: 991.98px) {
+
+  .users-number {
+    line-height: 33px;
+    padding-bottom: 50px;
+  }
+}
 
   @media (min-width: 576px) and (max-width: 1199.98px) {
     .foto-bg {
