@@ -213,6 +213,7 @@ body > div > section.user-numerals.user-numerals-mobile > div.calculator {
     z-index: 2;
     width: 7vw;
     height: 7vw;
+    background-size: contain;
     background-repeat: no-repeat;
 }
  
@@ -321,6 +322,7 @@ color: #9E9E9E;
 .offer {
     z-index: 3;
     margin-top: 60px;
+    position: relative;
 }
 .blue-bg-desktop {
     background-image: url(../img/blue_screen.svg);

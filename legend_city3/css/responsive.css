@@ -39,17 +39,17 @@
     display: none;
 } */
 
-.foto-bg {
+/* .foto-bg {
     display: none;
-}
+} */
 
-.foto-bg-mobile {
+/* .foto-bg-mobile {
     display:block;
     position: absolute;
     z-index: 4;
     right: 0;
     top: 230px;
-}
+} */
 
 /* .blue-bg-mobile
  {
@@ -78,7 +78,7 @@
 .yellow-bg {
     position: absolute;
     top: 85px;
-    left: -30px;
+    left: -25px;
     z-index: 5;
     /* width: 80px; */
     /* height: 80px; */
@@ -109,9 +109,9 @@
     font-size: 13px;
 }
 
-.offer__intro-4 {
+/* .offer__intro-4 {
     margin-top: 180px;
-}
+} */
 
 .offer__intro-2 {
     font-size: 16px;
@@ -911,7 +911,7 @@ img.logo {
     .blue-bg-desktop {
         display: block;
         background-image: url(../img/mobile/mobile_blue_bg.svg);
-        height: 650px;
+        height: 810px;
         right: 0;
         left: 0;
         width: 100%;
@@ -920,6 +920,13 @@ img.logo {
         background-position: center
     }
 
+    .foto-bg {
+        background-image: url(../img/mobile/mobile_foto_bg.svg);
+        top: 215px;
+        width: 40.6vw;
+        height: 79vw;
+
+    }
     .menu {
         display: flex;
         flex-direction: column-reverse;
@@ -937,6 +944,11 @@ img.logo {
         right: 0;
     }
 
+    .offer__intro-4 {
+        margin-top: 180px;
+        max-width: 370px;
+    }
+
     .men {
         max-width: 190px;
     }
@@ -951,8 +963,6 @@ img.logo {
     }
 
 }
-    /* .blue-bg-mobile {
-    } */
 
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -964,14 +974,30 @@ img.logo {
     .rio-bg {
         right: 10vw;
     }
-  }
+    .main-screen .container {
+        max-width: fit-content;
+    } 
+    .left-item {
+        margin: 0 20px 0 0 !important;
+    }
+
+    
+}
+
+
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) and (max-width: 991.98px) {
     .rio-bg {
         right: 15vw;
     }
+
+    .main-screen .container {
+        max-width: fit-content;
+    } 
   }
+
+
   @media (min-width: 576px) and (max-width: 1199.98px) {
     .foto-bg {
         background-image: url(../img/mobile/mobile_foto_bg.svg);
@@ -980,16 +1006,20 @@ img.logo {
         width: 35vw;
         right: 0;
         z-index: 2;
-        background-size: contain;
+        /* background-size: contain; */
         background-repeat: no-repeat;
     }
 }
+
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) and (max-width: 1199.98px) {
     .rio-bg {
         right: 20vw;
     }
 }
+
+
+
 /* Extra large devices*/
 @media (min-width: 1200px) and (max-width: 1920px){ 
     .offer__title {
