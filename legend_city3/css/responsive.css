@@ -977,10 +977,14 @@ img.logo {
 
     .video-play {
         margin: -32vw auto;
-}
+    }
 
     .videos> div {
         padding-top: 10px;
+    }
+
+    .grey-section-company {
+        background-image: none;
     }
 
 }

@@ -671,6 +671,9 @@ border-radius:50%;
 
 /*fourth display*/
 
+section.user-numerals {
+    padding-top: 140px;
+}
 
 .grey-section {
     padding-top: 130px;
