@@ -1016,6 +1016,12 @@ img.logo {
         margin: 0 20px 0 0 !important;
     }
 
+    .our-number-text {
+        text-align: left;
+        padding-top: 80px;
+        padding-bottom: 30px;
+    }
+
 
     
 }
