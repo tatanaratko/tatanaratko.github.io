@@ -379,10 +379,10 @@ body > section.users-section-mobile > div > img.u3.u33.c-size {
 
 
 
-.about-us {
+/* .about-us {
     margin-top: 190px;
     margin-bottom: 35px;
-}
+} */
 
 
 
@@ -961,7 +961,10 @@ img.logo {
     .telephone {
         font-size: 3.6vw;
     }
-
+    .about-us {
+        margin-top: 40px;
+        margin-bottom: 35px;
+    }
 }
 
 
@@ -995,8 +998,15 @@ img.logo {
     .main-screen .container {
         max-width: fit-content;
     } 
-  }
+    
+}
+@media (min-width: 320px) and (max-width: 991.98px) {
+    
+        .about {
+            margin:auto;
+        }
 
+  }
 
   @media (min-width: 576px) and (max-width: 1199.98px) {
     .foto-bg {
