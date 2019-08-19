@@ -984,6 +984,7 @@ img.logo {
         margin: 0 20px 0 0 !important;
     }
 
+
     
 }
 
@@ -1006,6 +1007,10 @@ img.logo {
             margin:auto;
         }
 
+        .video {
+            margin: auto;
+        }
+
   }
 
   @media (min-width: 576px) and (max-width: 1199.98px) {
@@ -1019,6 +1024,7 @@ img.logo {
         /* background-size: contain; */
         background-repeat: no-repeat;
     }
+
 }
 
 /* // Large devices (desktops, 992px and up) */
