@@ -737,9 +737,9 @@ img.logo {
     width: 290px;
 } */
 
-.mobile-user-slider {
+/* .mobile-user-slider {
     position: relative;
-}
+} */
 
 
 /* .user-video {
@@ -1163,7 +1163,7 @@ img.logo {
         right: 0px;
         position: absolute;
         z-index: 5;
-        bottom: 150px;
+        bottom: 40px;
         width: 60px;
         height: 70px;
     }
@@ -1206,6 +1206,11 @@ img.logo {
 
     .users-info .title {
         padding-bottom: 30px;
+    }
+
+    .mobile-user-slider {
+        position: relative;
+        height: 720px;
     }
 }
 
