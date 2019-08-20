@@ -281,26 +281,19 @@ section.videos .row.videos .bullet-active {
     /* left: 0; */
     /* width: 300px;
 } */
-
+/* 
 .users-section-mobile .u1 {
     background-image: url(../img/users_slider/u1.svg);
     width: 60px;
     right: 195px;
     bottom: 395px;
-}
-.users-section-mobile .u2 {
+} */
+/* .users-section-mobile .u2 {
     background-image: url(../img/users_slider/u2.svg);
     bottom: 380px;
     right: 250px;
-}
+} */
 
-.users-section-mobile .u33 {
-    right: 120px;
-    bottom: 395px;
-    background-size: contain;
-    width: 70px;
-    height: 70px;
-}
 
 body > section.users-section-mobile > div > img.u3.u33.c-size {
     padding: 2px;
@@ -309,17 +302,17 @@ body > section.users-section-mobile > div > img.u3.u33.c-size {
 }
 
 
-.users-section-mobile .u4 {
+/* .users-section-mobile .u4 {
     background-image: url(../img/users_slider/u4.svg);
     bottom: 395px;
     left: 205px;
-}
+} */
 
-.users-section-mobile .u5 {
+/* .users-section-mobile .u5 {
     background-image: url(../img/users_slider/u5.svg);
     left: 250px;
     bottom: 380px;
-}
+} */
 
 .users-section-mobile .u1,
 .users-section-mobile .u2,
@@ -749,25 +742,25 @@ img.logo {
 }
 
 
-.user-video {
+/* .user-video {
     position: absolute;
     bottom: 190px;
     transform: translateX(-50%);
     left: 50%;
-}
+} */
 
-.video-play-user {
-    position: initial;
+/* .video-play-user { */
+    /* position: initial; */
     /* top: 100px; */
     /* bottom: 59px; */
     /* transform: translateX(-50%); */
-    z-index: 5;
+    /* z-index: 5;
     transform: none;
-}
+} */
 
-.users-info.users-info-mobile {
+/* .users-info.users-info-mobile {
     top: 100px;
-}
+} */
 
 .map-zone-mobile {
     display:block;
@@ -890,10 +883,10 @@ img.logo {
     height: 125px;
 }
 
-.green-mobile-trigon {
+/* .green-mobile-trigon {
     right: 0px;
     top: 255px;
-}
+} */
 }
 
 
@@ -973,6 +966,16 @@ img.logo {
 
     .video-play {
         margin: -32vw auto;
+    }
+
+    .video-play-user {
+        position: relative;
+        /* top: 100px; */
+        /* bottom: 59px; */
+        /* transform: translateX(-50%); */
+        z-index: 5;
+        margin: -35vw auto;
+        transform: none;
     }
 
     .videos> div {
@@ -1122,7 +1125,7 @@ img.logo {
     }
 
     .users-section-mobile {
-        margin: 260px auto 50px;
+        /* margin: 260px auto 50px; */
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1130,7 +1133,7 @@ img.logo {
         margin-right: auto;
         /* max-width: 320px; */
         position: relative;
-        /* margin-top: 200px; */
+        margin-top: 100px;
     }
 
     .users-info {
@@ -1138,6 +1141,67 @@ img.logo {
         left: 0;
         max-width: 100vw;
         padding: 0 20px;
+        position: relative;
+        top: -230px;
+    }
+
+    .user-video {
+        position: relative;
+        transform: translateX(-50%);
+        left: 50%;
+        /* border: 5px solid #fff;
+        border-radius: 9px; */
+        top: 100px;
+    }
+
+    .user-video>div {
+        padding: 0 13px;
+    }
+
+    .green-trigon {
+        background-image: url(../img/green_trigon.svg);
+        right: 0px;
+        position: absolute;
+        z-index: 5;
+        bottom: 120px;
+        width: 60px;
+        height: 70px;
+    }
+
+    
+    .users-section-mobile .u33 {
+        left: 50%;
+        /* bottom: 395px; */
+        background-size: contain;
+        width: 100%;
+        height: 70px;
+        transform: translateX(-50%);
+    }
+
+    .users-section-mobile .u2 {
+        background-image: url(../img/users_slider/u2.svg);
+        /* bottom: 0px; */
+        left: 21vw;
+        top: 4vw;
+    }
+
+    .users-section-mobile .u4 {
+        background-image: url(../img/users_slider/u4.svg);
+        /* bottom: 395px; */
+        right: 21vw;
+        top: 4vw;
+    }
+
+    .users-section-mobile .u5 {
+        background-image: url(../img/users_slider/u5.svg);
+        right: 4vw;
+        top: 4vw;
+    }
+
+    .users-section-mobile .u1 {
+        background-image: url(../img/users_slider/u1.svg);
+        left: 4vw;
+        top: 4vw;
     }
 }
 
