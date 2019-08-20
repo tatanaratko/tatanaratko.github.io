@@ -1163,7 +1163,7 @@ img.logo {
         right: 0px;
         position: absolute;
         z-index: 5;
-        bottom: 120px;
+        bottom: 150px;
         width: 60px;
         height: 70px;
     }
@@ -1202,6 +1202,10 @@ img.logo {
         background-image: url(../img/users_slider/u1.svg);
         left: 4vw;
         top: 4vw;
+    }
+
+    .users-info .title {
+        padding-bottom: 30px;
     }
 }
 
