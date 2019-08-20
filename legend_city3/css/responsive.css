@@ -430,9 +430,9 @@ section.videos {
  */
 
 
-.statistic-num-container {
+/* .statistic-num-container {
     position: relative;
-}
+} */
 
 /* .statistic-num-row {
     position: absolute;
@@ -981,6 +981,7 @@ img.logo {
     .grey-section-company {
         background-image: none;
         padding-top: 40px;
+        height: fit-content;
     }
 
     .blue-rectangle {
@@ -1048,6 +1049,14 @@ img.logo {
         display: none;
     }
 
+    .row.statistic-num-row {
+        width: 100vw;
+    }
+
+    .statistic-num-container {
+        position: relative;
+        bottom: 180px;
+    }
 }
 
 
