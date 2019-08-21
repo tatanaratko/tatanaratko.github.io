@@ -777,11 +777,11 @@ img.logo {
     width: 100%
 }
 
-.mobile-map {
+/* .mobile-map {
     position: absolute;
     z-index: 1;
     width: 100%
-}
+} */
 .location-yellow-mobile{
     position: absolute;
     top: 80px;
@@ -824,10 +824,10 @@ img.logo {
     position: relative;
 }
 
-.blue-form-fig {
+/* .blue-form-fig {
  
     width: 295px;
- }
+ } */
 
  .form-height {
     width: 290px;
@@ -1221,6 +1221,41 @@ img.logo {
         max-height: 210px;
         overflow: hidden;
         height: 165px;
+    }
+
+    .blue-form-fig {
+        width: 290px;
+        border-radius: 13px 13px 0 0;
+    }
+
+    .yellow-form-fig {
+        width: 29vw;
+        height: 33vw;
+        background-size: contain;  
+    }
+    
+    .mobile-map {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+
+    .form {
+        top: -60px;
+    }
+
+    .white-form-fig {
+        width: 14vw;
+        height: 14vw;
+        background-size: contain;
+     }
+
+     .yellow-form-fig {
+        top: 75px;
+     }
+
+     .form-height {
+       border-radius: 20px;
     }
 }
 
