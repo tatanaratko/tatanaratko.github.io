@@ -1198,10 +1198,6 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     background-repeat: no-repeat;
 }
 
-.mobile-img {
-    background-image: url('../img/mobile-app-img.svg');
-}
-
 .calculator-text {
     position: relative;
     padding-left: 80px;
