@@ -1577,11 +1577,12 @@ border-radius: 15px;
     background-image: url('../img/form/placeholder.svg');
 }
 
+
 .form-content {
     display:flex;
     max-width: 300px;
     padding: 15px 0;
-
+    align-items: center;
 }
 
 .content-text {
