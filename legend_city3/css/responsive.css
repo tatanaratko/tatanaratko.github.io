@@ -1109,13 +1109,13 @@ img.logo {
     }
 
     .users-section-mobile {
-        /* margin: 260px auto 50px; */
+        background-image: url(../img/mobile/user_mobile_bg.svg);
+        width: 100%;
+        background-repeat: no-repeat;
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: auto;
-        margin-right: auto;
-        /* max-width: 320px; */
         position: relative;
         margin-top: 100px;
         height: 700px;
