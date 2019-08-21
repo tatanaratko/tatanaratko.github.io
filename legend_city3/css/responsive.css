@@ -796,14 +796,14 @@ img.logo {
     z-index: 3;
 }
 
-.form-mobile {
+/* .form-mobile {
     height: 370px;
     width: 290px;
     z-index: 4;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
     margin-bottom: 50px;
     border-radius: 10px;
-}
+} */
 
 /* .form-text-mobile {
     padding: 0;
@@ -829,10 +829,10 @@ img.logo {
     width: 295px;
  } */
 
- .form-height {
+ /* .form-height {
     width: 290px;
     height: 370px;
-}
+} */
 
 
 .content-text-mobile{
@@ -1244,6 +1244,9 @@ img.logo {
 
     .form {
         top: -60px;
+       
+        height: 370px;
+        width: 290px;
     }
 
     .white-form-fig {
@@ -1257,7 +1260,32 @@ img.logo {
      }
 
      .form-height {
+        width: 290px;
+        height: 370px;
        border-radius: 20px;
+       box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-height-decoration1 {
+        height: 20px;
+        border-radius: 0 0 20px 20px;
+        width: 260px;
+        position: relative;
+        bottom: 4px;
+        z-index: -1;
+        display: flex;
+        margin: auto;
+    }
+
+    .form-height.form-height-decoration2 {
+        height: 20px;
+        border-radius: 0 0 20px 20px;
+        width: 240px;
+        position: relative;
+        bottom: 4px;
+        z-index: -2;
+        display: flex;
+        margin: auto;
     }
 
     .number-text {
@@ -1284,6 +1312,10 @@ img.logo {
     .form-text-mobile {
         padding: 0 15px;
     }
+    
+    .form-mobile {
+        border-radius: 10px;
+    }
 }
 
 
@@ -1308,8 +1340,6 @@ img.logo {
         padding-top: 80px;
         padding-bottom: 30px;
     }
-
-
 
 
     
