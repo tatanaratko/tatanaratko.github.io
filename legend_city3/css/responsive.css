@@ -1118,7 +1118,8 @@ img.logo {
         margin-left: auto;
         position: relative;
         margin-top: 100px;
-        height: 700px;
+        background-size: contain;
+        height: 845px;
     }
 
     .users-info {
@@ -1156,11 +1157,18 @@ img.logo {
     
     .users-section-mobile .u33 {
         left: 50%;
-        /* bottom: 395px; */
         background-size: contain;
-        width: 100%;
-        height: 70px;
+        width: 90px;
+        height:  90px;
         transform: translateX(-50%);
+        border-radius: 50%;
+        border: 1px dashed green;
+        padding: 9px;
+    }
+
+    .users-section-mobile .u33 > img {
+        width: 70px;
+        height: 70px;
     }
 
     .users-section-mobile .u2 {
@@ -1241,6 +1249,7 @@ img.logo {
 
      .yellow-form-fig {
         top: 75px;
+        right: 40px;
      }
 
      .form-height {
@@ -1345,6 +1354,12 @@ img.logo {
         font-size: 3.7vw;
     }
         
+    /* .u3-border {
+        width: 80px;
+        height: 80px;
+        border: 1px dashed green;
+        z-index: 109;
+    } */
 }
 
 

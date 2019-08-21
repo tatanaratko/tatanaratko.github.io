@@ -1,5 +1,5 @@
-<svg width="100%" preserveAspectRatio="none" height="201" viewBox="0 0 320 201" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M678 12.6756C678 12.6756 534.219 46.2962 399.211 46.2962C264.203 46.2962 221.411 0.128669 87.686 0.128662C-46.0386 0.128655 -143.604 51.6562 -143.604 51.6562V201L678 201L678 12.6756Z" fill="url(#paint0_linear)"/>
+<svg width="100%" preserveAspectRatio="xMidYMid meet" height="230" viewBox="0 -10 320 201" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M678 12.6756C678 12.6756 534.219 46.2962 399.211 46.2962C264.203 46.2962 221.411 0.128669 87.686 0.128662C-46.0386 0.128655 -143.604 51.6562 -143.604 51.6562V201L678 201L678 12.6756Z" fill="url(#paint0_linear)" stroke="#FFDB13" stroke-width="5px"/>
 <defs>
 <linearGradient id="paint0_linear" x1="267.198" y1="92.8891" x2="267.198" y2="191.461" gradientUnits="userSpaceOnUse">
 <stop stop-color="#F9F9F9"/>
