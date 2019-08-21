@@ -227,18 +227,18 @@ section.videos .row.videos .bullet-active {
 }
 
 
-.mobile-blue-slider {
+/* .mobile-blue-slider {
     background-image: url('../img/users_slider/mobile_blue_slider.svg');
     background-repeat: no-repeat;
     width: 320px;
     height: 400px;
-}
+} */
 
-.mobile-green-slider,
+/* .mobile-green-slider,
 .mobile-blue-slider {
     display: block;
     padding-top: 50px;
-}
+} */
 /* .blue-slider{
     display: none;
 } */
@@ -255,12 +255,12 @@ section.videos .row.videos .bullet-active {
     max-width: 290px;
 } */
 
-.company-slider .text {
+/* .company-slider .text {
     font-size: 14px;
     max-height: 200px;
     overflow: hidden;
     height: 160px;
-}
+} */
 
 .company-info-img {
     width: 100px;
@@ -1000,10 +1000,11 @@ img.logo {
     } */
 
     .mobile-green-slider {
-        background-image: url('../img/company_slider/mobile_green_slider.svg');
+        background-image: url(../img/company_slider/mobile_green_slider.svg);
         background-repeat: no-repeat;
         width: 100vw;
-        height: 420px;
+        height: 470px;
+        display: block;
     }
 
     .company-slider .slider-color {
@@ -1031,7 +1032,7 @@ img.logo {
         position: relative;
         background-repeat: no-repeat;
         display: block;
-        height: 590px;
+        height: 610px;
     }
 
     .white-rect {
@@ -1134,6 +1135,7 @@ img.logo {
         /* max-width: 320px; */
         position: relative;
         margin-top: 100px;
+        height: 700px;
     }
 
     .users-info {
@@ -1142,7 +1144,7 @@ img.logo {
         max-width: 100vw;
         padding: 0 20px;
         position: relative;
-        top: -230px;
+        top: -315px;
     }
 
     .user-video {
@@ -1160,8 +1162,8 @@ img.logo {
 
     .green-trigon {
         background-image: url(../img/green_trigon.svg);
-        right: 0px;
-        position: absolute;
+        right: -80vw;
+        position: relative;
         z-index: 5;
         bottom: 40px;
         width: 60px;
@@ -1210,7 +1212,15 @@ img.logo {
 
     .mobile-user-slider {
         position: relative;
-        height: 720px;
+        /* height: 720px; */
+        height: 700px;
+    }
+
+    .company-slider .text {
+        font-size: 14px;
+        max-height: 210px;
+        overflow: hidden;
+        height: 165px;
     }
 }
 
