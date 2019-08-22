@@ -1277,8 +1277,8 @@ img.logo {
         position: relative;
         bottom: 4px;
         z-index: -2;
-        display: flex;
-        margin: auto;
+        /* display: flex;
+        margin: auto; */
     }
 
     .number-text {

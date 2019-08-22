@@ -1135,13 +1135,15 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     top: 174px;
 }
 
-.company-info, 
+.company-info {
+right: 6vw;
+max-width: 34vw;
+}
+
 .users-info {
-    position: absolute;
+    /* position: absolute; */
     top:140px;
     color: #ffffff;
-    right: 6vw;
-    max-width: 34vw;
 }
 
 .company-info.company-info-right {
@@ -1348,11 +1350,14 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     color: #000051;
 }
 .user-slider-figure {
-    
-        position: absolute;
-        right: 1000px;
-        bottom: -95px;
-    } 
+    background: url(../img/grey_big_el.svg);
+    position: absolute;
+    right: 52vw;
+    /* bottom: -95px; */
+    width: 570px;
+    height: 600px;
+    background-repeat: no-repeat;
+}
 
     .social-networks {
         display: flex;
@@ -1372,7 +1377,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 
     .users-slider .u1 {
         background-image: url(../img/users_slider/u1.svg);
-        right: 1150px;
+        right: 60vw;
         bottom: 425px;
         border: 13px solid #fff;
         border-radius: 50%;
@@ -1383,7 +1388,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     .users-slider .u2 {
         background-image: url(../img/users_slider/u2.svg);
         bottom: 385px;
-        right: 1400px;
+        right: 73vw;
         border-radius: 50%;
         border: 13px solid #fff;
         width: 93px;
@@ -1391,7 +1396,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     }
 
     .users-slider .u3{
-        right: 1500px;
+        right: 78vw;
         bottom: 150px;
         border-radius: 50%;
         border: 17px solid #fff;
@@ -1405,7 +1410,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     .users-slider .u4 {
         background-image: url(../img/users_slider/u4.svg);
         top: 371px;
-        right: 1420px;
+        right: 74vw;
         border-radius: 50%;
         border: 13px solid #fff;
         width: 80px;
@@ -1414,7 +1419,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 
     .users-slider .u5 {
         background-image: url(../img/users_slider/u5.svg);
-        right: 1250px;
+        right: 65vw;
         top: 450px;
         border-radius: 50%;
         border: 15px solid #fff;
@@ -2010,3 +2015,8 @@ img.logo {
     transform: translateX(-50%);
     left: 50%;
 }
+
+/* .users-slider .slider-color {
+    width: 41vw;
+    background: url(../img/blue_rect_slider.svg);
+} */
