@@ -1450,6 +1450,11 @@ img.logo {
     .range-slider-slider {
         width: 168px;
     } */
+
+    
+div.users-slider > div > div.video {
+    display: none;
+}
 }
 
 
@@ -1490,4 +1495,46 @@ img.logo {
     .yellow-tiny-ellipce   {
         display: none;
     }
+
+    .video-2 {
+        position: absolute;
+        right: 54vw;
+    }
+
+    .video .video-content {
+        position: relative;
+        z-index: 1;
+        width: 274px;
+        height: 154px;
+    }
+
+    .video {
+        width: 295px;
+        height: 165px;
+    }
+
+    .video-mask {
+        width: 274px;
+        height: 155px;
+    }
+
+    
+
+    .video-play {
+        display: flex;
+        margin: -107px auto;
+    }
+
+    .green-video-rectangle {
+        background-image: url(../img/green_video_rectangle.svg);
+        position: absolute;
+        z-index: 0;
+        right: 48px;
+        bottom: 50px;
+        width: 270px;
+        height: 140px;
+        background-repeat: no-repeat;
+    }
+
+    
 } 

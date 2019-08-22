@@ -1238,6 +1238,7 @@ max-width: 34vw;
 }
 
 /*sixth display*/
+ 
 
 .users-slider .text {
     max-width: 410px;
@@ -1451,23 +1452,21 @@ max-width: 34vw;
 
 
 
-.video-2 {
-    position: absolute;
-    right: 900px;
-    bottom: 70px;
+    .video-2 {
+        position: absolute;
+        right: 50vw;
+    }
 
-}
-
-.green-video-rectangle {
-background-image: url('../img/green_video_rectangle.svg');
-position: absolute;
-z-index: 0;
-right: 80px;
-bottom: 80px;
-width: 270px;
-height: 140px;
-background-repeat: no-repeat;
-}
+    .green-video-rectangle {
+        background-image: url('../img/green_video_rectangle.svg');
+        position: absolute;
+        z-index: 0;
+        right: 80px;
+        bottom: 80px;
+        width: 270px;
+        height: 140px;
+        background-repeat: no-repeat;
+    }
 
 
 
