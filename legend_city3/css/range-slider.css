@@ -126,3 +126,32 @@
  padding-bottom: 10px;
     color: #BDBDBD;
 }
+
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .range-slider-input {
+        width: 170px;
+    }
+
+    .range-slider-slider {
+        width: 168px;
+    }
+
+    .range-slider-progress-container {
+        width: 168px;
+    }
+
+    .range-slider-suffix {
+        left: 150px;
+    }
+
+    .price-filter .range-slider-limit-right {
+        left: 130px;
+    }
+
+    .period-filter .range-slider-limit-right {
+        left: 155px;
+    }
+
+}

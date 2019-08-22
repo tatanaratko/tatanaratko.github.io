@@ -1442,12 +1442,26 @@ img.logo {
     .offer {
         margin: 25px 50px;
     }
+
+    /* .range-slider-input {
+        width: 170px;
+    }
+
+    .range-slider-slider {
+        width: 168px;
+    } */
 }
 
 
 
 /* Extra large devices*/
 @media (min-width: 1200px) and (max-width: 1920px) { 
+   
+    .offer {
+        z-index: 3;
+        margin-top: 60px;
+        padding: 0 30px;
+    }
     .offer__title {
         font-size: 3.1vw;
     }
