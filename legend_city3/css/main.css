@@ -1387,19 +1387,20 @@ max-width: 34vw;
         border-radius: 50%;
         width: 60px;
         height: 60px;
-    
+        animation: animp1 3s;
     }
-
+    
     .users-slider .u2 {
         background-image: url(../img/users_slider/u2.svg);
     }
-        .users-slider .pu2 {
-            bottom: 385px;
-            right: 73vw;
-            border-radius: 50%;
-            border: 13px solid #fff;
-            width: 93px;
-            height: 93px;
+    .users-slider .pu2 {
+        bottom: 385px;
+        right: 73vw;
+        border-radius: 50%;
+        border: 13px solid #fff;
+        width: 93px;
+        height: 93px;
+        animation: animp2 3s;
         }
             
         
@@ -1414,7 +1415,7 @@ max-width: 34vw;
         border: 17px solid #fff;
         width:145px;
         height: 145px;
-            
+        animation: animp3 3s;
     }
 
     .users-slider div.u3{
@@ -1425,12 +1426,13 @@ max-width: 34vw;
     }
     
     .users-slider .pu4 {
-        top: 371px;
+        bottom: -50px;
         right: 74vw;
         border-radius: 50%;
         border: 13px solid #fff;
         width: 80px;
         height: 80px;
+        animation: animp4 3s;
 
     }
     .users-slider .u5 {
@@ -1444,7 +1446,7 @@ max-width: 34vw;
         border: 15px solid #fff;
         width: 65px;
         height: 65px;
-
+        animation: animp5 3s;
     }
 
     .left-arrow-2, .right-arrow-2 {
