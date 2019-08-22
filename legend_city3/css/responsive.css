@@ -1536,5 +1536,37 @@ div.users-slider > div > div.video {
         background-repeat: no-repeat;
     }
 
-    
+    .users-slider .u1 {
+        right: 65vw;
+    }
+
+    .users-slider .u3 {
+        right: 86vw;
+    }
+
+    .users-slider .u2 {
+        right: 82vw;
+    }
+
+    .users-slider .u4 {
+        right: 79vw;
+    }
+
 } 
+
+@media (min-width: 1200px) and (max-width: 1440px) {
+    .user-slider-figure {
+        right: 48vw;
+    }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .user-slider-figure {
+        right: 40vw;
+    }
+}
+
+@media (min-width: 1441px) and (max-width: 1700px) {
+    .user-slider-figure {
+        right: 48vw;
+    }
+}

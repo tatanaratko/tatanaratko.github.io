@@ -1379,7 +1379,7 @@ max-width: 34vw;
     .users-slider .u1 {
         background-image: url(../img/users_slider/u1.svg);
         right: 60vw;
-        bottom: 425px;
+        bottom: 450px;
         border: 13px solid #fff;
         border-radius: 50%;
         width: 60px;
@@ -1421,7 +1421,7 @@ max-width: 34vw;
     .users-slider .u5 {
         background-image: url(../img/users_slider/u5.svg);
         right: 65vw;
-        top: 450px;
+        top: 420px;
         border-radius: 50%;
         border: 15px solid #fff;
         width: 65px;
@@ -1739,18 +1739,18 @@ border-radius: 15px;
 }
 
 .white-tiny-ellipce-4 {
-    right: 980px;
+    right: 51vw;
     top: -40px;
 }
 
 
 .white-tiny-ellipce-5 {
-    right: 1180px;
+    right: 61.4vw;
 }
 
 .blue-tiny-ellipce-2 {
     top: 340px;
-    right: 950px;
+    right: 49.4vw;
 }
 
 
