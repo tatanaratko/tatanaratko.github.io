@@ -1000,6 +1000,7 @@ img.logo {
         /* margin: 0 10px; */
         max-width: 100vw;
         padding: 0 20px;
+        top: 60px;
     }
 
     .blue-trigon {
@@ -1138,6 +1139,7 @@ img.logo {
         /* border: 5px solid #fff;
         border-radius: 9px; */
         top: 100px;
+        z-index: 2;
     }
 
     .user-video>div {
@@ -1360,6 +1362,45 @@ img.logo {
         border: 1px dashed green;
         z-index: 109;
     } */
+
+    .company-slider .slider-color {
+        width: 100vw;
+        background-image: none;
+    }
+
+    .view-company {
+        display: block;
+    }
+
+    .company-slider-companies .c-border2,
+    .company-slider-companies .c-border3,
+    .company-slider-companies .c-border4,
+    .company-slider-companies .c-border5,
+    .company-slider-companies .c-border6,
+    .company-slider-companies .c-border7,
+    .company-slider-companies .c-border8,
+    .company-slider-companies .c-border9 {
+        display: none;
+    }
+
+    .white-tiny-ellipce-1,
+    .white-tiny-ellipce-2,
+    .white-tiny-ellipce-3,
+    .blue-tiny-ellipce ,
+    .company-slider-figure,
+    .yellow-tiny-ellipce   {
+        display: none;
+    }
+
+    .circles {
+        background-image: url(../img/users_slider/el_group_blue.png);
+        width: 85px;
+        height: 130px;
+        position: absolute;
+        z-index: 0;
+        right: 0;
+        top: 66vw;
+    }
 }
 
 /* // Small devices (landscape phones, 576px and up) */
@@ -1384,7 +1425,7 @@ img.logo {
         padding-bottom: 30px;
     }
 
-
+    
     
 }
 
@@ -1486,7 +1527,10 @@ div.users-slider > div > div.video {
     .white-tiny-ellipce-1,
     .white-tiny-ellipce-2,
     .white-tiny-ellipce-3,
+    .white-tiny-ellipce-4,
+    .white-tiny-ellipce-5,
     .blue-tiny-ellipce ,
+    .blue-tiny-ellipce-2 ,
     .company-slider-figure,
     .yellow-tiny-ellipce   {
         display: none;
