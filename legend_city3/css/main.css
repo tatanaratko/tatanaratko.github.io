@@ -722,6 +722,11 @@ section.user-numerals {
     top: -150px;
     right: 0;
     float: right;
+    width: 49.4vw;
+    height: 410px;
+    background-repeat: no-repeat;
+    background: url(../img/green_rectangle.svg);
+    background-size: cover;
 }
 
 .row.statistic-num-row {
@@ -875,10 +880,10 @@ border: 1px solid #dadada;;
 
 .blue-trigon {
     background-image: url('../img/blue_trigon.svg');
-    right: 590px;
+    right: 30.7vw;
     position: absolute;
     z-index: 5;
-    bottom: 340px;
+    bottom: 360px;
     width: 60px;
     height: 60px;
 }
@@ -895,8 +900,8 @@ border: 1px solid #dadada;;
 .white-rect {
     background-image: url('../img/white_middle_rect.svg');
     position: absolute;
-    bottom: 290px;
-    right: 250px;
+    bottom: 310px;
+    right: 13vw;
     width: 180px;
     height: 180px;
 }
@@ -908,7 +913,7 @@ border: 1px solid #dadada;;
 .circle-group {
     background-image: url('../img/circle_group.svg');
     position: absolute;
-    top: 270px;
+    top: 290px;
     right: 10px;
     width: 85px;
     height: 130px;
@@ -1101,7 +1106,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 
 .left-arrow,
 .right-arrow {
-    top: 340px;
+    top: 370px;
 }
 
 .left-arrow, .left-arrow-2 {
@@ -1135,8 +1140,8 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     position: absolute;
     top:140px;
     color: #ffffff;
-    right: 245px;
-    max-width: 540px;
+    right: 6vw;
+    max-width: 34vw;
 }
 
 .company-info.company-info-right {
@@ -1596,12 +1601,12 @@ border-radius: 15px;
     display: none;
 }
 
-.green-slider {
+/* .green-slider {
     background-image: url('../img/green_rectangle.svg');
     background-repeat: no-repeat;
     width: 49.4vw;
     height: 380px;
-}
+} */
 
 
 .blue-slider {
@@ -1754,7 +1759,7 @@ border-radius: 15px;
 }
 
 .company-info {
-    top: 90px;
+    top: 4.6vw;
 }
 
 img.logo {

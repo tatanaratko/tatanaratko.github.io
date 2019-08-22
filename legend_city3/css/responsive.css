@@ -1466,3 +1466,11 @@ img.logo {
         font-size: 3.1vw;
     }
 }
+
+
+@media (min-width: 1199px) and (max-width: 1440px) {
+    .left-arrow,
+.right-arrow {
+    top: 390px;
+}
+} 
