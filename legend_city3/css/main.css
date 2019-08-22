@@ -1064,7 +1064,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     right: 1100px;
 }
 .c-border5 {
-    right: 1090px;
+    right: 56.7vw;
     bottom: 390px;
 }
 
@@ -1546,13 +1546,13 @@ border-radius: 15px;
 }
 
 .yellow-form-fig {
-    background-image: url('../img/form/form_yellow_figure.svg');
+    background-image: url(../img/form/form_yellow_figure.svg);
     z-index: 0;
     position: absolute;
     top: 50px;
-    right: 160px;
-    width: 200px;
-    height: 200px;
+    right: 40px;
+    width: 160px;
+    height: 172px;
     background-repeat: no-repeat;
 }
 
