@@ -1472,9 +1472,22 @@ img.logo {
     .left-arrow,
     .right-arrow {
     top: 390px;
-}
+    }
 
     .company-slider .title, .users-slider .title {
         font-size: 2.5vw;
+    }
+
+    .right-arrow, .right-arrow-2 {
+        right: 27vw;
+    }
+
+    .white-tiny-ellipce-1,
+    .white-tiny-ellipce-2,
+    .white-tiny-ellipce-3,
+    .blue-tiny-ellipce ,
+    .company-slider-figure,
+    .yellow-tiny-ellipce   {
+        display: none;
     }
 } 
