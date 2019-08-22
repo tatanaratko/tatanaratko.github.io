@@ -148,6 +148,17 @@ var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 var companyElements;
 var inetshopsElements;
 
+var companyNext = 1;
+var inetshopNext = 1;
+
+function nextCompany(){
+    companyNext = companyNext === companyClassState.length - 1 ? 1 : companyNext + 1;
+}
+
+function nextInetshop(){
+    inetshopNext = inetshopNext === inetshopsClassState.length - 1 ? 1 : inetshopNext + 1;
+}
+
 var _init = function(){
     var spending = 48000;
     var percent = 5;
@@ -172,28 +183,34 @@ var _init = function(){
     }
 
     var onGreenSliderChange = function(){
-        var classStateShifted = [...companyClassState];
-        classStateShifted.push(classStateShifted.shift());
+        var classStateCopy = [...companyClassState];
+
+        classStateCopy[0] = companyClassState[companyNext]
+        classStateCopy[companyNext] = companyClassState[0]
 
         for(let i = 0; i<companyClassState.length; i++)
         {
-            companyElements[i].classList.replace(companyClassState[i], classStateShifted[i]);
+            companyElements[i].classList.replace(companyClassState[i], classStateCopy[i]);
         }
 
-        companyClassState = [...classStateShifted];
+        companyClassState = [...classStateCopy];
+        nextCompany();
 
     };
 
     var onInetshopsSliderChange = function(){
-        var classStateShifted = [...inetshopsClassState];
-        classStateShifted.push(classStateShifted.shift());
+        var classStateCopy = [...inetshopsClassState];
+        
+        classStateCopy[0] = inetshopsClassState[inetshopNext]
+        classStateCopy[inetshopNext] = inetshopsClassState[0]
 
         for(let i = 0; i<inetshopsClassState.length; i++)
         {
-            inetshopsElements[i].classList.replace(inetshopsClassState[i], classStateShifted[i]);
+            inetshopsElements[i].classList.replace(inetshopsClassState[i], classStateCopy[i]);
         }
 
-        inetshopsClassState = [...classStateShifted];
+        inetshopsClassState = [...classStateCopy];
+        nextInetshop();
     };
 
     var initSliderElements = function(elements, classes)
@@ -309,6 +326,7 @@ var _init = function(){
         inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
         inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(inetshopsElements, inetshopsClassState);
+        inetshopNext = 1;
         greenSlider.addEventListener("sliderchange", onInetshopsSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
@@ -323,6 +341,7 @@ var _init = function(){
         companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
         companyElements = [".c-border1", ".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(companyElements, companyClassState);
+        companyNext = 1;
         greenSlider.addEventListener("sliderchange", onGreenSliderChange);
         window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     });
