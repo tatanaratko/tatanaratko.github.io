@@ -1047,11 +1047,11 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     background-repeat: no-repeat;
 }
 .c-border2 {
-    right: 990px;
+    right: 51.5vw;
 }
 .c-border3 {
     top: 330px;
-    right: 1180px;
+    right: 61.4vw;
 }
 
 .arrow-ellipse {
@@ -1061,7 +1061,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 
 .c-border4 {
     top: 110px;
-    right: 1100px;
+    right: 57.2vw;
 }
 .c-border5 {
     right: 56.7vw;
@@ -1070,27 +1070,27 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 
 
 .c-border6 {
-    right: 1375px;
+    right: 71.6vw;
     top: 218px;
 }
 
 .c-border7 {
-    right: 1350px;
+    right: 70.3vw;
     top: 20px;
 }
 
 .c-border8 {
-    right: 1600px;
+    right: 83.3vw;
     top: 400px;
 }
 
 .c-border9 {
-    right: 1550px;
+    right: 80.7vw;
     top: 100px;
 }
 
 .c-border10 {
-    right: 1250px;
+    right: 65.1vw;
     top: 400px;
 }
 
@@ -1105,7 +1105,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 }
 
 .left-arrow, .left-arrow-2 {
-    right: 660px;
+    right: 34.3vw;
     border: 23px solid white;
     background-color: white;
     border-radius: 50%;
@@ -1113,7 +1113,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 }
 
 .right-arrow, .right-arrow-2 {
-    right: 570px;
+    right: 29vw;
     border: 23px solid white;
     background: white;
     border-radius: 50%;
@@ -1126,7 +1126,7 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
 }
 
 .view-company {
-    right: 866px;
+    right: 45.1vw;
     top: 174px;
 }
 
@@ -1599,7 +1599,7 @@ border-radius: 15px;
 .green-slider {
     background-image: url('../img/green_rectangle.svg');
     background-repeat: no-repeat;
-    width: 950px;
+    width: 49.4vw;
     height: 380px;
 }
 
