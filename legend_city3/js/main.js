@@ -206,7 +206,8 @@ var _init = function(){
 
     var onInetshopsSliderChange = function(){
         var classStateCopy = [...inetshopsClassState];
-        classStateCopy.push(classStateCopy.shift());
+        classStateCopy[0] = inetshopsClassState[inetshopNext]
+        classStateCopy[inetshopNext] = inetshopsClassState[0]
 
         for(let i = 0; i<inetshopsClassState.length; i++)
         {
