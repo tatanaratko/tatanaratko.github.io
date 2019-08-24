@@ -1,3 +1,6 @@
+var LEFT_DIRECTION = -1;
+var RIGHT_DIRECTION = 1;
+
 var COMPANY_SLIDER_DATA = [
     {
         title: "Рыбный мир",
@@ -152,16 +155,46 @@ var inetshopsElements;
 
 var usersElements;
 
-var companyNext = 1;
-var inetshopNext = 1;
+var buildChangeOrder = function(array) {
+    var shiftedArray = [...array];
+    shiftedArray.push(shiftedArray.shift());
 
-function nextCompany(){
-    companyNext = companyNext === companyClassState.length - 1 ? 1 : companyNext + 1;
-}
+    var result = {right:{}, left:{}};
+    for(var i = 0; i<shiftedArray.length; i++)
+    {
+        result.left[shiftedArray[i]] = array[i];
+        result.right[array[i]] = shiftedArray[i]
+    }
 
-function nextInetshop(){
-    inetshopNext = inetshopNext === inetshopsClassState.length - 1 ? 1 : inetshopNext + 1;
-}
+    return result
+};
+
+var commitChanges = function(array, order, direction) {
+    
+    var first, second;
+    var newArray = [...array];
+
+    if(direction === RIGHT_DIRECTION)
+    {
+        first = newArray[0];
+        second = order.right[first];
+    
+    }
+    else if(direction === LEFT_DIRECTION)
+    {
+        first = newArray[0];
+        second = order.left[first];
+    }
+
+    var secondIndex = newArray.indexOf(second);
+    newArray[0] = second;
+    newArray[secondIndex] = first;
+
+    return newArray;
+};
+
+var companyOrder = buildChangeOrder(companyClassState);
+var inetshopsOrder = buildChangeOrder(inetshopsClassState);
 
 var _init = function(){
     var spending = 48000;
@@ -188,11 +221,10 @@ var _init = function(){
         fadeCalculatorMobile.classList.add("in-down");
     }
 
-    var onGreenSliderChange = function(){
+    var onGreenSliderChange = function(e){
         var classStateCopy = [...companyClassState];
 
-        classStateCopy[0] = companyClassState[companyNext]
-        classStateCopy[companyNext] = companyClassState[0]
+        classStateCopy = commitChanges(classStateCopy, companyOrder, e.detail);
 
         for(let i = 0; i<companyClassState.length; i++)
         {
@@ -200,14 +232,12 @@ var _init = function(){
         }
 
         companyClassState = [...classStateCopy];
-        nextCompany();
 
     };
 
-    var onInetshopsSliderChange = function(){
+    var onInetshopsSliderChange = function(e){
         var classStateCopy = [...inetshopsClassState];
-        classStateCopy[0] = inetshopsClassState[inetshopNext]
-        classStateCopy[inetshopNext] = inetshopsClassState[0]
+        classStateCopy = commitChanges(classStateCopy, inetshopsOrder, e.detail);
 
         for(let i = 0; i<inetshopsClassState.length; i++)
         {
@@ -215,7 +245,6 @@ var _init = function(){
         }
 
         inetshopsClassState = [...classStateCopy];
-        nextInetshop();
     };
 
     var onUserSliderChange = function(){

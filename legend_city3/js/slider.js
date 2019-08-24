@@ -69,9 +69,6 @@
             return e;
         });
 
-        this.event = new Event("sliderchange");
-
-        
         this.renderCompanyInfo = function (el, info)
         {
 
@@ -181,7 +178,7 @@
                 this.setActiveBullet();
             }
 
-            this.dispatchEvent(this.event);
+            this.dispatchEvent(new CustomEvent("sliderchange", {detail:direction}));
 
         }).bind(this);
     
