@@ -1166,6 +1166,7 @@ img.logo {
         border-radius: 50%;
         border: 1px dashed green;
         padding: 9px;
+        background-color: #fff;
     }
 
     .users-section-mobile .u1 > img,
