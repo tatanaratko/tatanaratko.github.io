@@ -720,24 +720,7 @@
 
         </div>
         <div class="map">
-            <svg width="100%" height="773" viewBox="0 0 1919 773" fill="none" xmlns="http://www.w3.org/2000/svg"
-                preserveAspectRatio="xMidYMin slice" xmlns:xlink="http://www.w3.org/1999/xlink">
-                <image xlink:href="img/map/map.svg" x="0" y="0"></image>
-                <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="-69" y="0" width="1988" height="1004">
-                    <rect x="-69" y="174.565" width="1920" height="832" rx="84" transform="rotate(-5.21649 -69 174.565)"
-                        fill="#000051" />
-                </mask>
-                <g mask="url(#mask0)">
-                    <rect x="-13" y="-58" width="1920" height="1184" fill="url(#pattern0)" />
-                    <rect opacity="0.1" x="-69" y="174.565" width="1920" height="832" rx="84"
-                        transform="rotate(-5.21649 -69 174.565)" fill="#000051" />
-                </g>
-                <defs>
-                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
-                        <use xlink:href="#image0" transform="translate(-0.00016172) scale(0.000703957 0.00114155)" />
-                    </pattern>
-                </defs>
-            </svg>
+            <div id="my-map"></div>
 
         </div>
 
@@ -795,5 +778,23 @@
 <script src="js/our-number.js"></script>
 <script src="js/slider.js"></script>
 <script src="js/main.js"></script>
-
+<script src="https://api-maps.yandex.ru/2.1/?apikey=0a7d87c5-edbb-4d20-a150-7c43f0fe1ec4&lang=ru_RU" type="text/javascript"></script>
+<script type="text/javascript">
+    // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(init);
+    function init(){ 
+        // Создание карты.    
+        var myMap = new ymaps.Map("my-map", {
+            // Координаты центра карты.
+            // Порядок по умолчанию: «широта, долгота».
+            // Чтобы не определять координаты центра карты вручную,
+            // воспользуйтесь инструментом Определение координат.
+            center: [54.9835,73.3093],
+            // Уровень масштабирования. Допустимые значения:
+            // от 0 (весь мир) до 19.
+            zoom: 17
+        });
+    }
+    </script>
 </html>

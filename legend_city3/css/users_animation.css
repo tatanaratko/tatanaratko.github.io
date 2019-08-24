@@ -214,6 +214,7 @@
     height: 145px;
     /* animation: animp3 3s; */
     position: absolute;
+    z-index: 3;
 }
 
 

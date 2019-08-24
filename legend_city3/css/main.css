@@ -750,6 +750,7 @@ section.user-numerals {
     z-index:2;
     position: relative;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
 .line-mask {
@@ -1516,12 +1517,14 @@ max-width: 34vw;
 .map-bg {
     background-image: url('../img/map/map_bg.svg');
     background-repeat: no-repeat;
+    transform: rotate(2deg);
 }
 .map-zone{
     background-color: #f9f9f9;
     margin-top: -30px;
+    position: relative;
 }
-.map, 
+
 .map-bg {
     position: absolute;
 }
@@ -1534,7 +1537,7 @@ max-width: 34vw;
 .map-bg {
     z-index: 0;
     width: 100%;
-    transform: translate(0px, 24px);
+    /* transform: translate(0px, 24px); */
     background-color: #f9f9f9;
 }
 footer, p {
@@ -2059,3 +2062,13 @@ img.logo {
     width: 41vw;
     background: url(../img/blue_rect_slider.svg);
 } */
+
+.map {
+    top: 100px;
+}
+.map #my-map{
+    width: 100%;
+    position: relative;
+    height: 755px;
+    z-index: 3
+}
