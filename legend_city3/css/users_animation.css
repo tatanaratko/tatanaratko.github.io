@@ -7,22 +7,19 @@
     from {
         right: 56vw;
         bottom: 420px;
-        border: 13px solid #fff;
+        /* border: 13px solid #fff; */
         border-radius: 50%;
         width: 60px;
         height: 60px;
     }
 
     to {
-
         right: 60vw;
         bottom: 450px;
-        border: 13px solid #fff;
-        border-radius: 50%;
+        /* border: 13px solid #fff;
+        border-radius: 50%; */
         width: 60px;
         height: 60px;
-
-    
     }
 }
 
@@ -30,16 +27,16 @@
     from {
         right: 60vw;
         bottom: 450px;
-        border: 13px solid #fff;
-        border-radius: 50%;
+        /* border: 13px solid #fff;
+        border-radius: 50%; */
         width: 60px;
         height: 60px;
     }
     to {
         bottom: 385px;
         right: 73vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 93px;
         height: 93px;
     }
@@ -49,56 +46,112 @@
     from {
         bottom: 385px;
         right: 73vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 93px;
         height: 93px;
     }
     to {
-        right: 78vw;
-        bottom: 150px;
-        border-radius: 50%;
-        border: 17px solid #fff;
-        width:145px;
-        height: 145px;
+        right: 78.5vw;
+        bottom: 160px;
+        /* border-ra
+        7px solid #fff; */
+        width:140px;
+        height: 140px;
     }
 }
 
 @keyframes animp4 {
     from {
-        right: 78vw;
-        bottom: 150px;
-        border-radius: 50%;
-        border: 17px solid #fff;
-        width:145px;
-        height: 145px;
+        right: 78.5vw;
+        bottom: 160px;
+        /* border: 17px solid #fff;
+        border-radius: 50%; */
+        width:140px;
+        height: 14px;
     }
     to {
         bottom: -50px;
         right: 74vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 80px;
         height: 80px;
     }
 }
 
 @keyframes animp5 {
-    from {
+    0% {
         bottom: -50px;
         right: 74vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 80px;
         height: 80px;
     }
 
-    to {
+    50% {
+
+    }
+    100% {
          right: 65vw;
         top: 420px;
-        border-radius: 50%;
-        border: 15px solid #fff;
+        /* border-radius: 50%;
+        border: 15px solid #fff; */
         width: 65px;
         height: 65px;
     }
+}
+
+
+.view-user {
+    border: 1px dashed #36c150;
+    right: 78vw;
+    bottom: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 145px;
+    height: 145px;
+    /* animation: animp3 3s; */
+    position: absolute;
+}
+
+
+.users-slider .pu1 > img {
+    border: 13px solid #fff;
+    border-radius: 50%;
+   max-width: 100%;
+    max-height: 100%;
+    height: auto; 
+}
+
+
+.users-slider .pu2 > img {
+
+    border-radius: 50%;
+        border: 13px solid #fff;
+        max-width: 100%;
+        max-height: 100%;
+        height: auto; 
+}
+.users-slider .pu3 > img {
+    border-radius: 50%;
+    border: 17px solid #fff;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; 
+} 
+.users-slider .pu4 > img {
+    border: 13px solid #fff; 
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; 
+    border-radius: 50%;
+} 
+.users-slider .pu5 > img {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    max-width: 100%;
+    max-height: 100%;
+    height: auto; 
 }

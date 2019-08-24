@@ -1376,74 +1376,74 @@ max-width: 34vw;
         position: absolute;
     }
 
-    .users-slider .u1 {
+    /* .users-slider .u1 {
         background-image: url(../img/users_slider/u1.png);
-        }
+        } */
 
     .users-slider .pu1 {
         right: 60vw;
         bottom: 450px;
-        border: 13px solid #fff;
-        border-radius: 50%;
+        /* border: 13px solid #fff;
+        border-radius: 50%; */
         width: 60px;
         height: 60px;
         animation: animp1 3s;
     }
-    
+/*     
     .users-slider .u2 {
         background-image: url(../img/users_slider/u2.png);
-    }
+    } */
     .users-slider .pu2 {
         bottom: 385px;
         right: 73vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 93px;
         height: 93px;
         animation: animp2 3s;
         }
             
         
-    .users-slider .u3{
-        background-image: none;
-    }
+    /* .users-slider .u3{
+        background-image: url(../img/users_slider/u3.png);
+    } */
     
     .users-slider .pu3 {
-        right: 78vw;
-        bottom: 150px;
-        border-radius: 50%;
-        border: 17px solid #fff;
-        width:145px;
-        height: 145px;
+        right: 78.5vw;
+        bottom: 160px;
+        /* border-radius: 50%;
+        border: 17px solid #fff;*/
+        width:140px;
+        height: 140px; 
         animation: animp3 3s;
     }
 
-    .users-slider div.u3{
+    /* .users-slider div.u3{
         border: 1px dashed #36c150;
-    }
-    .users-slider .u4 {
+    } */
+    /* .users-slider .u4 {
         background-image: url(../img/users_slider/u4.png);
-    }
+    } */
     
     .users-slider .pu4 {
         bottom: -50px;
         right: 74vw;
-        border-radius: 50%;
-        border: 13px solid #fff;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
         width: 80px;
         height: 80px;
         animation: animp4 3s;
 
     }
-    .users-slider .u5 {
+    /* .users-slider .u5 {
         background-image: url(../img/users_slider/u5.png);
-    }
+    } */
     
     .users-slider .pu5 {
         right: 65vw;
         top: 420px;
-        border-radius: 50%;
-        border: 15px solid #fff;
+        /* border-radius: 50%;
+        border: 15px solid #fff; */
         width: 65px;
         height: 65px;
         animation: animp5 3s;
