@@ -149,6 +149,7 @@ var companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
 var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 
 var usersClassState = ["pu1", "pu2", "pu3", "pu4", "pu5"];
+var usersMobileClassState = ["u1", "u2", "u3", "u4", "u5"];
 
 var companyElements;
 var inetshopsElements;
@@ -204,6 +205,7 @@ var _init = function(){
     inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     
     usersElements = [".users-slider div.u1",".users-slider div.u2", ".users-slider div.u3", ".users-slider div.u4", ".users-slider div.u5"].map(e=>document.querySelector(e));
+    usersElementsMoblie = [".mobile-user-slider div.u1",".mobile-user-slider div.u2", ".mobile-user-slider div.u3", ".mobile-user-slider div.u4", ".mobile-user-slider div.u5"].map(e=>document.querySelector(e));
 
     function fadingText() {
         fadeText.classList.add("in-down");
@@ -277,6 +279,27 @@ var _init = function(){
         usersClassState = [...classStateCopy];
     };
 
+    var onUserSliderMobileChange = function(e){
+        var classStateCopy = [...usersMobileClassState];
+
+        if(e.detail === LEFT_DIRECTION)
+        {
+            classStateCopy.unshift(classStateCopy.pop());
+        }
+        else if(e.detail == RIGHT_DIRECTION)
+        {
+            classStateCopy.push(classStateCopy.shift());
+        }
+
+        for(let i = 0; i<usersMobileClassState.length; i++)
+        {
+            usersElementsMoblie[i].classList.replace(usersMobileClassState[i], classStateCopy[i]);
+        }
+
+
+        usersMobileClassState = [...classStateCopy];
+    };
+
     var initSliderElements = function(elements, classes)
     {
         var all = document.querySelectorAll(RESET_SELECTOR);
@@ -317,6 +340,7 @@ var _init = function(){
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
     blueSlideDesktop.addEventListener("sliderchange", onUserSliderChange);
+    blueSlideMobile.addEventListener("sliderchange", onUserSliderMobileChange);
 
     window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     if(window.innerWidth > 768)
