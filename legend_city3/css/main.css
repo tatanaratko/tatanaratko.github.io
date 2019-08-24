@@ -1409,11 +1409,11 @@ max-width: 34vw;
     } */
     
     .users-slider .pu3 {
-        right: 78.5vw;
-        bottom: 160px;
+        right: 78.2vw;
+        bottom: 154px;
         /* border-radius: 50%;
         border: 17px solid #fff;*/
-        width:140px;
+        width:137px;
         height: 140px; 
         animation: animp3 3s;
     }
@@ -1441,7 +1441,8 @@ max-width: 34vw;
     
     .users-slider .pu5 {
         right: 65vw;
-        top: 420px;
+        /* top: 420px; */
+        bottom: -105px;
         /* border-radius: 50%;
         border: 15px solid #fff; */
         width: 65px;
