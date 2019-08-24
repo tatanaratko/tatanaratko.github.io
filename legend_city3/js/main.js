@@ -247,14 +247,32 @@ var _init = function(){
         inetshopsClassState = [...classStateCopy];
     };
 
-    var onUserSliderChange = function(){
+    var onUserSliderChange = function(e){
         var classStateCopy = [...usersClassState];
-        classStateCopy.push(classStateCopy.shift());
+
+        if(e.detail === LEFT_DIRECTION)
+        {
+            classStateCopy.unshift(classStateCopy.pop());
+        }
+        else if(e.detail == RIGHT_DIRECTION)
+        {
+            classStateCopy.push(classStateCopy.shift());
+        }
 
         for(let i = 0; i<usersClassState.length; i++)
         {
+            if(e.detail === LEFT_DIRECTION)
+            {
+                usersElements[i].classList.add("reversed");
+
+                usersElements[i].addEventListener("animationend", function onAnimEnd(){
+                    usersElements[i].classList.remove("reversed");
+                    usersElements[i].removeEventListener("animationend", onAnimEnd);
+                });
+            }
             usersElements[i].classList.replace(usersClassState[i], classStateCopy[i]);
         }
+
 
         usersClassState = [...classStateCopy];
     };

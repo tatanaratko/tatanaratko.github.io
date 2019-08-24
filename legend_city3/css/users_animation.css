@@ -102,6 +102,107 @@
     }
 }
 
+@keyframes animp1-reversed {
+
+    from {
+        bottom: 385px;
+        right: 73vw;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
+        width: 93px;
+        height: 93px;
+    }
+
+    to {
+        right: 60vw;
+        bottom: 450px;
+        /* border: 13px solid #fff;
+        border-radius: 50%; */
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes animp2-reversed {
+    from {
+        right: 78.2vw;
+        bottom: 154px;
+        /* border-ra
+        7px solid #fff; */
+        width:137px;
+        height: 140px;
+    }
+    to {
+        bottom: 385px;
+        right: 73vw;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
+        width: 93px;
+        height: 93px;
+    }
+}
+
+@keyframes animp3-reversed {
+    from {
+        bottom: -50px;
+        right: 74vw;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
+        width: 80px;
+        height: 80px;
+    }
+    to {
+        right: 78.2vw;
+        bottom: 154px;
+        /* border-ra
+        7px solid #fff; */
+        width:137px;
+        height: 140px;
+    }
+}
+
+@keyframes animp4-reversed {
+    from {
+        bottom: -105px;
+        right: 65vw;
+        /* top: 420px; */
+        /* border-radius: 50%;
+        border: 15px solid #fff; */
+        width: 65px;
+        height: 65px;
+    }
+    to {
+        bottom: -50px;
+        right: 74vw;
+        /* border-radius: 50%;
+        border: 13px solid #fff; */
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes animp5-reversed {
+    from {
+        right: 60vw;
+        bottom: 450px;
+        /* border: 13px solid #fff;
+        border-radius: 50%; */
+        width: 60px;
+        height: 60px;
+    }
+
+   
+    to {
+        bottom: -105px;
+        right: 65vw;
+        /* top: 420px; */
+        /* border-radius: 50%;
+        border: 15px solid #fff; */
+        width: 65px;
+        height: 65px;
+    }
+}
+
 
 .view-user {
     border: 1px dashed #36c150;
