@@ -110,32 +110,32 @@ var USERS_DATA = [
         title: "Марина 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям. На данный момент получаю исключительно положительные эмоции.",
         imageUri: "img/video_1.svg",
-        additionalImageUri: "img/users_slider/u3.svg"
+        additionalImageUri: "img/users_slider/u3.png"
     },
     {
         title: "Даша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
         imageUri: "img/video_2.svg",
-        additionalImageUri: "img/users_slider/u2.svg"  
+        additionalImageUri: "img/users_slider/u2.png"  
     },
     {
         title: "Саша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
         imageUri: "img/video_3.svg",
-        additionalImageUri: "img/users_slider/u3.svg"
+        additionalImageUri: "img/users_slider/u3.png"
     },
     {
         title: "Леша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
         imageUri: "img/video_2.svg",
-        additionalImageUri: "img/users_slider/u4.svg"
+        additionalImageUri: "img/users_slider/u4.png"
     },
 
     {
         title: "Аня 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
         imageUri: "img/video_2.svg",
-        additionalImageUri: "img/users_slider/u5.svg"
+        additionalImageUri: "img/users_slider/u5.png"
     },
 ];
 
@@ -145,8 +145,12 @@ var RESET_SELECTOR = ".c-size";
 var companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
 var inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
 
+var usersClassState = ["pu1", "pu2", "pu3", "pu4", "pu5"];
+
 var companyElements;
 var inetshopsElements;
+
+var usersElements;
 
 var companyNext = 1;
 var inetshopNext = 1;
@@ -166,6 +170,8 @@ var _init = function(){
     companyElements = [".c-border1", ".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
     
+    usersElements = [".users-slider div.u1",".users-slider div.u2", ".users-slider div.u3", ".users-slider div.u4", ".users-slider div.u5"].map(e=>document.querySelector(e));
+
     function fadingText() {
         fadeText.classList.add("in-down");
     }
@@ -200,7 +206,6 @@ var _init = function(){
 
     var onInetshopsSliderChange = function(){
         var classStateCopy = [...inetshopsClassState];
-        
         classStateCopy[0] = inetshopsClassState[inetshopNext]
         classStateCopy[inetshopNext] = inetshopsClassState[0]
 
@@ -211,6 +216,18 @@ var _init = function(){
 
         inetshopsClassState = [...classStateCopy];
         nextInetshop();
+    };
+
+    var onUserSliderChange = function(){
+        var classStateCopy = [...usersClassState];
+        classStateCopy.push(classStateCopy.shift());
+
+        for(let i = 0; i<usersClassState.length; i++)
+        {
+            usersElements[i].classList.replace(usersClassState[i], classStateCopy[i]);
+        }
+
+        usersClassState = [...classStateCopy];
     };
 
     var initSliderElements = function(elements, classes)
@@ -248,10 +265,11 @@ var _init = function(){
     
     
     var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
-    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content", ".users-slider .u3"], USERS_DATA);
+    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content"], USERS_DATA);
     var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3-img"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
+    blueSlideDesktop.addEventListener("sliderchange", onUserSliderChange);
 
     window.userScrolling.addUserSeeEvent(greenSliderEl, greenSlider.startAutoRotation);
     if(window.innerWidth > 768)
