@@ -37,7 +37,13 @@
         ].forEach(delegate, this)
     };
     
-    var Slider = function (leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data)
+    var Slider = function (leftArrowSelector, 
+        rightArrowSelector, 
+        companyInfoSelector, 
+        companyImgSelector, 
+        data,
+        timeout = 1000
+        )
     {
 
         Emitter.call(this);
@@ -64,6 +70,8 @@
         this.hasBulletGroup = (this.bulletGroupEl && this.bulletGroupEl.offsetParent !== null);
         this.bullets = null;
 
+        this.timeout = timeout;
+
         this.sliderData = data.map(function(e,i){
             e.id = i;
             return e;
@@ -72,7 +80,7 @@
         this.renderCompanyInfo = function (el, info)
         {
 
-            this.isDebounceBlocked = !!this.leftArrow;
+            //this.isDebounceBlocked = !!this.leftArrow;
             
             var that = this;
 
@@ -80,7 +88,7 @@
 
                 el.removeEventListener("animationend", onFadeAnimationEnd);
                 el.addEventListener("animationend", function onShowAnimationEnd(){
-                    that.isDebounceBlocked = false;
+                    //that.isDebounceBlocked = false;
                     el.removeEventListener("animationend", onShowAnimationEnd)
                 });
                 
@@ -178,6 +186,9 @@
                 this.setActiveBullet();
             }
 
+            this.isDebounceBlocked = true;
+            setTimeout(()=>this.isDebounceBlocked=false, this.timeout);
+
             this.dispatchEvent(new CustomEvent("sliderchange", {detail:direction}));
 
         }).bind(this);
@@ -212,7 +223,7 @@
         this.disallowAutoRotation = function(){
             this.isAutoRotationBlocked = true;
 
-            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 2);
+            setTimeout(this.allowAutoRotation, AUTO_ROTATION_INTERVAL * 4);
         };
 
         this.onSwipeLeft = (function(){
@@ -319,9 +330,19 @@
     };
 
     window.slider = {
-        init: function (leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data)
+        init: function (leftArrowSelector, 
+            rightArrowSelector, 
+            companyInfoSelector, 
+            companyImgSelector, 
+            data, 
+            timeout)
         {
-            return new Slider(leftArrowSelector, rightArrowSelector, companyInfoSelector, companyImgSelector, data);
+            return new Slider(leftArrowSelector, 
+                rightArrowSelector, 
+                companyInfoSelector, 
+                companyImgSelector, 
+                data, 
+                timeout);
         }
     };
 

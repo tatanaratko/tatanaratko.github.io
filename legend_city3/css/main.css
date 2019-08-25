@@ -1388,6 +1388,9 @@ max-width: 34vw;
         border-radius: 50%; */
         width: 60px;
         height: 60px;
+    }
+
+    .users-slider .pu1.direct {
         animation: animp1 3s;
     }
 
@@ -1405,7 +1408,10 @@ max-width: 34vw;
         border: 13px solid #fff; */
         width: 93px;
         height: 93px;
-        animation: animp2 3s;
+    }
+
+    .users-slider .pu2.direct {
+        animation: animp2 2s linear;
     }
 
     .users-slider .pu2.reversed {
@@ -1424,6 +1430,9 @@ max-width: 34vw;
         border: 17px solid #fff;*/
         width:137px;
         height: 140px; 
+    }
+
+    .users-slider .pu3.direct {
         animation: animp3 3s;
     }
 
@@ -1445,8 +1454,10 @@ max-width: 34vw;
         border: 13px solid #fff; */
         width: 80px;
         height: 80px;
-        animation: animp4 3s;
+    }
 
+    .users-slider .pu4.direct {
+        animation: animp4 3s;
     }
 
     .users-slider .pu4.reversed {
@@ -1464,6 +1475,9 @@ max-width: 34vw;
         border: 15px solid #fff; */
         width: 65px;
         height: 65px;
+    }
+
+    .users-slider .pu5.direct {
         animation: animp5 3s;
     }
 

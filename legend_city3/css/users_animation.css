@@ -11,6 +11,7 @@
         border-radius: 50%;
         width: 60px;
         height: 60px;
+        opacity: 0;
     }
 
     to {
@@ -31,6 +32,9 @@
         border-radius: 50%; */
         width: 60px;
         height: 60px;
+    }
+    50% {
+        bottom: 440px;
     }
     to {
         bottom: 385px;
@@ -113,6 +117,10 @@
         height: 93px;
     }
 
+    50% {
+        bottom: 460px;
+    }
+
     to {
         right: 60vw;
         bottom: 450px;
@@ -191,7 +199,15 @@
         height: 60px;
     }
 
-   
+    25% {
+        opacity: 0;
+        bottom: 415px;
+        right: 55vw;
+    }
+    75% {
+        opacity: 0;
+        right: 60vw;
+    }
     to {
         bottom: -105px;
         right: 65vw;
@@ -200,6 +216,7 @@
         border: 15px solid #fff; */
         width: 65px;
         height: 65px;
+        opacity: 1;
     }
 }
 

@@ -1,6 +1,8 @@
 var LEFT_DIRECTION = -1;
 var RIGHT_DIRECTION = 1;
 
+var ANIMATION_DURATION = 3100;
+
 var COMPANY_SLIDER_DATA = [
     {
         title: "Рыбный мир",
@@ -272,6 +274,15 @@ var _init = function(){
                     usersElements[i].removeEventListener("animationend", onAnimEnd);
                 });
             }
+            else
+            {
+                usersElements[i].classList.add("direct");
+
+                usersElements[i].addEventListener("animationend", function onAnimEnd(){
+                    usersElements[i].classList.remove("direct");
+                    usersElements[i].removeEventListener("animationend", onAnimEnd);
+                });
+            }
             usersElements[i].classList.replace(usersClassState[i], classStateCopy[i]);
         }
 
@@ -335,7 +346,7 @@ var _init = function(){
     
     
     var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
-    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content"], USERS_DATA);
+    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content"], USERS_DATA, ANIMATION_DURATION);
     var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3-img"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
