@@ -114,32 +114,32 @@ var USERS_DATA = [
     {
         title: "Марина 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям. На данный момент получаю исключительно положительные эмоции.",
-        imageUri: "img/video_1.png",
+        imageUri: "img/video_1-min.png",
         additionalImageUri: "img/users_slider/u3.png"
     },
     {
         title: "Даша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
-        imageUri: "img/video_2.png",
+        imageUri: "img/video_2-min.png",
         additionalImageUri: "img/users_slider/u2.png"  
     },
     {
         title: "Саша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
-        imageUri: "img/video_3.png",
+        imageUri: "img/video_3-min.png",
         additionalImageUri: "img/users_slider/u3.png"
     },
     {
         title: "Леша 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
-        imageUri: "img/video_2.png",
+        imageUri: "img/video_2-min.png",
         additionalImageUri: "img/users_slider/u4.png"
     },
 
     {
         title: "Аня 25 лет. г.Москва",
         text: "Все начисляется, списывается и копится, после стал рекомендовать друзьям.",
-        imageUri: "img/video_2.png",
+        imageUri: "img/video_2-min.png",
         additionalImageUri: "img/users_slider/u5.png"
     },
 ];
