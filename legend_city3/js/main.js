@@ -69,7 +69,7 @@ var INTERNET_SHOPS_DATA = [
         title: "Aliexpress",
         subTitle: "Интернет-магазин модных новинок",
         text: "Вернем 10% Легенд Баллами с любой суммы покупки!",
-        imageUri: "img/company_slider/1i.svg"
+        imageUri: "img/company_slider/1i.png"
     },
     {
         title: "Mamsy",
@@ -81,7 +81,7 @@ var INTERNET_SHOPS_DATA = [
         title: "МВидео",
         subTitle: "Интернет-магазин цифровой и бытовой техники и электроники",
         text: "Вернем 10% Легенд Баллами с любой суммы покупки!",
-        imageUri: "img/company_slider/3i.svg"
+        imageUri: "img/company_slider/3i.png"
     },
     {
         title: "New balance",
