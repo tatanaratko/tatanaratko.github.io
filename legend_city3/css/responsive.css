@@ -1583,6 +1583,16 @@ div.users-slider > div > div.video {
     top: 390px;
     }
 
+    .blue-rectangle {
+        right: 55px;
+        bottom: 55px;
+    }
+
+    .big-yellow-el {
+        right: 185px;
+        top: 10px;
+    }
+
     .company-slider .title, .users-slider .title {
         font-size: 2.5vw;
     }
