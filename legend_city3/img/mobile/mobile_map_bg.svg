@@ -1,9 +1,12 @@
-<svg width="320" height="298" viewBox="0 0 320 298" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="-132.774" width="464.963" height="269.55" rx="84" transform="rotate(3.56066 -132.774 0)" fill="url(#paint0_linear)"/>
-<defs>
-<linearGradient id="paint0_linear" x1="99.7069" y1="0" x2="99.7069" y2="269.55" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FFDB13"/>
-<stop offset="1" stop-color="#FAAC2B"/>
-</linearGradient>
-</defs>
-</svg>
+<svg width="100%" height="282" viewBox="0 0 320 298" fill="none" xmlns="http://www.w3.org/2000/svg"
+                preserveAspectRatio="none">
+                <rect x="-132.774" width="464.963" height="269.55" rx="84" transform="rotate(3.56066 -132.774 0)"
+                    fill="url(#paint20_linear)" />
+                <defs>
+                    <linearGradient id="paint20_linear" x1="99.7069" y1="0" x2="99.7069" y2="269.55"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FFDB13" />
+                        <stop offset="1" stop-color="#FAAC2B" />
+                    </linearGradient>
+                </defs>
+            </svg>

@@ -750,14 +750,16 @@ img.logo {
     position: relative;
 } */
 
-.map-zone {
+/* .map-zone {
     display: none;
-}
+} */
 
 .mobile-bg {
+    background-image: url(../img/mobile/mobile_map_bg.svg);
     position: absolute;
     z-index: 0;
-    width: 100%
+    width: 100%;
+    height: 300px;
 }
 
 /* .mobile-map {
@@ -887,6 +889,10 @@ img.logo {
         background-repeat: no-repeat;
         background-position: center
     }
+
+    .map-zone .container {
+        display: none;
+    } 
 
     .foto-bg {
         background-image: url(../img/mobile/mobile_foto_bg.png);
