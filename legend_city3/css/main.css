@@ -1531,7 +1531,7 @@ max-width: 34vw;
 .map-bg {
     background-image: url('../img/map/map_bg.svg');
     background-repeat: no-repeat;
-    /* transform: rotate(2deg); */
+    height: 600px;
 }
 .map-zone{
     background-color: #f9f9f9;
@@ -2093,3 +2093,8 @@ img.logo {
     height: 400px;
 }
 
+
+
+.form-wrap-mobile {
+    display: none;
+}
