@@ -1143,7 +1143,7 @@ max-width: 34vw;
     padding-right: 5px;
 }
 .card-1 {
-    background-image: url('../img/user_numerals/cards.svg');
+    background-image: url('../img/user_numerals/cards.png');
     z-index: 3;
     height: 200px;
     background-repeat: no-repeat;
