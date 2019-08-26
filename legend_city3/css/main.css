@@ -1662,14 +1662,6 @@ border-radius: 15px;
     display: none;
 }
 
-/* .green-slider {
-    background-image: url('../img/green_rectangle.svg');
-    background-repeat: no-repeat;
-    width: 49.4vw;
-    height: 380px;
-} */
-
-
 .blue-slider {
     background-image: url('../img/blue_rect_slider.svg');
     background-repeat: no-repeat;
