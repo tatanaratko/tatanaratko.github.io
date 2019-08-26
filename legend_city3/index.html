@@ -163,8 +163,6 @@
             </div>
         </section>
 
-
-
         <section class="videos">
             <div class="container custom-container">
                 <div class="row videos">
@@ -201,7 +199,6 @@
 
         <section class="grey-section grey-section-company grey-section-mobile">
             <div class="grey-bg">
-                <!-- <div class="yellow-line-top"></div> -->
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-7">
@@ -212,7 +209,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="line-mask"></div> -->
                 <div class="company-slider company-slider-companies">
                     <div class="slider-color">
                         <div class="blue-trigon"></div>
@@ -234,9 +230,7 @@
                         <div class="c1 view-company c-border1">
                             <img class="company-info-img">
                         </div>
-                        <div class="c2 c-size c-border c-border2">
-                            <!-- <img src="img/company_slider/2c.svg"> -->
-                        </div>
+                        <div class="c2 c-size c-border c-border2"></div>
                         <div class="c3 c-size c-border c-border3"></div>
                         <div class="c4 c-size c-border c-border4"></div>
                         <div class="c5 c-size c-border c-border5"></div>
@@ -259,7 +253,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- <div class="grey-bottom-line"></div> -->
                 <div class=" grey-bottom-line grey-bottom-line-mobile"></div>
                 <div class="container statistic-num-container">
                     <div class="row statistic-num-row">
@@ -635,54 +628,6 @@
         </div>
     </section>
 
-    <!-- <section class="map-zone-mobile"> -->
-        <!-- <div class="mobile-bg">
-        </div> -->
-        <!-- <div class="mobile-map">
-            <div id="my-mobile-map"></div>
-        </div> -->
-        <!-- <img src="img/map/location.svg" alt="" class="location-yellow location-yellow-mobile"> -->
-        <!-- <div class="location-white location-white-mobile"></div> -->
-        <!-- <div class="form-wrap-mobile">
-            <div class="form form-mobile">
-                <div class="form-text form-text-mobile">
-                    <div class="contact-info contact-info-mobile">Контактная информация</div>
-                    <div class="mail form-content form-content-mobile">
-                        <div class="mail-icon form-icon"></div>
-                        <div class="mail-text content-text content-text-mobile">
-                            E-mail: <b>info@legendcity.ru</b></div>
-                    </div>
-                    <div class="number form-content form-content-mobile">
-                        <div class="phone-icon form-icon"></div>
-                        <div class="number-text content-text content-text-mobile">
-                            Тел.: 8 (3812) <b>638-201<br>
-                                8 800 511 63 21</b> 
-                            <span>Звонок бесплатный</span></div>
-                    </div>
-                    <div class="adress form-content form-content-mobile">
-                        <div class="place-icon form-icon"></div>
-                        <div class="adress-text content-text content-text-mobile">
-                            Россия, г. Омск, просп.<b> Комарова, 21,
-                                корп.1</b>, офис 224. Индекс 644074
-                        </div>
-                    </div>
-                </div>
-                <img src="img/form/form_figure.svg" alt="" class="blue-form-fig">
-                <div class="form-height"></div>
-                <div class="form-height form-height-decoration1"></div>
-                <div class="form-height form-height-decoration2"></div>
-                <div class="white-form-fig"></div>
-                <div class="yellow-form-fig"></div>
-            </div>
-        </div> -->
-    <!-- </section> -->
-
-    <!-- <section class="footer">
-        <div class="license">
-            All rights reserved©legendcity.ru
-        </div>
-    </section> -->
-
     <section class="map-zone">
         <div class="map-bg">
             
@@ -695,10 +640,7 @@
         <div class="container">
             <div class="row form-row">
                 <div class="col-lg-6 location">
-                    <!-- <img src="img/map/location.svg" alt="" class="location-yellow"> -->
-                    <!-- <div class="location-white"></div> -->
                 </div>
-
                 <div class="col-lg-6">
                     <div class="form">
                         <div class="form-text">
@@ -729,10 +671,7 @@
                         <div class="form-height form-height-decoration2"></div>
                         <div class="white-form-fig"></div>
                         <div class="yellow-form-fig"></div>
-                    </div>
-
-
-                    
+                    </div>               
                 </div>
             </div>
         </div>
@@ -776,9 +715,6 @@
         </div>
     </section>
     </div>
-    <!-- <div class="footer">
-            All rights reserved©legendcity.ru
-    </div> -->
 </body>
 
 <script src="js/user-scrolling.js"></script>
@@ -791,24 +727,17 @@
     // Функция ymaps.ready() будет вызвана, когда
     // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
     ymaps.ready(init);
-    function init(){ 
-        // Создание карты.    
+    function init(){    
         var myMap = new ymaps.Map("my-map", {
             center: [54.9835,73.3093],
             zoom: 16.5
         }, {
             searchControlProvider: 'yandex#search'
         }),
-    // Создание макета содержимого хинта.
-    // Макет создается через фабрику макетов с помощью текстового шаблона.
         HintLayout = ymaps.templateLayoutFactory.createClass( "<div class='my-hint'>" +
             "<b>{{ properties.object }}</b><br />" +
             "{{ properties.address }}" +
             "</div>", {
-                // Определяем метод getShape, который
-                // будет возвращать размеры макета хинта.
-                // Это необходимо для того, чтобы хинт автоматически
-                // сдвигал позицию при выходе за пределы карты.
                 getShape: function () {
                     var el = this.getElement(),
                         result = null;
