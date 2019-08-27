@@ -343,7 +343,7 @@ color: #9E9E9E;
 .foto-bg-mask {
     background-image: url(../img/foto-bg-mask.png);
     position: absolute;
-    height: 44vw;
+    height: 46vw;
     width: 43vw;
     right: 0;
     z-index: 1;
@@ -351,6 +351,10 @@ color: #9E9E9E;
     background-repeat: no-repeat;
 }
 
+.foto-bg-mask-transparent {
+    background-image: url(../img/foto-bg-mask-tr.png);
+    height: 47vw;
+}
 .rio-bg {
     position: absolute;
     right: 31vw;
