@@ -1093,6 +1093,14 @@
     line-height: 33px;
     padding-bottom: 50px;
   }
+
+  .single-number {
+    padding: 0 2.2vw;
+
+  }
+    .our-number {
+        font-size: 4.4vw;
+    }
 }
 
   @media (min-width: 576px) and (max-width: 1199.98px) {
@@ -1137,6 +1145,16 @@
 
 
 @media (min-width: 992px) and (max-width: 1440px) {
+
+    .our-number {
+        font-size: 4.4vw;
+    }
+
+    .single-number {
+        padding: 0 2.2vw;
+        
+    }
+
     .left-arrow,
     .right-arrow {
     top: 390px;
