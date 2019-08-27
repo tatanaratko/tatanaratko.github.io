@@ -340,6 +340,17 @@ color: #9E9E9E;
     background-size: cover;
 }
 
+.foto-bg-mask {
+    background-image: url(../img/foto-bg-mask.png);
+    position: absolute;
+    height: 44vw;
+    width: 43vw;
+    right: 0;
+    z-index: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .rio-bg {
     position: absolute;
     right: 31vw;
