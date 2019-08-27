@@ -332,6 +332,7 @@ var _init = function(){
     var fadeMobile = document.querySelector("body > div > section.mobile-app > div > div.row.mobile-align > div:nth-child(1)");
     var fadeCalculatorMobile=document.querySelector("body > div > section.user-numerals.user-numerals-mobile > div.calculator");
 
+    window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,100,".our-number-left .single-number"));
     window.userScrolling.addUserSeeEvent(ourNumbersEl, ()=>window.animation.animateNumberInc(0,115,".our-number-right .single-number"));
     window.userScrolling.addUserSeeEvent(fadeText, fadingText, 0.6);
     window.userScrolling.addUserSeeEvent(fadeCalculator, fadingCalculator, 0.5);
