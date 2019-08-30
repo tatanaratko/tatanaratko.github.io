@@ -230,3 +230,39 @@
     max-height: 100%;
     height: auto; 
 }
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .view-user {
+        right: 75.5vw;
+    }
+
+    @keyframes animp3 {
+        from {
+            bottom: 385px;
+            right: 73vw;
+            width: 93px;
+            height: 93px;
+        }
+        to {
+            right: 76vw;
+            bottom: 154px;
+            width:137px;
+            height: 140px;
+        }
+    }
+    
+    @keyframes animp4 {
+        from {
+            right: 76vw;
+            bottom: 154px;
+            width:137px;
+            height: 140px;
+        }
+        to {
+            bottom: -50px;
+            right: 74vw;
+            width: 80px;
+            height: 80px;
+        }
+    }
+}

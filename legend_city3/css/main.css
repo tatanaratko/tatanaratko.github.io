@@ -650,11 +650,6 @@ section.user-numerals {
     padding-top: 140px;
 }
 
-.grey-section {
-    padding-top: 130px;
-
-}
-
 .grey-section img{
     user-select: none;
 }
@@ -719,7 +714,7 @@ section.user-numerals {
     background-image: url('../img/grey_line_top.svg');
     left: 0;
     right: 0;
-    height: 502px;
+    height: 300px;
     z-index:2;
     position: relative;
     bottom: 157px;
@@ -1011,9 +1006,14 @@ section.grey-section.grey-section-mobile > div > div.company-slider.company-slid
     height: 105px;
     background-repeat: no-repeat;
 }
-.c-border2 {
-    right: 49vw;
+.company-slider-inetshops .c-border2 {
+    right: 55vw;
 }
+
+.company-slider-companies .c-border2 {
+    right: 51vw;
+}
+
 .c-border3 {
     top: 330px;
     right: 61.4vw;
@@ -1313,6 +1313,7 @@ max-width: 34vw;
     width: 570px;
     height: 600px;
     background-repeat: no-repeat;
+    z-index: -1;
 }
 
     .social-networks {
@@ -1827,6 +1828,10 @@ img.logo {
     width: 105px;
     height: 105px;
     background-repeat: no-repeat;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: white;
+    border-color: white;
 }
 
 .company-slider-companies .c-border5 {
@@ -1901,8 +1906,7 @@ img.logo {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
     width: 55px;
     height: 55px;
-    right: 1080px;
-    top:-30px;
+    top:-10px;
 
 }
 
