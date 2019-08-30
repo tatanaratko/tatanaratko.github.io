@@ -535,7 +535,7 @@
     margin: 0 auto;
     max-width:290px;
     position: relative;
-    top: 500px;
+    top: 430px;
 }
 
 .map-zone,
@@ -545,7 +545,7 @@
 
 
 .map-zone {
-    height: 930px;
+    height:865px;
 }
     .foto-bg {
         background-image: url(../img/mobile/mobile_foto_bg.png);
@@ -1070,6 +1070,14 @@
         padding-bottom: 30px;
     }
 
+    .form {
+        top: 570px;
+        margin-bottom: 40px;
+    }
+
+    .form-height {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+    }
     
     
 }
@@ -1083,6 +1091,29 @@
     .main-screen .container {
         max-width: fit-content;
     } 
+
+    .form-height,
+    .blue-form-fig {
+        width: 300px;
+    }
+
+    .blue-form-fig {
+        background-size: contain;
+    }
+
+    .form { 
+        margin: 0 0 0 30px;
+        max-width: 300px;
+    }
+
+    .contact-info {
+        font-size: 20px;
+        /* top: 100px; */
+        position: relative;
+        bottom: 60px;
+        text-align: center;
+        line-height: 40px;
+    }
     
 }
 @media (min-width: 320px) and (max-width: 991.98px) {
@@ -1090,6 +1121,11 @@
         .about {
             margin:auto;
         }
+
+        .form-container {
+            max-width: 100%;
+        }
+
 
   }
 
