@@ -765,15 +765,22 @@
         justify-content: center;
         margin-left: auto;
         position: relative;
-        margin-top: 100px;
+        /* margin-top: 100px; */
         /* height: 845px; */
     }
     
+    .users-foto {
+        top: 161px;
+        position: relative;
+    }
+
     .users-section-bg {
         background-image: url(../img/mobile/user_mobile_bg.svg);
         height: 40vw;
         background-size: cover;
-        background-repeat: no-repeat
+        top: 100px;
+        background-repeat: no-repeat;
+        position: relative;
     }
 
     .users-info {
@@ -834,30 +841,30 @@
     .users-section-mobile .u2 {
         left: 21vw;
         top: 4vw;
-        width: 45px;
-        height: 45px;
+        width: 8vw;
+        height: 8vw;
 
     }
 
     .users-section-mobile .u4 {
         right: 21vw;
         top: 4vw;
-        width: 45px;
-        height: 45px;
+        width: 8vw;
+        height: 8vw;
     }
 
     .users-section-mobile .u5 {
         right: 4vw;
         top: 4vw;
-        width: 45px;
-        height: 45px;
+        width: 8vw;
+        height: 8vw;
     }
 
     .users-section-mobile .u1 {
         left: 4vw;
         top: 4vw;
-        width: 45px;
-        height: 45px;
+        width: 8vw;
+        height: 8vw;
     }
 
     .users-info .title {
