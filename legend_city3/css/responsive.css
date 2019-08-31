@@ -1369,7 +1369,7 @@
         right: 40vw;
     }
 
-     .video {
+     .user-video {
         display: block;
         bottom: 442px;
         left: 20vw;
@@ -1444,25 +1444,27 @@
         position: absolute;
         right: 54vw;
     }
-
+    
     .video .video-content {
         position: relative;
         z-index: 1;
         width: 274px;
         height: 154px;
     }
-
+    
     .video {
         width: 295px;
         height: 165px;
-        bottom: 410px;    
+    }
+    .user-video{
+    bottom: 410px;    
     }
 
     .video-mask {
         width: 274px;
         height: 155px;
     }
-
+    
     .video-play {
         display: flex;
         margin: -107px auto;
@@ -1478,7 +1480,7 @@
         height: 140px;
         background-repeat: no-repeat;
     }
-
+    
 } 
 
 @media (min-width: 1200px) and (max-width: 1440px) {
@@ -1486,13 +1488,13 @@
         right: 48vw;
     }
 
-    .video {
+    .user-video {
         left: 20vw;
     }
 }
 
 @media (min-width: 992px) and (max-width: 1199.98px) {
-    .video {
+    .user-video {
         left: 32vw;
     }
 }
