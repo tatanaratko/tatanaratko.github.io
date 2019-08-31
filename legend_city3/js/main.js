@@ -406,7 +406,7 @@ var _init = function(){
 
         for(var bs of benefitSums)
         {
-            bs.textContent = window.RangeSlider.prototype.formatNumber(spending * 0.01 * percent);
+            bs.textContent = window.RangeSlider.prototype.formatNumber(spending * 0.01 * percent) + '\u20BD';
         }
 
     };
