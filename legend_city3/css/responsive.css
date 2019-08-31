@@ -84,7 +84,7 @@
     }
     
     .left-item {
-        font-size: 10px;
+        font-size: 12px;
     }
     
     .white-bg img {
@@ -545,7 +545,8 @@
 
 
 .map-zone {
-    height:865px;
+    height:675px;
+    bottom: 190px;
 }
     .foto-bg {
         background-image: url(../img/mobile/mobile_foto_bg.png);
@@ -577,7 +578,7 @@
     }
 
     .men {
-        max-width: 190px;
+        max-width: 140px;
     }
 
     .menu-row {
@@ -586,7 +587,7 @@
     }
 
     .telephone {
-        font-size: 3.6vw;
+        font-size: 15px;
     }
     .about-us {
         margin-top: 30px;
@@ -757,17 +758,22 @@
     }
 
     .users-section-mobile {
-        background-image: url(../img/mobile/user_mobile_bg.svg);
         width: 100%;
-        background-repeat: no-repeat;
+        /* background-repeat: no-repeat; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         margin-left: auto;
         position: relative;
         margin-top: 100px;
-        background-size: contain;
-        height: 845px;
+        /* height: 845px; */
+    }
+    
+    .users-section-bg {
+        background-image: url(../img/mobile/user_mobile_bg.svg);
+        height: 40vw;
+        background-size: cover;
+        background-repeat: no-repeat
     }
 
     .users-info {
@@ -861,7 +867,7 @@
 
     .mobile-user-slider {
         position: relative;
-        height: 700px;
+       
     }
 
     .company-slider .text {
@@ -1258,8 +1264,8 @@
     }
 
     .company-slider-companies .c-border6 {
-        width: 16vw;
-        height: 16vw;
+        width: 14vw;
+        height: 14vw;
         border-width: 2vw;
     }
 
@@ -1293,6 +1299,10 @@
 
     .view-company {
         right: 43vw;
+    }
+
+    .company-info {
+        right: 0;
     }
   }
 
