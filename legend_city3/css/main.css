@@ -717,8 +717,8 @@ section.user-numerals {
     height: 300px;
     z-index: 2;
     position: relative;
-    bottom: 153px;
-      transform: rotate(-0.5deg);
+    bottom: 163px;
+      /* transform: rotate(-0.5deg); */
 }
 
 .yellow-line-top {
@@ -740,8 +740,8 @@ section.user-numerals {
     z-index: 2;
     position: relative;
     background-repeat: no-repeat;
-    bottom: 10px;
-    transform: matrix(1, 0, 0, 1, -77, -27);
+    bottom: 30px;
+    /* transform: matrix(1, 0, 0, 1, -77, -27); */
 }
 
 .grey-bottom-line {
