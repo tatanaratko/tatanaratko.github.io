@@ -711,13 +711,14 @@ section.user-numerals {
 }
 
 .line-mask {
-    background-image: url('../img/grey_line_top.svg');
+    background-image: url(../img/grey_top_line_2.svg);
     left: 0;
     right: 0;
     height: 300px;
-    z-index:2;
+    z-index: 2;
     position: relative;
-    bottom: 157px;
+    bottom: 153px;
+      transform: rotate(-0.5deg);
 }
 
 .yellow-line-top {
@@ -732,13 +733,15 @@ section.user-numerals {
 }
 
 .yellow-line-2 {
-    background-image: url('../img/yellow_line_2.svg');
+    background-image: url(../img/line_yel_2.svg);
     left: 0;
     right: 0;
     height: 158px;
-    z-index:2;
+    z-index: 2;
     position: relative;
     background-repeat: no-repeat;
+    bottom: 10px;
+    transform: matrix(1, 0, 0, 1, -77, -27);
 }
 
 .grey-bottom-line {
