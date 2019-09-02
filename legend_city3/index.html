@@ -720,46 +720,5 @@
 <script src="js/slider.js"></script>
 <script src="js/main.js"></script>
 <script src="https://api-maps.yandex.ru/2.1/?apikey=0a7d87c5-edbb-4d20-a150-7c43f0fe1ec4&lang=ru_RU" type="text/javascript"></script>
-<script type="text/javascript" defer>
-    // Функция ymaps.ready() будет вызвана, когда
-    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-    ymaps.ready(init);
-    function init(){    
-        var myMap = new ymaps.Map("my-map", {
-            center: [54.9835,73.3093],
-            zoom: 16.5
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        HintLayout = ymaps.templateLayoutFactory.createClass( "<div class='my-hint'>" +
-            "<b>{{ properties.object }}</b><br />" +
-            "{{ properties.address }}" +
-            "</div>", {
-                getShape: function () {
-                    var el = this.getElement(),
-                        result = null;
-                    if (el) {
-                        var firstChild = el.firstChild;
-                        result = new ymaps.shape.Rectangle(
-                            new ymaps.geometry.pixel.Rectangle([
-                                [0, 0],
-                                [firstChild.offsetWidth, firstChild.offsetHeight]
-                            ])
-                        );
-                    }
-                    return result;
-                }
-            }
-        );
-
-    var myPlacemark = new ymaps.Placemark([54.9835,73.3093], {
-        object: "Город легенд"
-    }, {
-        hintLayout: HintLayout
-    });
-
-    myMap.geoObjects.add(myPlacemark);
-}
-
-    </script>
+<script src= "js/map.js" type="text/javascript"></script>
 </html>
