@@ -1180,7 +1180,7 @@
         }
   }
 
-  @media (min-width: 576px) and (max-width: 991.98px) {
+  @media (min-width: 576.01px) and (max-width: 991.98px) {
 
   .users-number {
     line-height: 33px;
@@ -1312,7 +1312,7 @@
     }
   }
 
-  @media (min-width: 576px) and (max-width: 1199.98px) {
+  @media (min-width: 576.01px) and (max-width: 1199.98px) {
     .foto-bg {
         background-image: url(../img/mobile/mobile_foto_bg.svg);
         position: absolute;
@@ -1490,6 +1490,12 @@
 
     .user-video {
         left: 20vw;
+    }
+}
+
+@media (min-width: 1199px) and (max-width: 1440px) {
+    .menu-custom-container {
+        margin-right: 28vw;
     }
 }
 
