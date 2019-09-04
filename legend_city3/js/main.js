@@ -346,9 +346,9 @@ var _init = function(){
 
     
     
-    var greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
-    var blueSlideDesktop = window.slider.init(".left-arrow-2", ".right-arrow-2", ".users-slider .users-info", [".users-slider .video-content"], USERS_DATA, ANIMATION_DURATION);
-    var blueSlideMobile = window.slider.init(".left-arrow-2", ".right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3-img"], USERS_DATA);
+    var greenSlider = window.slider.init("div.left-arrow","div.right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
+    var blueSlideDesktop = window.slider.init("div.left-arrow-2", "div.right-arrow-2", ".users-slider .users-info", [".users-slider .video-content"], USERS_DATA, ANIMATION_DURATION);
+    var blueSlideMobile = window.slider.init("div.left-arrow-2", "div.right-arrow-2", ".mobile-user-slider .users-info", [".mobile-user-slider .video-content", ".mobile-user-slider .u3-img"], USERS_DATA);
     var videoSlider = window.slider.init(null, null, "section.videos .row.videos", "section.videos .row.videos .video-content", USERS_DATA);
     
     blueSlideDesktop.addEventListener("sliderchange", onUserSliderChange);
@@ -423,7 +423,7 @@ var _init = function(){
         companySliderEl.classList.replace("company-slider-companies", "company-slider-inetshops");
         companiesBtn.classList.remove("slider-btn-visited");
         inetShopsBtn.classList.add("slider-btn-visited");
-        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
+        greenSlider = window.slider.init("div.left-arrow","div.right-arrow",".company-info-center", ".company-info-img", INTERNET_SHOPS_DATA);;
         inetshopsClassState = ["c1","c2","c3","c6","c7","c8","c9"];
         inetshopsElements = [".c-border1",".c-border2",".c-border3",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(inetshopsElements, inetshopsClassState);
@@ -438,7 +438,7 @@ var _init = function(){
         companySliderEl.classList.replace("company-slider-inetshops", "company-slider-companies");
         companiesBtn.classList.add("slider-btn-visited");
         inetShopsBtn.classList.remove("slider-btn-visited");
-        greenSlider = window.slider.init(".left-arrow",".right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
+        greenSlider = window.slider.init("div.left-arrow","div.right-arrow",".company-info-center", ".company-info-img", COMPANY_SLIDER_DATA);
         companyClassState = ["c1","c2","c3","c4","c5","c6","c7","c8","c9"];
         companyElements = [".c-border1", ".c-border2",".c-border3",".c-border4",".c-border5",".c-border6",".c-border7",".c-border8",".c-border9"].map(e=>document.querySelector(e));
         initSliderElements(companyElements, companyClassState);

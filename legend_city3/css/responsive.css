@@ -224,8 +224,8 @@
     }
     
     .arrow-ellipse,
-    .right-arrow,
-    .left-arrow {
+    div.right-arrow,
+    div.left-arrow {
         display: none;
     }
     
@@ -1200,11 +1200,11 @@
         left: 12vw;
     }
 
-    .right-arrow, .right-arrow-2 {
+    div.right-arrow, div.right-arrow-2 {
         right: 25vw;
     }
 
-    .left-arrow, .left-arrow-2 {
+    div.left-arrow, div.left-arrow-2 {
         right: 38.3vw;
     }
 
@@ -1405,8 +1405,8 @@
         
     }
 
-    .left-arrow,
-    .right-arrow {
+    div.left-arrow,
+    div.right-arrow {
     top: 390px;
     }
 
@@ -1424,7 +1424,7 @@
         font-size: 2.5vw;
     }
 
-    .right-arrow, .right-arrow-2 {
+    div.right-arrow, div.right-arrow-2 {
         right: 27vw;
     }
 
