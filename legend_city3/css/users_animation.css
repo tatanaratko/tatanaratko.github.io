@@ -266,3 +266,123 @@
         }
     }
 }
+
+@media (max-width: 576px) {
+    .users-section-mobile .u1.direct {
+        animation: anim-mob1;
+    }
+
+    .users-section-mobile .u2.direct {
+        animation: anim-mob2;
+    }
+
+    .users-section-mobile .u3.direct {
+        animation: anim-mob3;
+    }
+
+    .users-section-mobile .u4.direct {
+        animation: anim-mob1;
+    }
+
+    .users-section-mobile .u5.direct {
+        animation: anim-mob5;
+    }
+/*  */
+    .users-section-mobile .u1.reversed {
+        animation: anim-rev-mob1;
+    }
+
+    .users-section-mobile .u2.reversed {
+        animation: anim-rev-mob2;
+    }
+
+    .users-section-mobile .u3.reversed {
+        animation: anim-revmob3;
+    }
+
+    .users-section-mobile .u4.reversed {
+        animation: anim-revmob4;
+    }
+
+    .users-section-mobile .u5.reversed {
+        animation: anim-rev-mob5;
+    }
+
+/*  */
+
+@keyframes anim-mob1 {
+
+    from {
+    }
+
+    to {
+    }
+}
+
+@keyframes anim-mob2 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-mob3 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-mob4 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-mob5 {
+    from {
+    }   
+    to {
+    }
+}
+
+@keyframes anim-rev-mob1 {
+
+    from {
+    }
+
+    to {
+    }
+}
+
+@keyframes anim-rev-mob2 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-rev-mob3 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-rev-mob4 {
+    from {
+    }
+    to {
+    }
+}
+
+@keyframes anim-rev-mob5{
+    from {
+    }
+
+    to {
+    }
+}
+
+}

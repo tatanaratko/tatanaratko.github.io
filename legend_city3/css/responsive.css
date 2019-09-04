@@ -839,12 +839,20 @@
         height: auto; 
     }
 
+    .users-section-mobile .u1 {
+        left: 4vw;
+        top: 4vw;
+        width: 8vw;
+        height: 8vw;
+    }
+    
+    
     .users-section-mobile .u2 {
         left: 21vw;
         top: 4vw;
         width: 8vw;
         height: 8vw;
-
+        animation: animp2-mob 3s;
     }
 
     .users-section-mobile .u4 {
@@ -852,6 +860,7 @@
         top: 4vw;
         width: 8vw;
         height: 8vw;
+        animation: animp4-mob 3s;
     }
 
     .users-section-mobile .u5 {
@@ -859,14 +868,10 @@
         top: 4vw;
         width: 8vw;
         height: 8vw;
+        animation: animp5-mob 3s;
     }
 
-    .users-section-mobile .u1 {
-        left: 4vw;
-        top: 4vw;
-        width: 8vw;
-        height: 8vw;
-    }
+  
 
     .users-info .title {
         padding-bottom: 30px;
