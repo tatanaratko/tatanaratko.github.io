@@ -42,7 +42,7 @@
         companyInfoSelector, 
         companyImgSelector, 
         data,
-        timeout = 1000
+        timeout = 600
         )
     {
 
@@ -108,12 +108,17 @@
                     that.$text.textContent = info.text;
                 }
 
+                if(that.companyImg) {
+                    that.companyImg.classList.remove("slider-text-faded")
+                }
+
                 el.classList.remove("slider-text-faded");
             }, false);
     
+            this.companyImg.classList.add("slider-text-faded");
             el.classList.add("slider-text-faded");
-
-            this.companyImg.setAttribute("src", info.imageUri);
+            setTimeout(()=>this.companyImg.setAttribute("src", info.imageUri), 200)
+            
 
             if (this.additionalImg && info.additionalImageUri)
             {
