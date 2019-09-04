@@ -5,15 +5,19 @@ body {
     overflow-x:  hidden !important;
 }
 
-.slider-text-shown.slider-text-faded {
-    animation-duration: 250ms;
+.slider-text-shown.slider-text-faded, 
+.img-animation-fadin{
+    animation-duration: 330ms;
     animation-name: fadein;
 }
 
-.slider-text-shown{
-    animation-duration: 250ms;
+.slider-text-shown,
+.img-animation-fadout {
+    animation-duration: 330ms;
     animation-name: fadeout;
 }
+
+
 
 @keyframes fadein {
     from {

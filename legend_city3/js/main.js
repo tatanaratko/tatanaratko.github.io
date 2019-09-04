@@ -451,31 +451,25 @@ var _init = function(){
     
 };
 
-
 document.addEventListener("DOMContentLoaded", _init);
 
 function onClickPlayMarket() {
-    // console.log('play market is here');
     document.location.href = 'https://play.google.com/store/apps/details?id=com.legendcity.legendcity&hl=ru&utm_source=app-web&utm_campaign=app-web&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1http://www.mozilla.org';
 }
 
 function onClickAppStore() {
-    // console.log('app is here');
     document.location.href='https://apps.apple.com/ru/app/legendcity/id1229070695';
 }
 
 function onClickVk() {
-    // console.log('app is here');
     document.location.href='https://vk.com/legendcity55';
 }
 
 function onClickInst() {
-    // console.log('app is here');
     document.location.href='https://www.instagram.com/legendcity.official/';
 }
 
 function onClickYt() {
-    // console.log('app is here');
     document.location.href='https://www.youtube.com/user/perfectlegendinfo/videos';
 }
 
