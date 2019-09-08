@@ -7,12 +7,14 @@ body {
 
 .slider-text-shown.slider-text-faded, 
 .img-animation-fadin{
+    opacity: 0;
     animation-duration: 330ms;
     animation-name: fadein;
 }
 
 .slider-text-shown,
 .img-animation-fadout {
+    opacity: 1;
     animation-duration: 330ms;
     animation-name: fadeout;
 }
@@ -932,6 +934,9 @@ border: 1px solid #dadada;;
 section.grey-section.grey-section-mobile > div > div.company-slider.company-slider-companies > div > div.view-company.c-border1,
 section.grey-section.grey-section-mobile > div > div.company-slider.company-slider-inetshops > div > div.view-company.c-border1{
     background-image: none;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: white;
 }
 .company-slider-companies .c2{
     background-image: url('../img/company_slider/2c.svg');
