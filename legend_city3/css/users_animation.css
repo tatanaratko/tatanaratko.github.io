@@ -336,9 +336,11 @@
 @keyframes anim-mob3 {
     from {
         right: 21vw;
+        transform: none;
     }
     to { 
-        left: 50%
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
 
