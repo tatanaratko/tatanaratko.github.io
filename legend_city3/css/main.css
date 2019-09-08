@@ -19,6 +19,12 @@ body {
     animation-name: fadeout;
 }
 
+.company-animation-fading {
+    opacity: 1;
+    animation-duration: 660ms;
+    animation-name: fadeout;
+}
+
 
 
 @keyframes fadein {

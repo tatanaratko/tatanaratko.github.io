@@ -227,12 +227,19 @@ var _init = function(){
 
     var onGreenSliderChange = function(e){
         var classStateCopy = [...companyClassState];
-
+        var currentClass = document.querySelector(".view-company").getAttribute("class").replace(/.*([ci][0-9])\s+.*/g, '$1')
         classStateCopy = commitChanges(classStateCopy, companyOrder, e.detail);
 
         for(let i = 0; i<companyClassState.length; i++)
         {
             companyElements[i].classList.replace(companyClassState[i], classStateCopy[i]);
+            if(companyElements[i].classList.contains(currentClass))
+            {
+                companyElements[i].classList.add("company-animation-fading");
+                companyElements[i].addEventListener("animationend", function(){
+                    companyElements[i].classList.remove("company-animation-fading")
+                });
+            }
         }
 
         companyClassState = [...classStateCopy];
