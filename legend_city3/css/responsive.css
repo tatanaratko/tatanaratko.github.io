@@ -852,7 +852,7 @@
         top: 4vw;
         width: 8vw;
         height: 8vw;
-        animation: animp2-mob 3s;
+        /* animation: animp2-mob 3s; */
     }
 
     .users-section-mobile .u4 {
@@ -860,7 +860,7 @@
         top: 4vw;
         width: 8vw;
         height: 8vw;
-        animation: animp4-mob 3s;
+        /* animation: animp4-mob 3s; */
     }
 
     .users-section-mobile .u5 {
@@ -868,7 +868,7 @@
         top: 4vw;
         width: 8vw;
         height: 8vw;
-        animation: animp5-mob 3s;
+        /* animation: animp5-mob 3s; */
     }
 
   

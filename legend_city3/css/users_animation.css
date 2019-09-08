@@ -269,23 +269,23 @@
 
 @media (max-width: 576px) {
     .users-section-mobile .u1.direct {
-        animation: anim-mob1;
+        animation: anim-mob1 3s;
     }
 
     .users-section-mobile .u2.direct {
-        animation: anim-mob2;
+        animation: anim-mob2 3s;
     }
 
     .users-section-mobile .u3.direct {
-        animation: anim-mob3;
+        animation: anim-mob3 3s;
     }
 
     .users-section-mobile .u4.direct {
-        animation: anim-mob1;
+        animation: anim-mob4 3s;
     }
 
     .users-section-mobile .u5.direct {
-        animation: anim-mob5;
+        animation: anim-mob5 3s;
     }
 /*  */
     .users-section-mobile .u1.reversed {
@@ -313,76 +313,120 @@
 @keyframes anim-mob1 {
 
     from {
+        left: 21vw;
+        transform: none;
     }
 
     to {
+        left: 4vw;
     }
 }
 
 @keyframes anim-mob2 {
     from {
+        transform: translateX(-50%);
+        left: 50%
     }
     to {
+        transform: none;
+        left: 21vw;
     }
 }
 
 @keyframes anim-mob3 {
     from {
+        right: 21vw;
     }
-    to {
+    to { 
+        left: 50%
     }
 }
 
 @keyframes anim-mob4 {
     from {
+        right: 4vw;
     }
     to {
+        right: 21vw;
     }
 }
 
 @keyframes anim-mob5 {
     from {
-    }   
+        left: 4vw;
+        opacity: 1;
+    } 
+    30% {
+        left: 0vw;
+        opacity: 0;
+    }  
+    70% {
+        right: 0vw;
+        opacity: 0;
+    }
     to {
+        right: 4vw;
+        opacity: 1;
     }
 }
 
 @keyframes anim-rev-mob1 {
 
     from {
+        right: 4vw;
+        opacity: 1;
+    } 
+    30% {
+        right: 0vw;
+        opacity: 0;
+    }  
+    70% {
+        left: 0vw;
+        opacity: 0;
     }
-
     to {
+        left: 4vw;
+        opacity: 1;       
     }
+}
 }
 
 @keyframes anim-rev-mob2 {
     from {
+        left: 4vw;
     }
     to {
+        left: 21vw;
+        transform: none;
     }
 }
 
 @keyframes anim-rev-mob3 {
     from {
+        left: 21vw;
     }
     to {
+        transform: translateX(-50%);
+        left: 50%
     }
 }
 
 @keyframes anim-rev-mob4 {
     from {
+        left: 50%;
     }
     to {
+        right: 21vw;
     }
 }
 
 @keyframes anim-rev-mob5{
     from {
+        right: 21vw;
     }
 
     to {
+        right: 4vw;
     }
 }
 
-}
