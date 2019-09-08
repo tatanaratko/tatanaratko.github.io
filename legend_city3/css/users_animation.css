@@ -289,23 +289,23 @@
     }
 /*  */
     .users-section-mobile .u1.reversed {
-        animation: anim-rev-mob1;
+        animation: anim-rev-mob1 3s;
     }
 
     .users-section-mobile .u2.reversed {
-        animation: anim-rev-mob2;
+        animation: anim-rev-mob2 3s;
     }
 
     .users-section-mobile .u3.reversed {
-        animation: anim-rev-mob3;
+        animation: anim-rev-mob3 3s;
     }
 
     .users-section-mobile .u4.reversed {
-        animation: anim-revmob4;
+        animation: anim-rev-mob4 3s;
     }
 
     .users-section-mobile .u5.reversed {
-        animation: anim-rev-mob5;
+        animation: anim-rev-mob5 3s;
     }
 
 /*  */
@@ -413,6 +413,7 @@
 
 @keyframes anim-rev-mob4 {
     from {
+        transform: translateX(-50%);
         left: 50%;
     }
     to {
