@@ -1,0 +1,26 @@
+{
+    "ProfileId": "12w562qrx",
+    "PersonInfo": {
+        "Name": "Василий Иванов",
+        "BirthDate": "12-09-1990",
+        "Citizenship": "Russian Federation"
+    },
+    "CardInfo": [
+        {
+            "CardNumber": "1234890456793333",
+            "CardName": "VISA CLASSIC",
+            "ExpDate": "30-02-2019"
+        },
+        {
+            "CardNumber": "1234000145292133",
+            "CardName": "MASTERCARD GOLD",
+            "ExpDate": "21-05-2020"
+        },
+        {
+            "CardNumber": "1234000145293333",
+            "CardName": "MIR КЛАССИЧЕСКАЯ",
+            "ExpDate": "02-12-2019"
+        }
+    ]
+  }
+  
