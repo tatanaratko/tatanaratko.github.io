@@ -817,11 +817,11 @@
 
     
     .users-section-mobile .u3 {
-        left: 50%;
+        left: 43.5vw;
         background-size: contain;
         width: 65px;
         height:  65px;
-        transform: translateX(-50%);
+        /* transform: translateX(-50%); */
         border-radius: 50%;
         border: 1px dashed green;
         padding: 9px;

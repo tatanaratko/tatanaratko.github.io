@@ -300,11 +300,11 @@ var _init = function(){
     var onUserSliderMobileChange = function(e){
         var classStateCopy = [...usersMobileClassState];
 
-        if(e.detail === LEFT_DIRECTION)
+        if(e.detail === RIGHT_DIRECTION)
         {
             classStateCopy.unshift(classStateCopy.pop());
         }
-        else if(e.detail == RIGHT_DIRECTION)
+        else if(e.detail == LEFT_DIRECTION)
         {
             classStateCopy.push(classStateCopy.shift());
         }

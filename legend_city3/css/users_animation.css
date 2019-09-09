@@ -314,7 +314,7 @@
 
     from {
         left: 21vw;
-        transform: none;
+        /* transform: none; */
     }
 
     to {
@@ -324,23 +324,32 @@
 
 @keyframes anim-mob2 {
     from {
-        transform: translateX(-50%);
-        left: 50%
+        /* transform: translateX(-50%); */
+        left: 43.5vw
     }
     to {
-        transform: none;
+        /* transform: none; */
         left: 21vw;
     }
 }
 
 @keyframes anim-mob3 {
     from {
-        right: 21vw;
-        transform: none;
-    }
+        left: 69vw;
+        /* transform: none; */
+        border: none;
+        border-radius: 50%;
+        
+        }
     to { 
-        left: 50%;
-        transform: translateX(-50%);
+        left: 43.5vw;
+        width: 65px;
+        height:  65px;
+        border-radius: 50%;
+        border: 1px dashed green;
+        padding: 9px;
+        background-color: #fff;
+        border-radius: 50%;
     }
 }
 
@@ -399,27 +408,45 @@
     }
     to {
         left: 21vw;
-        transform: none;
+        /* transform: none; */
     }
 }
 
 @keyframes anim-rev-mob3 {
     from {
         left: 21vw;
+        border: none;
+        border-radius: 50%;
     }
     to {
-        transform: translateX(-50%);
-        left: 50%
+        /* transform: translateX(-50%); */
+        left: 43.5vw;
+        width: 65px;
+        height:  65px;
+        border-radius: 50%;
+        border: 1px dashed green;
+        padding: 9px;
+        background-color: #fff;
+        border-radius: 50%;
     }
 }
 
 @keyframes anim-rev-mob4 {
     from {
-        transform: translateX(-50%);
-        left: 50%;
+        /* transform: translateX(-50%); */
+        right: 43.5vw;
+        width: 65px;
+        height:  65px;
+        border-radius: 50%;
+        border: 1px dashed green;
+        padding: 9px;
+        background-color: #fff;
+        border-radius: 50%;
     }
     to {
         right: 21vw;
+        border: none;
+        border-radius: 50%;
     }
 }
 
