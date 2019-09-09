@@ -1,4 +1,4 @@
-var Date= {
+var Info = {
     "ProfileId": "12w562qrx",
     "PersonInfo": {
         "Name": "Василий Иванов",
@@ -22,23 +22,47 @@ var Date= {
             "ExpDate": "02-12-2019"
         }
     ]
-  }
+}
 
 
-  //Создать массив "oldCards" для карть с истекшим сроком
-  //Получить доступ к ключу "CardInfo"
-  //Зайти внутрь этого массива
-  //Получить доступ к первому, второму...двадцатому объекту массива
-  //В первом объекте получить значение ключа "ExpDate"
-  // ExpDate.split("-")
-  // day=[0], month=[1], year=[2]
-  // new Date(year+"-"+month+"-"+day)
-  //Если это значение < , чем значение поля Date, то:  
-  //В первом объекте получить значение ключа "CardNumber"
-  //Отсчитать у значения последние 4 цифры
+//Создать массив "resultOldCards" для карт с истекшим сроком
+//Получить доступ к ключу "CardInfo"
+//Зайти внутрь этого массива
+//Получить доступ к первому, второму...двадцатому объекту массива
+//В первом объекте получить значение ключа "ExpDate"
+// ExpDate.split("-")
+// day=[0], month=[1], year=[2]
+// new Date(year+"-"+month+"-"+day)
+//Если это значение < , чем значение поля Date, то:  
+//В первом объекте получить значение ключа "CardNumber"
+//Отсчитать у значения последние 4 цифры
 //Записать это число в массив "oldCards" 
 //Перебрать таким образом все элементы
+
 function getCardsArrayExpDate(json, date) {
-    get.Date.CardInfo
-    
+    var resultOldCardNumbers = [];
+    var cardInfoMas = json["CardInfo"];
+
+    for (var i = 0; i < cardInfoMas.length; i++) {
+        var cardExpDates = cardInfoMas[i].ExpDate;
+        var splited = cardExpDates.split('-');
+        var day = splited[0];
+        var month = splited[1];
+        var year = splited[2];
+
+        var newDate = new Date(year + '-' + month + '-' + day);
+        if (newDate < date) {
+            var cardNumberDate = cardInfoMas[i].CardNumber;
+            var oldCardNumber=cardNumberDate.substr(-4,4);
+            resultOldCardNumbers.push(oldCardNumber);   
+        }    
+    }
+
+    if (resultOldCardNumbers.length===0) {
+        return null;
+    }
+
+    return resultOldCardNumbers; 
 }
+
+getCardsArrayExpDate(Info,new Date('2019-03-21'));
