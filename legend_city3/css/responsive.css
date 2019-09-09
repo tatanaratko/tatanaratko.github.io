@@ -819,8 +819,8 @@
     .users-section-mobile .u3 {
         left: 43.5vw;
         background-size: contain;
-        width: 65px;
-        height:  65px;
+        width: 13vw;
+        height:  13vw;
         /* transform: translateX(-50%); */
         border-radius: 50%;
         border: 1px dashed green;
