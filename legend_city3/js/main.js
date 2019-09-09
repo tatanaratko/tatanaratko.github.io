@@ -311,9 +311,26 @@ var _init = function(){
 
         for(let i = 0; i<usersMobileClassState.length; i++)
         {
+            if(e.detail === LEFT_DIRECTION)
+            {
+                usersElementsMoblie[i].classList.add("reversed");
+
+                usersElementsMoblie[i].addEventListener("animationend", function onAnimEnd(){
+                    usersElementsMoblie[i].classList.remove("reversed");
+                    usersElementsMoblie[i].removeEventListener("animationend", onAnimEnd);
+                });
+            }
+            else
+            {
+                usersElementsMoblie[i].classList.add("direct");
+
+                usersElementsMoblie[i].addEventListener("animationend", function onAnimEnd(){
+                    usersElementsMoblie[i].classList.remove("direct");
+                    usersElementsMoblie[i].removeEventListener("animationend", onAnimEnd);
+                });
+            }
             usersElementsMoblie[i].classList.replace(usersMobileClassState[i], classStateCopy[i]);
         }
-
 
         usersMobileClassState = [...classStateCopy];
     };
