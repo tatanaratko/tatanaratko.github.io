@@ -314,7 +314,6 @@
 
     from {
         left: 21vw;
-        /* transform: none; */
     }
 
     to {
@@ -324,11 +323,9 @@
 
 @keyframes anim-mob2 {
     from {
-        /* transform: translateX(-50%); */
         left: 43.5vw
     }
     to {
-        /* transform: none; */
         left: 21vw;
     }
 }
@@ -336,7 +333,6 @@
 @keyframes anim-mob3 {
     from {
         left: 69vw;
-        /* transform: none; */
         border: none;
         border-radius: 50%;
         
@@ -388,19 +384,19 @@
         opacity: 1;
     } 
     30% {
-        right: 0vw;
+        right: 1vw;
         opacity: 0;
     }  
     70% {
-        left: 0vw;
+        right: 90vw;
         opacity: 0;
     }
     to {
-        left: 4vw;
-        opacity: 1;       
+        right: 87vw;
+        opacity: 1;
     }
 }
-}
+
 
 @keyframes anim-rev-mob2 {
     from {
@@ -460,3 +456,4 @@
     }
 }
 
+}
