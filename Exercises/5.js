@@ -1,7 +1,7 @@
 function monkeyCount(n) {
     var result=[];
         while (n>0) {
-            var resultPushing = result.unshift(n);
+            result.unshift(n);
             n--;
         }
     return result;
