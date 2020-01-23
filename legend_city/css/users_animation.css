@@ -1,0 +1,466 @@
+
+
+
+
+@keyframes animp1 {
+
+    from {
+        right: 56vw;
+        bottom: 420px;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        opacity: 0;
+    }
+
+    to {
+        right: 60vw;
+        bottom: 450px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes animp2 {
+    from {
+        right: 60vw;
+        bottom: 450px;
+        width: 60px;
+        height: 60px;
+    }
+    50% {
+        bottom: 440px;
+    }
+    to {
+        bottom: 385px;
+        right: 73vw;
+        width: 93px;
+        height: 93px;
+    }
+}
+
+@keyframes animp3 {
+    from {
+        bottom: 385px;
+        right: 73vw;
+        width: 93px;
+        height: 93px;
+    }
+    to {
+        right: 78.2vw;
+        bottom: 154px;
+        width:137px;
+        height: 140px;
+    }
+}
+
+@keyframes animp4 {
+    from {
+        right: 78.2vw;
+        bottom: 154px;
+        width:137px;
+        height: 140px;
+    }
+    to {
+        bottom: -50px;
+        right: 74vw;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes animp5 {
+    from {
+        bottom: -50px;
+        right: 74vw;
+        width: 80px;
+        height: 80px;
+    }
+
+   
+    to {
+        bottom: -105px;
+        right: 65vw;
+        width: 65px;
+        height: 65px;
+    }
+}
+
+@keyframes animp1-reversed {
+
+    from {
+        bottom: 385px;
+        right: 73vw;
+        width: 93px;
+        height: 93px;
+    }
+
+    50% {
+        bottom: 460px;
+    }
+
+    to {
+        right: 60vw;
+        bottom: 450px;
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@keyframes animp2-reversed {
+    from {
+        right: 78.2vw;
+        bottom: 154px;
+        width:137px;
+        height: 140px;
+    }
+    to {
+        bottom: 385px;
+        right: 73vw;
+        width: 93px;
+        height: 93px;
+    }
+}
+
+@keyframes animp3-reversed {
+    from {
+        bottom: -50px;
+        right: 74vw;
+        width: 80px;
+        height: 80px;
+    }
+    to {
+        right: 78.2vw;
+        bottom: 154px;
+        width:137px;
+        height: 140px;
+    }
+}
+
+@keyframes animp4-reversed {
+    from {
+        bottom: -105px;
+        right: 65vw;
+        width: 65px;
+        height: 65px;
+    }
+    to {
+        bottom: -50px;
+        right: 74vw;
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@keyframes animp5-reversed {
+    from {
+        right: 60vw;
+        bottom: 450px;
+        width: 60px;
+        height: 60px;
+    }
+
+    25% {
+        opacity: 0;
+        bottom: 415px;
+        right: 55vw;
+    }
+    75% {
+        opacity: 0;
+        right: 60vw;
+    }
+    to {
+        bottom: -105px;
+        right: 65vw;
+        width: 65px;
+        height: 65px;
+        opacity: 1;
+    }
+}
+
+
+.view-user {
+    border: 1px dashed #36c150;
+    right: 78vw;
+    bottom: 150px;
+    border-radius: 50%;
+    background-color: #fff;
+    width: 145px;
+    height: 145px;
+    position: absolute;
+    z-index: 3;
+}
+
+
+.users-slider .pu1 > img {
+    border: 13px solid #fff;
+    border-radius: 50%;
+    width: 100%;
+    max-height: 100%;
+    height: auto; 
+}
+
+
+.users-slider .pu2 > img {
+
+    border-radius: 50%;
+    border: 13px solid #fff;
+    width: 100%;
+    max-height: 100%;
+    height: auto; 
+}
+.users-slider .pu3 > img {
+    border-radius: 50%;
+    border: 17px solid #fff;
+    width: 100%;
+    max-height: 100%;
+    height: auto; 
+} 
+.users-slider .pu4 > img {
+    border: 13px solid #fff; 
+    width: 100%;
+    max-height: 100%;
+    height: auto; 
+    border-radius: 50%;
+} 
+.users-slider .pu5 > img {
+    border-radius: 50%;
+    border: 15px solid #fff;
+    width: 100%;
+    max-height: 100%;
+    height: auto; 
+}
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .view-user {
+        right: 75.5vw;
+    }
+
+    @keyframes animp3 {
+        from {
+            bottom: 385px;
+            right: 73vw;
+            width: 93px;
+            height: 93px;
+        }
+        to {
+            right: 76vw;
+            bottom: 154px;
+            width:137px;
+            height: 140px;
+        }
+    }
+    
+    @keyframes animp4 {
+        from {
+            right: 76vw;
+            bottom: 154px;
+            width:137px;
+            height: 140px;
+        }
+        to {
+            bottom: -50px;
+            right: 74vw;
+            width: 80px;
+            height: 80px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .users-section-mobile .u1.direct {
+        animation: anim-mob1 3s;
+    }
+
+    .users-section-mobile .u2.direct {
+        animation: anim-mob2 3s;
+    }
+
+    .users-section-mobile .u3.direct {
+        animation: anim-mob3 3s;
+    }
+
+    .users-section-mobile .u4.direct {
+        animation: anim-mob4 3s;
+    }
+
+    .users-section-mobile .u5.direct {
+        animation: anim-mob5 3s;
+    }
+/*  */
+    .users-section-mobile .u1.reversed {
+        animation: anim-rev-mob1 3s;
+    }
+
+    .users-section-mobile .u2.reversed {
+        animation: anim-rev-mob2 3s;
+    }
+
+    .users-section-mobile .u3.reversed {
+        animation: anim-rev-mob3 3s;
+    }
+
+    .users-section-mobile .u4.reversed {
+        animation: anim-rev-mob4 3s;
+    }
+
+    .users-section-mobile .u5.reversed {
+        animation: anim-rev-mob5 3s;
+    }
+
+/*  */
+
+@keyframes anim-mob1 {
+
+    from {
+        left: 21vw;
+    }
+
+    to {
+        left: 4vw;
+    }
+}
+
+@keyframes anim-mob2 {
+    from {
+        left: 43.5vw
+    }
+    to {
+        left: 21vw;
+    }
+}
+
+@keyframes anim-mob3 {
+    from {
+        left: 69vw;
+        border: none;
+        border-radius: 50%;
+        /* padding: 9px; */
+        width: 11vw;
+        height:  11vw;
+        }
+   
+        to { 
+        left: 43.5vw;
+        width: 13vw;
+        height:  13vw;
+        border-radius: 50%;
+        border: 1px dashed green;
+        /* padding: 9px; */
+        background-color: #fff;
+        border-radius: 50%;
+    }
+}
+
+@keyframes anim-mob4 {
+    from {
+        right: 4vw;
+    }
+    to {
+        right: 21vw;
+    }
+}
+
+@keyframes anim-mob5 {
+    from {
+        left: 4vw;
+        opacity: 1;
+    } 
+    30% {
+        left: 0vw;
+        opacity: 0;
+    }  
+    70% {
+        right: 0vw;
+        opacity: 0;
+    }
+    to {
+        right: 4vw;
+        opacity: 1;
+    }
+}
+
+@keyframes anim-rev-mob1 {
+
+    from {
+        right: 4vw;
+        opacity: 1;
+    } 
+    30% {
+        right: 1vw;
+        opacity: 0;
+    }  
+    70% {
+        right: 90vw;
+        opacity: 0;
+    }
+    to {
+        right: 87vw;
+        opacity: 1;
+    }
+}
+
+
+@keyframes anim-rev-mob2 {
+    from {
+        left: 4vw;
+    }
+    to {
+        left: 21vw;
+        /* transform: none; */
+    }
+}
+
+@keyframes anim-rev-mob3 {
+    from {
+        left: 21vw;
+        border: none;
+        border-radius: 50%;
+        width: 11vw;
+        height: 11vw;
+        /* padding: 0; */
+    }
+
+    to {
+        /* transform: translateX(-50%); */
+        left: 43.5vw;
+        width: 13vw;
+        height:  13vw;
+        border-radius: 50%;
+        border: 1px dashed green;
+        /* padding: 9px; */
+        background-color: #fff;
+        border-radius: 50%;
+    }
+}
+
+@keyframes anim-rev-mob4 {
+    from {
+        /* transform: translateX(-50%); */
+        right: 43.5vw;
+        width: 13vw;
+        height:  13vw;
+        border-radius: 50%;
+        border: 1px dashed green;
+        padding: 9px;
+        background-color: #fff;
+        border-radius: 50%;
+    }
+    to {
+        right: 21vw;
+        border: none;
+        border-radius: 50%;
+    }
+}
+
+@keyframes anim-rev-mob5{
+    from {
+        right: 21vw;
+    }
+
+    to {
+        right: 4vw;
+    }
+}
+
+}
