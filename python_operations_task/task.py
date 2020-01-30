@@ -23,27 +23,33 @@ def five_dates(sorted_data):
     result_datas.reverse()
     dates_to_print = []
     for d in result_datas:
-        from_account='anon'
+        from_account = 'anon'
+        if 'from' in d:
+            from_account = d['from']
         date = d['date']
         date_format=datetime.datetime.strptime(date, '%Y-%m-%dT%H:%M:%S.%f')
         date_str=date_format.strftime('%d.%m.%Y')
         to = d['to']
-        to_number=extract_number(to)
+        to_number = extract_number(to)
+        to_acc = extract_acc_to(to)
+        from_acc = extract_acc_from(from_account)
         to_masked = 'incorrect number (to)'
         if len(to_number) ==16:
-            to_masked=mask_card_number(to_number)
+            to_masked = mask_card_number(to_number)
         elif len(to_number) == 20:
-            to_masked=mask_acc_number(to_number)
+            to_masked = mask_acc_number(to_number)
         des = d['description']
-        if 'from' in d: 
-            from_account = d['from']
+
+
 
         amount = d['operationAmount']['amount']
         currency = d['operationAmount']['currency']['name']
-        print('{date} {des}\n{from_acc} -> {to}\n{amount} {currency}\n'.format(
+        print('{date} {des}\n{from_type} {from_acc} -> {to_account} {to}\n{amount} {currency}\n'.format(
             date=date_str,
             des=des,
+            to_account=to_acc,
             to=to_masked,
+            from_type=from_acc,
             from_acc=from_account,
             amount=amount,
             currency=currency
@@ -57,12 +63,23 @@ def extract_number(string):
         return number
     return 'not a number'
 
+def extract_acc_to(string):
+    splited = string.split()
+    acc = splited[0]
+    return acc
+
+
+def extract_acc_from(string):
+    splited = string.split()
+    acc = splited[0]
+    return acc
+
 def mask_acc_number(acc_number):
     masked = '**' + acc_number[-4:]    
     return masked
 
 def mask_card_number(card_number):
-    masked = card_number[:4]+ ' '+card_number[5:7]+ '** **** '+ card_number[-4:]  
+    masked = card_number[:4]+ ' '+card_number[5:7]+ '** **** ' + card_number[-4:]
     return masked
 
 cd = catch_data()
