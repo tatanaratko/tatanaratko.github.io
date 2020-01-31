@@ -65,14 +65,22 @@ def extract_number(string):
 
 def extract_acc_to(string):
     splited = string.split()
-    acc = splited[0]
-    return acc
+    acc_name = []
+    for my_str in splited:
+        if not my_str.isdigit():
+           acc_name.append(my_str)
+           acc_format = ' '.join(acc_name)
+    return acc_format
 
 
 def extract_acc_from(string):
     splited = string.split()
-    acc = splited[0]
-    return acc
+    acc_name = []
+    for my_str in splited:
+        if not my_str.isdigit():
+            acc_name.append(my_str)
+            acc_format = ' '.join(acc_name)
+    return acc_format
 
 def mask_acc_number(acc_number):
     masked = '**' + acc_number[-4:]    
